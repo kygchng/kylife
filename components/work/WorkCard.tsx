@@ -7,8 +7,6 @@ interface WorkCardProps {
 }
 
 export default function WorkCard({ project }: WorkCardProps) {
-  const year = new Date(project.date).getFullYear();
-
   return (
     <Link href={`/work/${project.slug}`} className="block group">
       <div className="aspect-square bg-gray-100 mb-3 relative overflow-hidden">
@@ -21,7 +19,7 @@ export default function WorkCard({ project }: WorkCardProps) {
         />
       </div>
       <h3 className="font-medium mb-1">{project.title}</h3>
-      <p className="text-sm text-gray-600 mb-2">{year}</p>
+      <p className="text-sm text-gray-600 mb-2">{project.date}</p>
       <div className="flex flex-wrap gap-1">
         {project.tags.map((tag) => (
           <span
