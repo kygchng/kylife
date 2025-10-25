@@ -5,39 +5,44 @@ export const PROJECTS: Project[] = [
     slug: "lilyloop",
     title: "LilyLoop",
     date: "2023–present",
-    cover: "/projects/placeholder-lilyloop.jpg",
-    description:
-      "Co-founding LilyLoop to bring quantified care to cycle health. We're integrating biodegradable moisture sensors into smart menstrual products to measure flow precisely—turning an untracked experience into actionable data. Y-Prize Finale Winner ($10k) and Venture Lab Startup Challenge Finalist (top 8; Ashton & Blank Awards $25k).",
+    cover: "/projects/lilyloop-logo.png",
     tags: ["build"],
     content: [
       {
         type: "text",
+        size: "lg",
         content:
-          "What started as a late-night conversation about why we still *estimate* menstrual flow became LilyLoop. I draw on my research in IoT for precision agriculture—designing experiments to print biodegradable moisture sensors on cellulose nanofibers—and translate that rigor to women's health. Our goal: instant hormone and flow insights that help people understand stress, energy, and cycle health in real time.",
-        size: "lg"
+          "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women’s health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
       },
       {
         type: "image",
-        src: "/projects/placeholder-lilyloop.jpg",
-        alt: "Early LilyLoop prototype sketch",
-        size: "full",
-        aspectRatio: "wide",
-        caption: "Prototyping loops: materials, signal, and product experience."
+        src: "/projects/lilyloop-yprize.png",
+        alt: "Y-Prize team photo",
+        aspectRatio: "auto",
       },
       {
         type: "text",
         content:
-          "Winning the Y-Prize gave us our first real validation; the Startup Challenge put us in rooms with operators who pressed us on manufacturability, cleaning up our experiments and our roadmap. I'm proud of how we grew the idea without losing empathy for the user."
+          "We went all in that first summer to prototype smart menstrual products using biodegradable soil moisture sensors. At the Turner Lab @ Penn, I spent long days screen-printing silver traces on cellulose nanofibrils and testing moisture levels in soil - work that would later inspire our early sensing architecture. With guidance from Penn CHOP mentors and women’s health researchers worldwide, we validated our approach through the NSF I-Corps program and early customer interviews."
+      },
+      {
+        type: "image",
+        src: "/projects/turner lab.jpg",
+        alt: "Turner Lab research setup",
+        aspectRatio: "auto",
+      },
+      {
+        type: "text",
+        content:
+          "After a few pivots, we’ve returned to what motivated us from the start: building tools that translate cycle signals into real insight. Our renewed goal is to create instant hormone and flow feedback, helping people understand their stress, energy, and overall cycle health in real time. [to be continued...]"
       }
     ]
-  },
+  },  
   {
     slug: "box-of-balloons-platform",
     title: "Box of Balloons — Chapter Platform",
     date: "2024–2025",
     cover: "/projects/placeholder-bob.jpg",
-    description:
-      "Led product + tech for a MERN web platform used by 50+ chapter leads to intake requests, manage capacity, and power national reporting for a nonprofit delivering birthday boxes to kids in foster care and homelessness.",
     tags: ["build"],
     content: [
       {
@@ -65,8 +70,6 @@ export const PROJECTS: Project[] = [
     title: "FIONA — Foodbank Chatbot",
     date: "2020–2022",
     cover: "/projects/placeholder-fiona.jpg",
-    description:
-      "I led a team of five to build FIONA (Foodbank Inquiry OperatioN Assistant) on Google Cloud—handling 100+ inquiries/day so staff could focus on getting food to families. 1st place at Google Pitch Night; finalist for Google Pitch Day.",
     tags: ["build"],
     content: [
       {
@@ -87,8 +90,6 @@ export const PROJECTS: Project[] = [
     title: "EstiMate — Social Betting, Reimagined",
     date: "2024",
     cover: "/projects/placeholder-estimate.jpg",
-    description:
-      "iOS app that turns casual bets into secure, transparent memories—Caldera chain, Solidity contracts, Convex DB, and Apple Sign-In. Won three prizes at TreeHacks 2024.",
     tags: ["build"],
     content: [
       {
@@ -116,8 +117,6 @@ export const PROJECTS: Project[] = [
     title: "Forget Me Not — Social Garden",
     date: "2022",
     cover: "/projects/placeholder-forgetmenot.jpg",
-    description:
-      "An IoT plant pot + app that lets you nurture relationships at a distance—remotely caring for a loved one's plant as a physical reminder of connection. Built during Penn's M&TSI.",
     tags: ["build"],
     content: [
       {
@@ -140,8 +139,6 @@ export const PROJECTS: Project[] = [
     title: "Conceptual Art → V.Scoop",
     date: "2023",
     cover: "/projects/placeholder-vscoop.jpg",
-    description:
-      "From casting an analog clock inside a 30-lb concrete block to building V.Scoop, a virtual art museum where people process current events through shared artwork.",
     tags: ["build"],
     content: [
       {
@@ -156,8 +153,6 @@ export const PROJECTS: Project[] = [
     title: "Cookies4aGoodCause",
     date: "2020–2021",
     cover: "/projects/placeholder-cookies.jpg",
-    description:
-      "A nonprofit bakery I started in lockdown to spread warmth—literally and figuratively. I handcrafted pastries, delivered smiles, and donated proceeds to UNICEF.",
     tags: ["misc"],
     content: [
       {
@@ -179,36 +174,10 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "public-art-club-murals",
-    title: "Public Art Club — Campus Murals",
-    date: "2022",
-    cover: "/projects/placeholder-murals.jpg",
-    description:
-      "Revived a pandemic-era club with a 100-ft mural project that brought color—and a sense of normal—back to campus.",
-    tags: ["art"],
-    content: [
-      {
-        type: "text",
-        content:
-          "We went from at-home crafts to painting together at lunch—music, laughter, paint everywhere. Seeing classmates stop to take selfies in front of our work made me realize how much beauty can reset the mood of a place."
-      },
-      {
-        type: "image",
-        src: "/projects/placeholder-murals.jpg",
-        alt: "Bulletin board murals",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Hills, waterfalls, clouds—pinned up with sore thumbs and big grins."
-      }
-    ]
-  },
-  {
     slug: "chinese-dance",
     title: "Chinese Dance",
     date: "Ongoing",
     cover: "/projects/placeholder-dance.jpg",
-    description:
-      "Story-first movement has been my constant—an art I once hid, now celebrate. From Tang-dynasty tales to bamboo-in-the-wind pieces, I learned to speak with eyes, breath, and detail.",
     tags: ["misc"],
     content: [
       {
@@ -223,8 +192,6 @@ export const PROJECTS: Project[] = [
     title: "Dorm Barber",
     date: "2020–present",
     cover: "/projects/placeholder-hair.jpg",
-    description:
-      "Pandemic necessity turned into a mini-practice in craft and care—matching face shape, preference, and style to make friends feel most like themselves.",
     tags: ["misc"],
     content: [
       {
@@ -239,7 +206,6 @@ export const PROJECTS: Project[] = [
     title: "Rooster",
     date: "2019",
     cover: "/projects/rooster.PNG",
-    description:"Mixed media, magazines, leaves, feathers, acrylic",
     tags: ["art"], 
     content: [
       {
@@ -262,7 +228,6 @@ export const PROJECTS: Project[] = [
     title: "Game On",
     date: "2023",
     cover: "/projects/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
-    description: "Mixed media, mixed pills, remote game controller",
     tags: ["art"], 
     content: [
       {
@@ -292,8 +257,7 @@ export const PROJECTS: Project[] = [
     title: "Dream Fragments",
     date: "2023",
     cover: "/projects/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
-    description: "Mixed media, wood skewers, vellum, LEDs",
-    tags: ["art"], 
+   tags: ["art"], 
     content: [
       {
         type: "video",
@@ -322,7 +286,6 @@ export const PROJECTS: Project[] = [
     title: "Dangerous Bloom",
     date: "2023",
     cover: "/projects/01_Shattered Cup.png",
-    description: "Mixed media, wood skewers, shattered cup",
     tags: ["art"], 
     content: [
       {
@@ -346,7 +309,6 @@ export const PROJECTS: Project[] = [
     title: "Ubiquity",
     date: "2023",
     cover: "/projects/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
-    description: "Mixed media, polymer clay on phone screen, two iPhones, photo of self",
     tags: ["art"], 
     content: [
       {
@@ -370,7 +332,6 @@ export const PROJECTS: Project[] = [
     title: "Accessory Series - iHuman & Beautiful Restraint",
     date: "2023",
     cover: "/projects/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
-    description: "Mixed media, nylon dog collars, computer chips, handcuffs, feathers",
     tags: ["art"], 
     content: [
       {
@@ -394,7 +355,6 @@ export const PROJECTS: Project[] = [
     title: "Parched",
     date: "2023",
     cover: "/projects/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
-    description: "Mixed media, cut styrofoam cups, LEDs",
     tags: ["art"], 
     content: [
       {
@@ -418,7 +378,6 @@ export const PROJECTS: Project[] = [
     title: "Writer's Block",
     date: "2023",
     cover: "/projects/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
-    description: "Mixed media, monitor, thumb tacks, acrylic spray, After Effects",
     tags: ["art"], 
     content: [
       {
@@ -442,7 +401,6 @@ export const PROJECTS: Project[] = [
     title: "Cola Wars",
     date: "2023",
     cover: "/projects/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
-    description: "Mixed media, cola can labels, straws, keyboard, acrylic spray",
     tags: ["art"], 
     content: [
       {
@@ -466,7 +424,6 @@ export const PROJECTS: Project[] = [
     title: "Litter Bug",
     date: "2023",
     cover: "/projects/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
-    description: "Mixed media, banana, kitty litter",
     tags: ["art"], 
     content: [
       {
@@ -490,7 +447,6 @@ export const PROJECTS: Project[] = [
     title: "In Memoriam",
     date: "2023",
     cover: "/projects/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
-    description:"Mixed media, mixed media, acrylic spray, keyboard, plastic figures",
     tags: ["art"], 
     content: [
       {
@@ -514,7 +470,6 @@ export const PROJECTS: Project[] = [
     title: "Gumball Faces (Stop Motion)",
     date: "2023",
     cover: "/projects/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
-    description:"Mixed media, gumball machine, glass head, painted ping pong balls",
     tags: ["art"], 
     content: [
       {
@@ -545,7 +500,6 @@ export const PROJECTS: Project[] = [
     title: "Hema Fraud",
     date: "2023",
     cover: "/projects/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
-    description:"Mixed media, glass vails, blood, drops of blood in water and food coloring, self",
     tags: ["art"], 
     content: [
       {
@@ -569,7 +523,6 @@ export const PROJECTS: Project[] = [
     title: "Timestamp",
     date: "2023",
     cover: "/projects/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
-    description:"Mixed media, analog clock cast in concrete",
     tags: ["art"], 
     content: [
       {
@@ -592,7 +545,6 @@ export const PROJECTS: Project[] = [
     title: "Unequal Access",
     date: "2023",
     cover: "/projects/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
-    description:"Mixed media, combination lock, hasp, toilet seat, LEDs",
     tags: ["art"], 
     content: [
       {
@@ -610,7 +562,6 @@ export const PROJECTS: Project[] = [
     title: "End of Innocence",
     date: "2023",
     cover: "/projects/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
-    description:"Mixed media, Hello Kitty purse, prescription bottles, LEDs",
     tags: ["art"], 
     content: [
       {
@@ -628,7 +579,6 @@ export const PROJECTS: Project[] = [
     title: "Masquerade Filtration",
     date: "2023",
     cover: "/projects/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
-    description:"Mixed media, yarn, wire",
     tags: ["art"], 
     content: [
       {
@@ -646,7 +596,6 @@ export const PROJECTS: Project[] = [
     title: "Disconnect",
     date: "2023",
     cover: "/projects/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
-    description:"Mixed media, wire mesh, yarn, LEDs",
     tags: ["art"], 
     content: [
       {
@@ -664,7 +613,6 @@ export const PROJECTS: Project[] = [
     title: "Appealing to the Core",
     date: "2023",
     cover: "/projects/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
-    description:"Mixed media, peeled spple, iPhone",
     tags: ["art"], 
     content: [
       {
@@ -682,7 +630,6 @@ export const PROJECTS: Project[] = [
     title: "Dissenting Perspectives",
     date: "2023",
     cover: "/projects/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
-    description:"Mixed media, poured concrete, eyeglasses",
     tags: ["art"], 
     content: [
       {
@@ -693,6 +640,28 @@ export const PROJECTS: Project[] = [
         aspectRatio: "wide",
         caption: "Dissenting Perspectives"
       },
+    ]
+  },
+  {
+    slug: "public-art-club-murals",
+    title: "Public Art Club — Campus Murals",
+    date: "2022",
+    cover: "/projects/placeholder-murals.jpg",
+    tags: ["art"],
+    content: [
+      {
+        type: "text",
+        content:
+          "We went from at-home crafts to painting together at lunch—music, laughter, paint everywhere. Seeing classmates stop to take selfies in front of our work made me realize how much beauty can reset the mood of a place."
+      },
+      {
+        type: "image",
+        src: "/projects/placeholder-murals.jpg",
+        alt: "Bulletin board murals",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Hills, waterfalls, clouds—pinned up with sore thumbs and big grins."
+      }
     ]
   },
 ];

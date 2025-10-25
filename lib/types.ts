@@ -70,7 +70,6 @@ export interface Project {
   title: string;
   date: string; // ISO date or year
   cover: string; // path to cover image
-  description: string; // short description for gallery
   tags: Tag[];
 
   // New flexible content system

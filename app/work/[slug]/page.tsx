@@ -56,7 +56,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-gray-700 leading-relaxed">{project.description}</p>
             </div>
           </div>
         )}
