@@ -66,7 +66,7 @@ export default function Header() {
         </div>
       )}
 
-      <header className="px-4 md:px-6 py-4 border-b">
+      <header className="px-4 md:px-6 py-4 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-black before:absolute before:bottom-[-4px] before:left-0 before:right-0 before:h-[1px] before:bg-black">
         <div className="flex justify-between items-start gap-8">
           {/* Left Column - Bio */}
           <div className="flex-shrink-0" style={{ width: "600px" }}>
