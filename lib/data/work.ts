@@ -76,22 +76,34 @@ export const PROJECTS: Project[] = [
     ]
   },  
   {
-    slug: "fiona-chatbot",
-    title: "FIONA — Foodbank Chatbot",
-    date: "2020–2022",
-    cover: "/projects/placeholder-fiona.jpg",
-    tags: ["build"],
-    content: [
+    "slug": "fiona-chatbot",
+    "title": "FIONA",
+    "date": "2020–2022",
+    "cover": "/projects/fiona-logo.png",
+    "tags": ["build"],
+    "content": [
       {
-        type: "text",
-        content:
-          "We partnered closely with the Ecumenical Hunger Program—weekly syncs to map their workflow and prioritize intents from \"What are your hours?\" to \"How can I donate?\" Launching before the holidays helped free phone lines—one tiny assist that scaled into hundreds of conversations a day."
+        "type": "text",
+        "content":
+          "FIONA, short for Foodbank Inquiry OperatioN Assistant, was born out of a simple question: how could we help food banks keep up when call lines were overflowing during COVID? Partnering with the Ecumenical Hunger Program (EHP), I led a four-person team to design a chatbot that could field common questions and donation requests, freeing up staff to focus on distributing food to families in need."
       },
       {
-        type: "quote",
-        content:
-          "We turned an idea into an impact—one turkey at a time.",
-        author: "from my reflection"
+        "type": "text",
+        "content":
+          "We held weekly syncs with EHP managers to understand their workflows and refine intents—from “What are your hours?” to “How can I donate?” Using JavaScript and Google Cloud Fulfillment, FIONA connects user inputs to a webhook and database, delivering tailored responses specific to each food bank’s needs. After rounds of debugging and iteration, we integrated FIONA directly into EHP’s website—streamlining communication, handling hundreds of interactions daily, and helping EHP distribute a record number of Thanksgiving dinners."
+      },
+      {
+        "type": "image",
+        "src": "/projects/fiona-tweets.png",
+        "alt": "Tweets highlighting FIONA's launch and impact",
+        "size": "md",
+        "aspectRatio": "auto",
+        "caption": "FIONA’s debut: helping EHP handle hundreds of requests a day during the holidays."
+      },
+      {
+        "type": "quote",
+        "content":
+          "We turned an idea into an impact—one turkey at a time."
       }
     ]
   },
