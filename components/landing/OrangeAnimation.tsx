@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const TOTAL_FRAMES = 8;
+const TOTAL_FRAMES = 5;
 
 export default function OrangeAnimation() {
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -28,32 +28,52 @@ export default function OrangeAnimation() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center cursor-pointer"
-      style={{ backgroundColor: "#9baf8e" }}
+      className="fixed inset-0 flex items-center justify-center cursor-pointer bg-white"
       onClick={handleClick}
       role="button"
       aria-label="click me"
     >
       {!isComplete ? (
-        <div className="relative place-content-center">
+        <div className="relative place-content-center transition-opacity duration-500 ease-out">
           <Image
             src={`/orange/${(currentFrame + 1)
               .toString()
               .padStart(2, "0")}.png`}
             alt={`Orange animation frame ${currentFrame + 1}`}
-            width={1200}
-            height={1200}
+            width={800}
+            height={800}
             priority={currentFrame === 0}
-            className="object-contain"
+            className="object-contain transition-transform duration-500 ease-out hover:scale-105"
           />
         </div>
       ) : (
-        <div className="text-center text-black">
-          <h1 className="text-3xl mb-6">kylie chang</h1>
-          <h1 className="text-xl italic mb-6">welcome!</h1>
+        <div className="text-center text-black relative">
+          <div className="absolute -top-20 -left-64 opacity-90">
+            <Image
+              src="/orange/08.png"
+              alt="Orange slice"
+              width={300}
+              height={300}
+              className="object-contain"
+            />
+          </div>
+          <div className="absolute -top-20 -right-34 opacity-90">
+            <Image
+              src="/orange/09.png"
+              alt="me"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </div>
+          <p className="text-lg mb-8 text-gray-700 max-w-md mx-auto leading-relaxed">
+            peel back the layers—
+            <br />
+            there's more than meets the rind
+          </p>
           <Link
             href="/work"
-            className="inline-block rounded-full border border-black px-4 py-2 text-sm hover:bg-black hover:text-white transition"
+            className="inline-block rounded-full border border-black px-5 py-2.5 text-sm hover:bg-black hover:text-white transition-all duration-300"
           >
             enter
           </Link>

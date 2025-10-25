@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.orange-cursor {
+  cursor: url('/orange/01.png') 16 16, auto;
+}
+
+.orange-cursor * {
+  cursor: url('/orange/01.png') 16 16, auto;
+}

@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
     cover: "/projects/placeholder-murals.jpg",
     description:
       "Revived a pandemic-era club with a 100-ft mural project that brought color—and a sense of normal—back to campus.",
-    tags: ["2d art"],
+    tags: ["art"],
     content: [
       {
         type: "text",
@@ -235,16 +235,39 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    slug: "rooster",  
+    title: "Rooster",
+    date: "2019",
+    cover: "/projects/rooster.PNG",
+    description:"Mixed media, magazines, leaves, feathers, acrylic",
+    tags: ["art"], 
+    content: [
+      {
+        type: "image",
+        src: "/projects/rooster.PNG",
+        alt: "Rooster",
+        size: "lg",
+        aspectRatio: "tall",
+        caption: "Rooster"
+      },
+      {
+        type: "text",
+        content: "Featured in SF MOMA.",
+        size: "lg"
+      }
+    ]
+  },
+  {
     slug: "game-on",  
     title: "Game On",
     date: "2023",
     cover: "/projects/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
     description: "Mixed media, mixed pills, remote game controller",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "video",
-        src: "projects/0_Game On_game controller, mixed pills.mov",
+        src: "/projects/0_Game On_game controller, mixed pills.mp4",
         caption: "Game On",
         loop: true,
         autoplay: false
@@ -270,7 +293,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
     description: "Mixed media, wood skewers, vellum, LEDs",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "video",
@@ -300,7 +323,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/01_Shattered Cup.png",
     description: "Mixed media, wood skewers, shattered cup",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -324,7 +347,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
     description: "Mixed media, polymer clay on phone screen, two iPhones, photo of self",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -348,7 +371,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
     description: "Mixed media, nylon dog collars, computer chips, handcuffs, feathers",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -372,7 +395,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
     description: "Mixed media, cut styrofoam cups, LEDs",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -396,7 +419,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
     description: "Mixed media, monitor, thumb tacks, acrylic spray, After Effects",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -420,7 +443,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
     description: "Mixed media, cola can labels, straws, keyboard, acrylic spray",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -444,7 +467,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
     description: "Mixed media, banana, kitty litter",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -468,7 +491,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
     description:"Mixed media, mixed media, acrylic spray, keyboard, plastic figures",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -492,7 +515,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
     description:"Mixed media, gumball machine, glass head, painted ping pong balls",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "video",
@@ -523,7 +546,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
     description:"Mixed media, glass vails, blood, drops of blood in water and food coloring, self",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -547,7 +570,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
     description:"Mixed media, analog clock cast in concrete",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -570,7 +593,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
     description:"Mixed media, combination lock, hasp, toilet seat, LEDs",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -588,7 +611,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
     description:"Mixed media, Hello Kitty purse, prescription bottles, LEDs",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -606,7 +629,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
     description:"Mixed media, yarn, wire",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -624,7 +647,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
     description:"Mixed media, wire mesh, yarn, LEDs",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -642,7 +665,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
     description:"Mixed media, peeled spple, iPhone",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
@@ -660,7 +683,7 @@ export const PROJECTS: Project[] = [
     date: "2023",
     cover: "/projects/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
     description:"Mixed media, poured concrete, eyeglasses",
-    tags: ["3d art"], 
+    tags: ["art"], 
     content: [
       {
         type: "image",
