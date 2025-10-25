@@ -48,12 +48,12 @@ export default function OrangeAnimation() {
         </div>
       ) : (
         <div className="text-center text-black relative">
-          <div className="absolute -top-20 -left-64 opacity-90">
+          <div className="absolute -top-10 -left-54 opacity-90">
             <Image
               src="/orange/08.png"
               alt="Orange slice"
-              width={300}
-              height={300}
+              width={180}
+              height={180}
               className="object-contain"
             />
           </div>

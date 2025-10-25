@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { site } from "../../lib/site";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname();
   const [now, setNow] = useState(new Date());
-  const [lastUpdated] = useState(new Date());
   const [mounted, setMounted] = useState(false);
+  const [hoveredWord, setHoveredWord] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -24,84 +25,158 @@ export default function Header() {
     return null;
   }
 
-  const formatTimestamp = (date: Date) => {
-    return date.toLocaleString("en-US", {
-      month: "2-digit",
-      day: "2-digit",
-      year: "numeric",
+  const formatTime = (date: Date) => {
+    return date.toLocaleTimeString("en-US", {
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
+      hour12: true,
     });
   };
 
-  const formatLastUpdated = (date: Date) => {
-    return date.toLocaleString("en-US", {
-      month: "2-digit",
-      year: "numeric",
-    });
+  const lastSqueezed = "10/25/2025";
+
+  const getImageForWord = (word: string) => {
+    switch (word) {
+      case "oranges":
+        return "/wendy-cope.webp";
+      case "frankenstein":
+        return "/frankenstein.jpg";
+      case "four-agreements":
+        return "/four-agreements.jpg";
+      default:
+        return "/orange/01.png";
+    }
   };
 
   return (
-    <header className="px-4 md:px-6 border-b">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
-        {/* Left Column */}
-        <div className="text-[13px] md:text-sm leading-5 tracking-tight">
-          <Link
-            href="/work"
-            className="font-medium hover:opacity-60 transition-opacity"
-          >
-            {site.name}
-          </Link>
-          <div className="mt-1 text-neutral-700">{site.status}</div>
-          <div className="mt-1 text-neutral-600">{mounted ? formatTimestamp(now) : "loading..."}</div>
-          <div className="text-neutral-600">
-            (last updated on {formatLastUpdated(lastUpdated)})
+    <>
+      {/* Hover Image - Positioned in the center gap between left and right sections */}
+      {hoveredWord && (
+        <div className="fixed top-8 left-4/7 -translate-x-1/2 z-50 animate-in fade-in duration-200">
+          <div className="bg-white p-3 rounded-lg shadow-xl border-2 border-orange-300">
+            <Image
+              src={getImageForWord(hoveredWord)}
+              alt={`${hoveredWord} preview`}
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </div>
+        </div>
+      )}
+
+      <header className="px-4 md:px-6 py-4 border-b">
+        <div className="flex justify-between items-start gap-8">
+          {/* Left Column - Bio */}
+          <div className="flex-shrink-0" style={{ width: "600px" }}>
+            <h1 className="text-[13px] md:text-sm mb-1">✿ Kylie Chang ✿</h1>
+
+            <div className="text-[13px] md:text-sm leading-5 tracking-tight">
+            <p>
+              <span className="font-medium">Currently:</span> CS + Finance @ UPenn M&T
+            </p>
+            <p>
+              <span className="font-medium">Previously:</span> AI @ Figma, KP Fellows '25
+            </p>
+
+            <p className="mt-1">
+              <span className="font-medium">Talk to me about:</span> conceptual art, whimsical tech,{" "}
+              <span
+                className="relative inline-block cursor-pointer"
+                onMouseEnter={() => setHoveredWord("four-agreements")}
+                onMouseLeave={() => setHoveredWord(null)}
+              >
+                the Four Agreements
+                <svg
+                  className="absolute left-0 -bottom-1 w-full"
+                  height="4"
+                  viewBox="0 0 100 4"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
+                    stroke="#ff8c42"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              , women's health,{" "}
+              <span
+                className="relative inline-block cursor-pointer"
+                onMouseEnter={() => setHoveredWord("frankenstein")}
+                onMouseLeave={() => setHoveredWord(null)}
+              >
+                Frankenstein's monster
+                <svg
+                  className="absolute left-0 -bottom-1 w-full"
+                  height="4"
+                  viewBox="0 0 100 4"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
+                    stroke="#ff8c42"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              , little joys, and{" "}
+              <span
+                className="relative inline-block cursor-pointer"
+                onMouseEnter={() => setHoveredWord("oranges")}
+                onMouseLeave={() => setHoveredWord(null)}
+              >
+                my love for oranges
+                <svg
+                  className="absolute left-0 -bottom-1 w-full"
+                  height="4"
+                  viewBox="0 0 100 4"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
+                    stroke="#ff8c42"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              .
+            </p>
           </div>
         </div>
 
-        {/* Center Column */}
-        <div className="text-[13px] md:text-sm leading-5 tracking-tight text-neutral-700">
-          <div className="hidden md:block">
-            {site.role}
-            <br />
-            {site.previous.join(", ")}
+        {/* Right Column - Vibe & Links */}
+        <div className="text-[13px] md:text-sm leading-5 tracking-tight text-right flex-shrink-0">
+          <div>
+            <p className="text-gray-600">
+              <span className="font-medium">currently:</span> {mounted ? formatTime(now) : "loading..."}
+            </p>
+            <p className="text-gray-500 mt-0.5">
+              ( last squeezed: {lastSqueezed} 🍊 )
+            </p>
           </div>
-          <div className="md:hidden">
-            {site.role} · {site.previous.join(" · ")}
-            <span className="inline-block w-3 h-3 rounded-full bg-amber-300 ml-2 align-middle"></span>
-          </div>
-        </div>
 
-        {/* Right Column */}
-        <div className="text-[13px] md:text-sm leading-5 tracking-tight">
-          <ul className="space-y-1">
+          <div className="space-y-0.5 mt-2">
             {site.social.map((link) => (
-              <li key={link.name}>
+              <div key={link.name}>
                 <a
-                  href={link.url}
+                  href={link.name === "E-mail" ? `mailto:${link.url}` : link.url}
                   target={link.name !== "E-mail" ? "_blank" : undefined}
                   rel={link.name !== "E-mail" ? "noreferrer" : undefined}
-                  aria-label={link.label}
-                  className="underline decoration-dotted underline-offset-[3px] hover:opacity-60 transition-opacity"
+                  className="underline hover:opacity-60 transition-opacity"
                 >
                   {link.name}
                 </a>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
-
-      {/* Bottom Nav Row */}
-      <div className="flex justify-end gap-6 py-2 text-sm border-t">
-        <Link href="/work" className="hover:opacity-60 transition-opacity">
-          Work
-        </Link>
-        <Link href="/archive" className="hover:opacity-60 transition-opacity">
-          Archive
-        </Link>
-      </div>
     </header>
+    </>
   );
 }
