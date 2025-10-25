@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-const FILTERS = ["all", "build", "art", "misc"] as const;
+const FILTERS = ["all", "art", "build", "misc"] as const;
 
 export default function WorkFilters() {
   const router = useRouter();

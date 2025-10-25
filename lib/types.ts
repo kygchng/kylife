@@ -1,4 +1,4 @@
-export type Tag = "build" | "art" | "misc";
+export type Tag = "art" | "build" | "misc";
 
 // Content block types for flexible project pages
 export type ContentBlock =

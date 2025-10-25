@@ -5,8 +5,8 @@ interface WorkPageProps {
   searchParams: { filter?: string };
 }
 
-export default function WorkPage({ searchParams }: WorkPageProps) {
-  const filter = searchParams.filter || "all";
+export default async function WorkPage({ searchParams }: WorkPageProps) {
+  const filter = await searchParams.filter || "all";
 
   return (
     <div className="px-4 md:px-6 py-6 pb-16 orange-cursor">
