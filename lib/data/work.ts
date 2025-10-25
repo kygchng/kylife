@@ -39,32 +39,42 @@ export const PROJECTS: Project[] = [
     ]
   },  
   {
-    slug: "box-of-balloons-platform",
-    title: "Box of Balloons — Chapter Platform",
-    date: "2024–2025",
-    cover: "/projects/placeholder-bob.jpg",
-    tags: ["build"],
-    content: [
+    "slug": "box-of-balloons-platform",
+    "title": "Box of Balloons",
+    "date": "2024–2025",
+    "cover": "/projects/bob-logo.png",
+    "tags": ["build"],
+    "content": [
       {
-        type: "text",
-        content:
-          "As PM/tech lead at Hack4Impact, I scoped pain points with chapter leaders drowning in Google Forms, then rallied a 15-person team to ship a centralized, permissioned system. Agencies submit secure requests; chapters toggle intake on/off; national staff see a consolidated dashboard and live stats embedded on their public Wix site."
+        "type": "text",
+        "content": "As Product Manager and Technical Lead at Hack4Impact, I partnered with Box of Balloons -- a nonprofit that brings birthdays to children in homelessness and foster care --to reimagine how their 24+ chapters coordinate nationwide. I scoped pain points with chapter leaders drowning in Google Forms, then led a 15-person team to design and ship a centralized, permissioned MERN platform. Partner agencies now submit secure requests, chapters can toggle intake on or off, and national staff can view a live dashboard of impact metrics embedded directly on their Wix site."
       },
       {
-        type: "image",
-        src: "/projects/placeholder-bob.jpg",
-        alt: "Chapter dashboard mock",
-        size: "lg",
-        aspectRatio: "video",
-        caption: "Capacity toggles, delivery confirmations, and exportable reports."
+        "type": "image",
+        "src": "/projects/bob-map.png",
+        "alt": "Map of Box of Balloons chapters across the U.S.",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Interactive chapter map showing 24+ locations nationwide."
       },
       {
-        type: "text",
-        content:
-          "My favorite part was translating field constraints into crisp user stories and an MVP we could actually deliver on a semester timeline—shipping something that saved volunteers time and gave the org real visibility."
+        "type": "image",
+        "src": "/projects/bob-dashboard.png",
+        "alt": "Chapter leader dashboard interface",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Dashboard for chapter leaders to manage requests, toggle capacity, and track deliveries."
+      },
+      {
+        "type": "image",
+        "src": "/projects/bob-admin.png",
+        "alt": "National admin analytics dashboard",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Admin view consolidating chapter-level data and real-time impact statistics for public display."
       }
     ]
-  },
+  },  
   {
     slug: "fiona-chatbot",
     title: "FIONA — Foodbank Chatbot",

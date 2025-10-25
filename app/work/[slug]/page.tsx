@@ -19,14 +19,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const formattedDate = new Date(project.date).getFullYear();
-
   return (
     <div className="px-4 md:px-6 py-6 pb-16">
       {/* Project Header */}
       <div className="max-w-5xl mx-auto mb-12">
         <h1 className="text-3xl font-medium mb-2">{project.title}</h1>
-        <p className="text-gray-600 mb-4">{formattedDate}</p>
+        <p className="text-gray-600 mb-4">{project.date}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
