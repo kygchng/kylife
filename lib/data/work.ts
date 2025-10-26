@@ -5,36 +5,36 @@ export const PROJECTS: Project[] = [
     slug: "lilyloop",
     title: "LilyLoop",
     date: "2023–present",
-    cover: "/projects/lilyloop-logo.png",
+    cover: "/projects/lilyloop/lilyloop-logo.png",
     tags: ["build"],
     content: [
       {
         type: "text",
         size: "lg",
         content:
-          "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women’s health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
+          "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women's health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
       },
       {
         type: "image",
-        src: "/projects/lilyloop-yprize.png",
+        src: "/projects/lilyloop/lilyloop-yprize.png",
         alt: "Y-Prize team photo",
         aspectRatio: "auto",
       },
       {
         type: "text",
         content:
-          "We went all in that first summer to prototype smart menstrual products using biodegradable soil moisture sensors. At the Turner Lab @ Penn, I spent long days screen-printing silver traces on cellulose nanofibrils and testing moisture levels in soil - work that would later inspire our early sensing architecture. With guidance from Penn CHOP mentors and women’s health researchers worldwide, we validated our approach through the NSF I-Corps program and early customer interviews."
+          "We went all in that first summer to prototype smart menstrual products using biodegradable soil moisture sensors. At the Turner Lab @ Penn, I spent long days screen-printing silver traces on cellulose nanofibrils and testing moisture levels in soil - work that would later inspire our early sensing architecture. With guidance from Penn CHOP mentors and women's health researchers worldwide, we validated our approach through the NSF I-Corps program and early customer interviews."
       },
       {
         type: "image",
-        src: "/projects/turner lab.jpg",
+        src: "/projects/lilyloop/turner lab.jpg",
         alt: "Turner Lab research setup",
         aspectRatio: "auto",
       },
       {
         type: "text",
         content:
-          "After a few pivots, we’ve returned to what motivated us from the start: building tools that translate cycle signals into real insight. Our renewed goal is to create instant hormone and flow feedback, helping people understand their stress, energy, and overall cycle health in real time. [to be continued...]"
+          "After a few pivots, we've returned to what motivated us from the start: building tools that translate cycle signals into real insight. Our renewed goal is to create instant hormone and flow feedback, helping people understand their stress, energy, and overall cycle health in real time. [to be continued...]"
       }
     ]
   },  
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     "slug": "box-of-balloons-platform",
     "title": "Box of Balloons",
     "date": "2024–2025",
-    "cover": "/projects/bob-logo.png",
+    "cover": "/projects/bob/bob-logo.png",
     "tags": ["build"],
     "content": [
       {
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
       },
       {
         "type": "image",
-        "src": "/projects/bob-map.png",
+        "src": "/projects/bob/bob-map.png",
         "alt": "Map of Box of Balloons chapters across the U.S.",
         "size": "lg",
         "aspectRatio": "auto",
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
       },
       {
         "type": "image",
-        "src": "/projects/bob-dashboard.png",
+        "src": "/projects/bob/bob-dashboard.png",
         "alt": "Chapter leader dashboard interface",
         "size": "lg",
         "aspectRatio": "auto",
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
       },
       {
         "type": "image",
-        "src": "/projects/bob-admin.png",
+        "src": "/projects/bob/bob-admin.png",
         "alt": "National admin analytics dashboard",
         "size": "lg",
         "aspectRatio": "auto",
@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
     "slug": "fiona-chatbot",
     "title": "FIONA",
     "date": "2020–2022",
-    "cover": "/projects/fiona-logo.png",
+    "cover": "/projects/fiona/fiona-logo.png",
     "tags": ["build"],
     "content": [
       {
@@ -90,15 +90,15 @@ export const PROJECTS: Project[] = [
       {
         "type": "text",
         "content":
-          "We held weekly syncs with EHP managers to understand their workflows and refine intents—from “What are your hours?” to “How can I donate?” Using JavaScript and Google Cloud Fulfillment, FIONA connects user inputs to a webhook and database, delivering tailored responses specific to each food bank’s needs. After rounds of debugging and iteration, we integrated FIONA directly into EHP’s website—streamlining communication, handling hundreds of interactions daily, and helping EHP distribute a record number of Thanksgiving dinners."
+          "We held weekly syncs with EHP managers to understand their workflows and refine intents—from 'What are your hours?' to 'How can I donate?' Using JavaScript and Google Cloud Fulfillment, FIONA connects user inputs to a webhook and database, delivering tailored responses specific to each food bank's needs. After rounds of debugging and iteration, we integrated FIONA directly into EHP's website—streamlining communication, handling hundreds of interactions daily, and helping EHP distribute a record number of Thanksgiving dinners."
       },
       {
         "type": "image",
-        "src": "/projects/fiona-tweets.png",
+        "src": "/projects/fiona/fiona-tweets.png",
         "alt": "Tweets highlighting FIONA's launch and impact",
         "size": "md",
         "aspectRatio": "auto",
-        "caption": "FIONA’s debut: helping EHP handle hundreds of requests a day during the holidays."
+        "caption": "FIONA's debut: helping EHP handle hundreds of requests a day during the holidays."
       },
       {
         "type": "quote",
@@ -108,32 +108,38 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "estimate",
-    title: "EstiMate — Social Betting, Reimagined",
-    date: "2024",
-    cover: "/projects/placeholder-estimate.jpg",
-    tags: ["build"],
-    content: [
+    "slug": "estimate",
+    "title": "EstiMate",
+    "date": "2024",
+    "cover": "/projects/estimate/estimate-logo.png",
+    "tags": ["build"],
+    "content": [
       {
-        type: "text",
-        content:
-          "We started from a simple pain: friendly wagers vanish. I led design and backend/database, wiring SwiftUI to a Bun/Express API, Convex for data + key storage, and on-chain holds via Ethers. AirDrop or link to invite, pick sides, pick stakes, and let the contract keep everyone honest."
+        "type": "text",
+        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
       },
       {
-        type: "text",
-        content:
-          "The hardest part was orchestrating iOS, backend, and chain cleanly. The most valuable part was talking to students and shaping the product around how bets *actually* happen in groups."
+        "type": "text",
+        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
       },
       {
-        type: "image",
-        src: "/projects/placeholder-estimate.jpg",
-        alt: "EstiMate flows",
-        size: "lg",
-        aspectRatio: "video",
-        caption: "From dashboard to dispute-free settlement."
+        "type": "image",
+        "src": "/projects/estimate/estimate-flow.jpg",
+        "alt": "EstiMate user flow",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "From friendly challenge setup to transparent on-chain settlement."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-stack.jpg",
+        "alt": "EstiMate tech stack",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
       }
     ]
-  },
+  },  
   {
     slug: "forget-me-not",
     title: "Forget Me Not — Social Garden",
@@ -227,12 +233,12 @@ export const PROJECTS: Project[] = [
     slug: "rooster",  
     title: "Rooster",
     date: "2019",
-    cover: "/projects/rooster.PNG",
+    cover: "/projects/art/rooster.PNG",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/rooster.PNG",
+        src: "/projects/art/rooster.PNG",
         alt: "Rooster",
         size: "lg",
         aspectRatio: "tall",
@@ -249,12 +255,12 @@ export const PROJECTS: Project[] = [
     slug: "game-on",  
     title: "Game On",
     date: "2023",
-    cover: "/projects/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
+    cover: "/projects/art/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "video",
-        src: "/projects/0_Game On_game controller, mixed pills.mp4",
+        src: "/projects/art/0_Game On_game controller, mixed pills.mp4",
         caption: "Game On",
         loop: true,
         autoplay: false
@@ -266,7 +272,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "image",
-        src: "/projects/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
+        src: "/projects/art/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
         alt: "Game On",
         size: "lg",
         aspectRatio: "wide",
@@ -278,12 +284,12 @@ export const PROJECTS: Project[] = [
     slug: "dream-fragments",  
     title: "Dream Fragments",
     date: "2023",
-    cover: "/projects/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
+    cover: "/projects/art/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
    tags: ["art"], 
     content: [
       {
         type: "video",
-        src: "/projects/01_Dream Fragments_84x31x28_mixed media, wood skewers, vellum, LEDs.mp4",
+        src: "/projects/art/01_Dream Fragments_84x31x28_mixed media, wood skewers, vellum, LEDs.mp4",
         caption: "Dream Fragments",
         loop: true,
         autoplay: false
@@ -295,7 +301,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "image",
-        src: "/projects/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
+        src: "/projects/art/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
         alt: "Dream Fragments",
         size: "lg",
         aspectRatio: "wide",
@@ -307,12 +313,12 @@ export const PROJECTS: Project[] = [
     slug: "dangerous-bloom",  
     title: "Dangerous Bloom",
     date: "2023",
-    cover: "/projects/01_Shattered Cup.png",
+    cover: "/projects/art/01_Shattered Cup.png",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/01_Shattered Cup.png",
+        src: "/projects/art/01_Shattered Cup.png",
         alt: "Dangerous Bloom",
         size: "lg",
         aspectRatio: "wide",
@@ -330,12 +336,12 @@ export const PROJECTS: Project[] = [
     slug: "ubiquity",  
     title: "Ubiquity",
     date: "2023",
-    cover: "/projects/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
+    cover: "/projects/art/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
+        src: "/projects/art/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
         alt: "Ubiquity",
         size: "lg",
         aspectRatio: "wide",
@@ -353,12 +359,12 @@ export const PROJECTS: Project[] = [
     slug: "accesory-series",  
     title: "Accessory Series - iHuman & Beautiful Restraint",
     date: "2023",
-    cover: "/projects/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
+    cover: "/projects/art/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
+        src: "/projects/art/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
         alt: "Accessory Series - iHuman & Beautiful Restraint",
         size: "lg",
         aspectRatio: "wide",
@@ -376,12 +382,12 @@ export const PROJECTS: Project[] = [
     slug: "parched",  
     title: "Parched",
     date: "2023",
-    cover: "/projects/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
+    cover: "/projects/art/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
+        src: "/projects/art/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
         alt: "Parched",
         size: "lg",
         aspectRatio: "wide",
@@ -399,12 +405,12 @@ export const PROJECTS: Project[] = [
     slug: "writers-block",  
     title: "Writer's Block",
     date: "2023",
-    cover: "/projects/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
+    cover: "/projects/art/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
+        src: "/projects/art/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
         alt: "Writer's Block",
         size: "lg",
         aspectRatio: "wide",
@@ -422,12 +428,12 @@ export const PROJECTS: Project[] = [
     slug: "cola-wars",  
     title: "Cola Wars",
     date: "2023",
-    cover: "/projects/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
+    cover: "/projects/art/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
+        src: "/projects/art/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
         alt: "Cola Wars",
         size: "lg",
         aspectRatio: "wide",
@@ -445,12 +451,12 @@ export const PROJECTS: Project[] = [
     slug: "litter-bug",  
     title: "Litter Bug",
     date: "2023",
-    cover: "/projects/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
+    cover: "/projects/art/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
+        src: "/projects/art/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
         alt: "Litter Bug",
         size: "lg",
         aspectRatio: "wide",
@@ -468,12 +474,12 @@ export const PROJECTS: Project[] = [
     slug: "in-memoriam",  
     title: "In Memoriam",
     date: "2023",
-    cover: "/projects/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
+    cover: "/projects/art/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
+        src: "/projects/art/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
         alt: "In Memoriam",
         size: "lg",
         aspectRatio: "wide",
@@ -491,19 +497,19 @@ export const PROJECTS: Project[] = [
     slug: "gumball-faces",  
     title: "Gumball Faces (Stop Motion)",
     date: "2023",
-    cover: "/projects/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
+    cover: "/projects/art/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "video",
-        src: "/projects/15_Gumball Faces_stop motion, glass head, gumball machine, ping pong balls - HD 720p.mov4",
+        src: "/projects/art/15_Gumball Faces_stop motion, glass head, gumball machine, ping pong balls - HD 720p.mov4",
         caption: "Gumball Faces",
         loop: true,
         autoplay: false
       },
       {
         type: "image",
-        src: "/projects/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
+        src: "/projects/art/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
         alt: "Gumball Faces (Stills)",
         size: "lg",
         aspectRatio: "wide",
@@ -521,12 +527,12 @@ export const PROJECTS: Project[] = [
     slug: "hema-fraud",  
     title: "Hema Fraud",
     date: "2023",
-    cover: "/projects/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
+    cover: "/projects/art/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
+        src: "/projects/art/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
         alt: "Hema Fraud",
         size: "lg",
         aspectRatio: "wide",
@@ -544,12 +550,12 @@ export const PROJECTS: Project[] = [
     slug: "timestamp",  
     title: "Timestamp",
     date: "2023",
-    cover: "/projects/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
+    cover: "/projects/art/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
+        src: "/projects/art/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
         alt: "Timestamp",
         size: "lg",
         aspectRatio: "wide",
@@ -566,12 +572,12 @@ export const PROJECTS: Project[] = [
     slug: "unequal-access",  
     title: "Unequal Access",
     date: "2023",
-    cover: "/projects/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
+    cover: "/projects/art/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
+        src: "/projects/art/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
         alt: "Unequal Access",
         size: "lg",
         aspectRatio: "wide",
@@ -583,12 +589,12 @@ export const PROJECTS: Project[] = [
     slug: "end-of-innocence",  
     title: "End of Innocence",
     date: "2023",
-    cover: "/projects/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
+    cover: "/projects/art/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
+        src: "/projects/art/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
         alt: "End of Innocence",
         size: "lg",
         aspectRatio: "wide",
@@ -600,12 +606,12 @@ export const PROJECTS: Project[] = [
     slug: "masquerade-filtration",  
     title: "Masquerade Filtration",
     date: "2023",
-    cover: "/projects/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
+    cover: "/projects/art/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
+        src: "/projects/art/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
         alt: "Masquerade Filtration",
         size: "lg",
         aspectRatio: "wide",
@@ -617,12 +623,12 @@ export const PROJECTS: Project[] = [
     slug: "disconnect",  
     title: "Disconnect",
     date: "2023",
-    cover: "/projects/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
+    cover: "/projects/art/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
+        src: "/projects/art/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
         alt: "Disconnect",
         size: "lg",
         aspectRatio: "wide",
@@ -634,12 +640,12 @@ export const PROJECTS: Project[] = [
     slug: "appealing-to-the-core",  
     title: "Appealing to the Core",
     date: "2023",
-    cover: "/projects/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
+    cover: "/projects/art/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
+        src: "/projects/art/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
         alt: "Appealing to the Core",
         size: "lg",
         aspectRatio: "wide",
@@ -651,12 +657,12 @@ export const PROJECTS: Project[] = [
     slug: "dissenting-perspectives",  
     title: "Dissenting Perspectives",
     date: "2023",
-    cover: "/projects/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
+    cover: "/projects/art/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
+        src: "/projects/art/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
         alt: "Dissenting Perspectives",
         size: "lg",
         aspectRatio: "wide",
@@ -668,7 +674,7 @@ export const PROJECTS: Project[] = [
     slug: "public-art-club-murals",
     title: "Public Art Club — Campus Murals",
     date: "2022",
-    cover: "/projects/placeholder-murals.jpg",
+    cover: "/projects/art/placeholder-murals.jpg",
     tags: ["art"],
     content: [
       {
@@ -678,7 +684,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "image",
-        src: "/projects/placeholder-murals.jpg",
+        src: "/projects/art/placeholder-murals.jpg",
         alt: "Bulletin board murals",
         size: "lg",
         aspectRatio: "wide",
