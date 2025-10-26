@@ -141,25 +141,29 @@ export const PROJECTS: Project[] = [
     ]
   },  
   {
-    slug: "forget-me-not",
-    title: "Forget Me Not — Social Garden",
-    date: "2022",
-    cover: "/projects/placeholder-forgetmenot.jpg",
-    tags: ["build"],
-    content: [
+    "slug": "forget-me-not",
+    "title": "Forget Me Not — Social Garden",
+    "date": "2022",
+    "cover": "/projects/forget-me-not/forget me not logo.png",
+    "tags": ["build"],
+    "content": [
       {
-        type: "text",
-        content:
-          "We asked a universal question: how do we show we're thinking of each other between sporadic texts? Our blue-flower demo made parents smile—and admit their kids didn't call nearly enough. Lectures on IDEO's culture nudged us to make brainstorming playful and prolific; the Lauder lounge windows vanished under Post-its."
+        "type": "text",
+        "content": "During Penn’s Management & Technology Summer Institute, our team explored how technology can make emotional connection tangible. We built Forget Me Not, a “social garden” where you can nurture relationships by tending to a loved one’s plant remotely. Each interaction—watering, light, care—translates into movement or growth in a shared flower pot, turning affection into something you can literally see bloom. Inspired by IDEO’s design culture, we filled the Lauder lounge with Post-its and laughter before wiring up sensors, a Feather Huzzah, and a companion app. Watching our first flower respond felt like proof that empathy can be engineered."
       },
       {
         type: "image",
-        src: "/projects/placeholder-forgetmenot.jpg",
-        alt: "Smart pot prototype",
-        size: "lg",
-        aspectRatio: "video",
-        caption: "Feather Huzzah, sensors, and a companion app—seed to sprout."
-      }
+        src: "/projects/forget-me-not/forget me not logo 2.png",
+        alt: "Forget Me Not logo",
+        size: "sm",
+        aspectRatio: "auto"
+      },
+      {
+        "type": "video",
+        "src": "/projects/forget-me-not/Forget Me Not Final Vid.mp4",
+        "caption": "Final product & demo"
+      },
+      
     ]
   },
   {
