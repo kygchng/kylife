@@ -446,7 +446,7 @@ export const PROJECTS: Project[] = [
     "slug": "estimate",
     "title": "EstiMate",
     "date": "2024",
-    "cover": "/projects/estimate/estimate-logo.png",
+    "cover": "/projects/estimate/estimate-logo2.png",
     "tags": ["projects"],
     "content": [
       {
