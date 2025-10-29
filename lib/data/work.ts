@@ -641,8 +641,8 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "haircutting",
-    title: "Dorm Barber",
+    slug: "barber",
+    title: "Barber",
     date: "2020–present",
     cover: "/projects/hair/scissors.png",
     tags: ["misc"],
