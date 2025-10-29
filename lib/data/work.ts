@@ -611,7 +611,7 @@ export const PROJECTS: Project[] = [
     "slug": "cookies4agoodcause",
     "title": "Cookies4aGoodCause",
     "date": "2020–2021",
-    "cover": "/projects/cookies/logo.png",
+    "cover": "/projects/cookies/cookies-logo.png",
     "tags": ["misc"],
     "content": [
       {
@@ -644,7 +644,7 @@ export const PROJECTS: Project[] = [
     slug: "barber",
     title: "Barber",
     date: "2020–present",
-    cover: "/projects/hair/scissors.png",
+    cover: "/projects/hair/scissors-logo.png",
     tags: ["misc"],
     content: [
       {
