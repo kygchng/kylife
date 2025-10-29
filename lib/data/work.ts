@@ -2,238 +2,6 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
-    slug: "lilyloop",
-    title: "LilyLoop",
-    date: "2023–present",
-    cover: "/projects/lilyloop/lilyloop-logo.png",
-    tags: ["build"],
-    content: [
-      {
-        type: "text",
-        size: "lg",
-        content:
-          "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women's health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
-      },
-      {
-        type: "image",
-        src: "/projects/lilyloop/lilyloop-yprize.png",
-        alt: "Y-Prize team photo",
-        aspectRatio: "auto",
-      },
-      {
-        type: "text",
-        content:
-          "We went all in that first summer to prototype smart menstrual products using biodegradable soil moisture sensors. At the Turner Lab @ Penn, I spent long days screen-printing silver traces on cellulose nanofibrils and testing moisture levels in soil - work that would later inspire our early sensing architecture. With guidance from Penn CHOP mentors and women's health researchers worldwide, we validated our approach through the NSF I-Corps program and early customer interviews."
-      },
-      {
-        type: "image",
-        src: "/projects/lilyloop/turner lab.jpg",
-        alt: "Turner Lab research setup",
-        aspectRatio: "auto",
-      },
-      {
-        type: "text",
-        content:
-          "After a few pivots, we've returned to what motivated us from the start: building tools that translate cycle signals into real insight. Our renewed goal is to create instant hormone and flow feedback, helping people understand their stress, energy, and overall cycle health in real time. [to be continued...]"
-      }
-    ]
-  },  
-  {
-    "slug": "box-of-balloons-platform",
-    "title": "Box of Balloons",
-    "date": "2024–2025",
-    "cover": "/projects/bob/bob-logo.png",
-    "tags": ["build"],
-    "content": [
-      {
-        "type": "text",
-        "content": "As Product Manager and Technical Lead at Hack4Impact, I partnered with Box of Balloons -- a nonprofit that brings birthdays to children in homelessness and foster care --to reimagine how their 24+ chapters coordinate nationwide. I scoped pain points with chapter leaders drowning in Google Forms, then led a 15-person team to design and ship a centralized, permissioned MERN platform. Partner agencies now submit secure requests, chapters can toggle intake on or off, and national staff can view a live dashboard of impact metrics embedded directly on their Wix site."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-map.png",
-        "alt": "Map of Box of Balloons chapters across the U.S.",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Interactive chapter map showing 24+ locations nationwide."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-dashboard.png",
-        "alt": "Chapter leader dashboard interface",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Dashboard for chapter leaders to manage requests, toggle capacity, and track deliveries."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-admin.png",
-        "alt": "National admin analytics dashboard",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Admin view consolidating chapter-level data and real-time impact statistics for public display."
-      }
-    ]
-  },  
-  {
-    "slug": "fiona-chatbot",
-    "title": "FIONA",
-    "date": "2020–2022",
-    "cover": "/projects/fiona/fiona-logo.png",
-    "tags": ["build"],
-    "content": [
-      {
-        "type": "text",
-        "content":
-          "FIONA, short for Foodbank Inquiry OperatioN Assistant, was born out of a simple question: how could we help food banks keep up when call lines were overflowing during COVID? Partnering with the Ecumenical Hunger Program (EHP), I led a four-person team to design a chatbot that could field common questions and donation requests, freeing up staff to focus on distributing food to families in need."
-      },
-      {
-        "type": "text",
-        "content":
-          "We held weekly syncs with EHP managers to understand their workflows and refine intents—from 'What are your hours?' to 'How can I donate?' Using JavaScript and Google Cloud Fulfillment, FIONA connects user inputs to a webhook and database, delivering tailored responses specific to each food bank's needs. After rounds of debugging and iteration, we integrated FIONA directly into EHP's website—streamlining communication, handling hundreds of interactions daily, and helping EHP distribute a record number of Thanksgiving dinners."
-      },
-      {
-        "type": "image",
-        "src": "/projects/fiona/fiona-tweets.png",
-        "alt": "Tweets highlighting FIONA's launch and impact",
-        "size": "md",
-        "aspectRatio": "auto",
-        "caption": "FIONA's debut: helping EHP handle hundreds of requests a day during the holidays."
-      },
-      {
-        "type": "quote",
-        "content":
-          "We turned an idea into an impact—one turkey at a time."
-      }
-    ]
-  },
-  {
-    "slug": "estimate",
-    "title": "EstiMate",
-    "date": "2024",
-    "cover": "/projects/estimate/estimate-logo.png",
-    "tags": ["build"],
-    "content": [
-      {
-        "type": "text",
-        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
-      },
-      {
-        "type": "text",
-        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-flow.jpg",
-        "alt": "EstiMate user flow",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "From friendly challenge setup to transparent on-chain settlement."
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-stack.jpg",
-        "alt": "EstiMate tech stack",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
-      }
-    ]
-  },  
-  {
-    "slug": "forget-me-not",
-    "title": "Forget Me Not — Social Garden",
-    "date": "2022",
-    "cover": "/projects/forget-me-not/forget me not logo.png",
-    "tags": ["build"],
-    "content": [
-      {
-        "type": "text",
-        "content": "During Penn’s Management & Technology Summer Institute, our team explored how technology can make emotional connection tangible. We built Forget Me Not, a “social garden” where you can nurture relationships by tending to a loved one’s plant remotely. Each interaction—watering, light, care—translates into movement or growth in a shared flower pot, turning affection into something you can literally see bloom. Inspired by IDEO’s design culture, we filled the Lauder lounge with Post-its and laughter before wiring up sensors, a Feather Huzzah, and a companion app. Watching our first flower respond felt like proof that empathy can be engineered."
-      },
-      {
-        type: "image",
-        src: "/projects/forget-me-not/forget me not logo 2.png",
-        alt: "Forget Me Not logo",
-        size: "sm",
-        aspectRatio: "auto"
-      },
-      {
-        "type": "video",
-        "src": "/projects/forget-me-not/Forget Me Not Final Vid.mp4",
-        "caption": "Final product & demo"
-      },
-      
-    ]
-  },
-  {
-    slug: "conceptual-art-vscoop",
-    title: "Conceptual Art → V.Scoop",
-    date: "2023",
-    cover: "/projects/placeholder-vscoop.jpg",
-    tags: ["build"],
-    content: [
-      {
-        type: "text",
-        content:
-          "Conceptual art gave me a way to think through hard topics—turning skewers, pins, and glue into ideas. V.Scoop extends that impulse to a community space: rooms themed on events like COVID-19 or Ukraine where users share, view, and discuss work. It's about dialogue as much as display."
-      }
-    ]
-  },
-  {
-    slug: "cookies4agoodcause",
-    title: "Cookies4aGoodCause",
-    date: "2020–2021",
-    cover: "/projects/placeholder-cookies.jpg",
-    tags: ["misc"],
-    content: [
-      {
-        type: "text",
-        content:
-          "This project taught me how small, beautiful things can still move a community. I obsessed over recipes—from s'mores cookies to matcha-rose pastries—and my apple-pie cookie with a hand-latticed crust became a crowd favorite. Beyond fundraising, every delivery felt like a tiny act of care."
-      },
-      {
-        type: "quote",
-        content:
-          "Beyond the effort put into baking the cookie, my customer saw the effort put into them.",
-        author: "from my essay"
-      },
-      {
-        type: "text",
-        content:
-          "That same instinct—to brighten and beautify—shows up in my tech work too: craft matters when the goal is human."
-      }
-    ]
-  },
-  {
-    slug: "chinese-dance",
-    title: "Chinese Dance",
-    date: "Ongoing",
-    cover: "/projects/placeholder-dance.jpg",
-    tags: ["misc"],
-    content: [
-      {
-        type: "text",
-        content:
-          "I chased every genre—ballet, tap, jazz, hip-hop—before realizing the style I grew up with was already mine. At Penn, I bring that pride to the Asian Dance Team, blending tradition with experimentation."
-      }
-    ]
-  },
-  {
-    slug: "haircutting",
-    title: "Dorm Barber",
-    date: "2020–present",
-    cover: "/projects/placeholder-hair.jpg",
-    tags: ["misc"],
-    content: [
-      {
-        type: "text",
-        content:
-          "My first self-cut ended at the chin after chasing symmetry. From there: dad, brother, then a brave friend with craft scissors and a trash can. These days I set up a chair and cape, do the consultation, and get to work. It's design thinking with clippers."
-      }
-    ]
-  },
-  {
     slug: "rooster",  
     title: "Rooster",
     date: "2019",
@@ -696,4 +464,230 @@ export const PROJECTS: Project[] = [
       }
     ]
   },
+  {
+    slug: "lilyloop",
+    title: "LilyLoop",
+    date: "2023–present",
+    cover: "/projects/lilyloop/lilyloop-logo.png",
+    tags: ["build"],
+    content: [
+      {
+        type: "text",
+        size: "lg",
+        content:
+          "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women's health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
+      },
+      {
+        type: "image",
+        src: "/projects/lilyloop/lilyloop-yprize.png",
+        alt: "Y-Prize team photo",
+        aspectRatio: "auto",
+      },
+      {
+        type: "text",
+        content:
+          "We went all in that first summer to prototype smart menstrual products using biodegradable soil moisture sensors. At the Turner Lab @ Penn, I spent long days screen-printing silver traces on cellulose nanofibrils and testing moisture levels in soil - work that would later inspire our early sensing architecture. With guidance from Penn CHOP mentors and women's health researchers worldwide, we validated our approach through the NSF I-Corps program and early customer interviews."
+      },
+      {
+        type: "image",
+        src: "/projects/lilyloop/turner lab.jpg",
+        alt: "Turner Lab research setup",
+        aspectRatio: "auto",
+      },
+      {
+        type: "text",
+        content:
+          "After a few pivots, we've returned to what motivated us from the start: building tools that translate cycle signals into real insight. Our renewed goal is to create instant hormone and flow feedback, helping people understand their stress, energy, and overall cycle health in real time. [to be continued...]"
+      }
+    ]
+  },  
+  {
+    "slug": "box-of-balloons-platform",
+    "title": "Box of Balloons",
+    "date": "2024–2025",
+    "cover": "/projects/bob/bob-logo.png",
+    "tags": ["build"],
+    "content": [
+      {
+        "type": "text",
+        "content": "As Product Manager and Technical Lead at Hack4Impact, I partnered with Box of Balloons -- a nonprofit that brings birthdays to children in homelessness and foster care --to reimagine how their 24+ chapters coordinate nationwide. I scoped pain points with chapter leaders drowning in Google Forms, then led a 15-person team to design and ship a centralized, permissioned MERN platform. Partner agencies now submit secure requests, chapters can toggle intake on or off, and national staff can view a live dashboard of impact metrics embedded directly on their Wix site."
+      },
+      {
+        "type": "image",
+        "src": "/projects/bob/bob-map.png",
+        "alt": "Map of Box of Balloons chapters across the U.S.",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Interactive chapter map showing 24+ locations nationwide."
+      },
+      {
+        "type": "image",
+        "src": "/projects/bob/bob-dashboard.png",
+        "alt": "Chapter leader dashboard interface",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Dashboard for chapter leaders to manage requests, toggle capacity, and track deliveries."
+      },
+      {
+        "type": "image",
+        "src": "/projects/bob/bob-admin.png",
+        "alt": "National admin analytics dashboard",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Admin view consolidating chapter-level data and real-time impact statistics for public display."
+      }
+    ]
+  },  
+  {
+    "slug": "fiona-chatbot",
+    "title": "FIONA",
+    "date": "2020–2022",
+    "cover": "/projects/fiona/fiona-logo.png",
+    "tags": ["build"],
+    "content": [
+      {
+        "type": "text",
+        "content":
+          "FIONA, short for Foodbank Inquiry OperatioN Assistant, was born out of a simple question: how could we help food banks keep up when call lines were overflowing during COVID? Partnering with the Ecumenical Hunger Program (EHP), I led a four-person team to design a chatbot that could field common questions and donation requests, freeing up staff to focus on distributing food to families in need."
+      },
+      {
+        "type": "text",
+        "content":
+          "We held weekly syncs with EHP managers to understand their workflows and refine intents—from 'What are your hours?' to 'How can I donate?' Using JavaScript and Google Cloud Fulfillment, FIONA connects user inputs to a webhook and database, delivering tailored responses specific to each food bank's needs. After rounds of debugging and iteration, we integrated FIONA directly into EHP's website—streamlining communication, handling hundreds of interactions daily, and helping EHP distribute a record number of Thanksgiving dinners."
+      },
+      {
+        "type": "image",
+        "src": "/projects/fiona/fiona-tweets.png",
+        "alt": "Tweets highlighting FIONA's launch and impact",
+        "size": "md",
+        "aspectRatio": "auto",
+        "caption": "FIONA's debut: helping EHP handle hundreds of requests a day during the holidays."
+      },
+      {
+        "type": "quote",
+        "content":
+          "We turned an idea into an impact—one turkey at a time."
+      }
+    ]
+  },
+  {
+    "slug": "estimate",
+    "title": "EstiMate",
+    "date": "2024",
+    "cover": "/projects/estimate/estimate-logo.png",
+    "tags": ["build"],
+    "content": [
+      {
+        "type": "text",
+        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
+      },
+      {
+        "type": "text",
+        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-flow.jpg",
+        "alt": "EstiMate user flow",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "From friendly challenge setup to transparent on-chain settlement."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-stack.jpg",
+        "alt": "EstiMate tech stack",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
+      }
+    ]
+  },  
+  {
+    "slug": "forget-me-not",
+    "title": "Forget Me Not — Social Garden",
+    "date": "2022",
+    "cover": "/projects/forget-me-not/forget me not logo.png",
+    "tags": ["build"],
+    "content": [
+      {
+        "type": "text",
+        "content": "During Penn’s Management & Technology Summer Institute, our team explored how technology can make emotional connection tangible. We built Forget Me Not, a “social garden” where you can nurture relationships by tending to a loved one’s plant remotely. Each interaction—watering, light, care—translates into movement or growth in a shared flower pot, turning affection into something you can literally see bloom. Inspired by IDEO’s design culture, we filled the Lauder lounge with Post-its and laughter before wiring up sensors, a Feather Huzzah, and a companion app. Watching our first flower respond felt like proof that empathy can be engineered."
+      },
+      {
+        type: "image",
+        src: "/projects/forget-me-not/forget me not logo 2.png",
+        alt: "Forget Me Not logo",
+        size: "sm",
+        aspectRatio: "auto"
+      },
+      {
+        "type": "video",
+        "src": "/projects/forget-me-not/Forget Me Not Final Vid.mp4",
+        "caption": "Final product & demo"
+      },
+      
+    ]
+  },
+  {
+    "slug": "cookies4agoodcause",
+    "title": "Cookies4aGoodCause",
+    "date": "2020–2021",
+    "cover": "/projects/cookies/logo.png",
+    "tags": ["misc"],
+    "content": [
+      {
+        type: "image",
+        src: "/projects/cookies/pic.jpeg",
+        alt: "Cookies4aGoodCause pic",
+        size: "lg",
+        aspectRatio: "wide"
+      },
+      {
+        "type": "text",
+        "content":
+          "Cookies4aGoodCause started as a small lockdown experiment and grew into my nonprofit bakery with a simple mission: to spread warmth, both literally and figuratively. Instead of cranking out store-bought mixes, my friend and I poured our creativity into every batch—from gooey s’mores cookies to matcha-rose pastries."
+      },
+      {
+        type: "image",
+        src: "/projects/cookies/grid.png",
+        alt: "Cookies4aGoodCause grid",
+        size: "md",
+        aspectRatio: "auto"
+      },
+      {
+        "type": "text",
+        "content":
+          "Proceeds went to UNICEF, but what meant more was the joy each cookie sparked. Those smiles reminded me that craft—whether in baking, design, or code—can be its own quiet form of kindness."
+      }
+    ]
+  },
+  {
+    slug: "chinese-dance",
+    title: "Chinese Dance",
+    date: "Ongoing",
+    cover: "/projects/placeholder-dance.jpg",
+    tags: ["misc"],
+    content: [
+      {
+        type: "text",
+        content:
+          "I chased every genre—ballet, tap, jazz, hip-hop—before realizing the style I grew up with was already mine. At Penn, I bring that pride to the Asian Dance Team, blending tradition with experimentation."
+      }
+    ]
+  },
+  {
+    slug: "haircutting",
+    title: "Dorm Barber",
+    date: "2020–present",
+    cover: "/projects/placeholder-hair.jpg",
+    tags: ["misc"],
+    content: [
+      {
+        type: "text",
+        content:
+          "My first self-cut ended at the chin after chasing symmetry. From there: dad, brother, then a brave friend with craft scissors and a trash can. These days I set up a chair and cape, do the consultation, and get to work. It's design thinking with clippers."
+      }
+    ]
+  }
 ];

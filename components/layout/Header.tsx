@@ -54,7 +54,7 @@ export default function Header() {
       {/* Hover Image - Positioned in the center gap between left and right sections */}
       {hoveredWord && (
         <div className="fixed top-8 left-4/7 -translate-x-1/2 z-50 animate-in fade-in duration-200">
-          <div className="bg-white p-3 rounded-lg shadow-xl border-2 border-orange-300">
+          <div className="bg-white p-2 shadow-xl border-2 border-orange-300">
             <Image
               src={getImageForWord(hoveredWord)}
               alt={`${hoveredWord} preview`}
