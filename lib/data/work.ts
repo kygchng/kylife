@@ -469,7 +469,7 @@ export const PROJECTS: Project[] = [
     title: "LilyLoop",
     date: "2023–present",
     cover: "/projects/lilyloop/lilyloop-logo.png",
-    tags: ["build"],
+    tags: ["projects"],
     content: [
       {
         type: "text",
@@ -506,7 +506,7 @@ export const PROJECTS: Project[] = [
     "title": "Box of Balloons",
     "date": "2024–2025",
     "cover": "/projects/bob/bob-logo.png",
-    "tags": ["build"],
+    "tags": ["projects"],
     "content": [
       {
         "type": "text",
@@ -543,7 +543,7 @@ export const PROJECTS: Project[] = [
     "title": "FIONA",
     "date": "2020–2022",
     "cover": "/projects/fiona/fiona-logo.png",
-    "tags": ["build"],
+    "tags": ["projects"],
     "content": [
       {
         "type": "text",
@@ -575,7 +575,7 @@ export const PROJECTS: Project[] = [
     "title": "EstiMate",
     "date": "2024",
     "cover": "/projects/estimate/estimate-logo.png",
-    "tags": ["build"],
+    "tags": ["projects"],
     "content": [
       {
         "type": "text",
@@ -608,7 +608,7 @@ export const PROJECTS: Project[] = [
     "title": "Forget Me Not — Social Garden",
     "date": "2022",
     "cover": "/projects/forget-me-not/forget me not logo.png",
-    "tags": ["build"],
+    "tags": ["projects"],
     "content": [
       {
         "type": "text",
