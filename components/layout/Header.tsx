@@ -102,7 +102,7 @@ export default function Header() {
                   />
                 </svg>
               </span>
-              , women's health,{" "}
+              , women's health, Chinese dance,{" "}
               <span
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setHoveredWord("frankenstein")}
@@ -123,7 +123,7 @@ export default function Header() {
                   />
                 </svg>
               </span>
-              , little joys, and{" "}
+              , <br />little joys, and{" "}
               <span
                 className="relative inline-block cursor-pointer"
                 onMouseEnter={() => setHoveredWord("oranges")}
@@ -153,7 +153,7 @@ export default function Header() {
         <div className="text-[13px] md:text-sm leading-5 tracking-tight text-right flex-shrink-0">
           <div>
             <p className="text-gray-600">
-              <span className="font-medium">currently:</span> {mounted ? formatTime(now) : "loading..."}
+               {mounted ? formatTime(now) : "loading..."}
             </p>
             <p className="text-gray-500 mt-0.5">
               ( last squeezed: {lastSqueezed} 🍊 )

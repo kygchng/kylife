@@ -443,27 +443,38 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "public-art-club-murals",
-    title: "Public Art Club — Campus Murals",
-    date: "2022",
-    cover: "/projects/art/placeholder-murals.jpg",
-    tags: ["art"],
-    content: [
+    "slug": "estimate",
+    "title": "EstiMate",
+    "date": "2024",
+    "cover": "/projects/estimate/estimate-logo.png",
+    "tags": ["projects"],
+    "content": [
       {
-        type: "text",
-        content:
-          "We went from at-home crafts to painting together at lunch—music, laughter, paint everywhere. Seeing classmates stop to take selfies in front of our work made me realize how much beauty can reset the mood of a place."
+        "type": "text",
+        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
       },
       {
-        type: "image",
-        src: "/projects/art/placeholder-murals.jpg",
-        alt: "Bulletin board murals",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Hills, waterfalls, clouds—pinned up with sore thumbs and big grins."
+        "type": "text",
+        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-flow.jpg",
+        "alt": "EstiMate user flow",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "From friendly challenge setup to transparent on-chain settlement."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-stack.jpg",
+        "alt": "EstiMate tech stack",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
       }
     ]
-  },
+  },  
   {
     slug: "lilyloop",
     title: "LilyLoop",
@@ -539,6 +550,32 @@ export const PROJECTS: Project[] = [
     ]
   },  
   {
+    "slug": "forget-me-not",
+    "title": "Forget Me Not — Social Garden",
+    "date": "2022",
+    "cover": "/projects/forget-me-not/forget me not logo.png",
+    "tags": ["projects"],
+    "content": [
+      {
+        "type": "text",
+        "content": "During Penn’s Management & Technology Summer Institute, our team explored how technology can make emotional connection tangible. We built Forget Me Not, a “social garden” where you can nurture relationships by tending to a loved one’s plant remotely. Each interaction—watering, light, care—translates into movement or growth in a shared flower pot, turning affection into something you can literally see bloom. Inspired by IDEO’s design culture, we filled the Lauder lounge with Post-its and laughter before wiring up sensors, a Feather Huzzah, and a companion app. Watching our first flower respond felt like proof that empathy can be engineered."
+      },
+      {
+        type: "image",
+        src: "/projects/forget-me-not/forget me not logo 2.png",
+        alt: "Forget Me Not logo",
+        size: "sm",
+        aspectRatio: "auto"
+      },
+      {
+        "type": "video",
+        "src": "/projects/forget-me-not/Forget Me Not Final Vid.mp4",
+        "caption": "Final product & demo"
+      },
+      
+    ]
+  },
+  {
     "slug": "fiona-chatbot",
     "title": "FIONA",
     "date": "2020–2022",
@@ -568,65 +605,6 @@ export const PROJECTS: Project[] = [
         "content":
           "We turned an idea into an impact—one turkey at a time."
       }
-    ]
-  },
-  {
-    "slug": "estimate",
-    "title": "EstiMate",
-    "date": "2024",
-    "cover": "/projects/estimate/estimate-logo.png",
-    "tags": ["projects"],
-    "content": [
-      {
-        "type": "text",
-        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
-      },
-      {
-        "type": "text",
-        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-flow.jpg",
-        "alt": "EstiMate user flow",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "From friendly challenge setup to transparent on-chain settlement."
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-stack.jpg",
-        "alt": "EstiMate tech stack",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
-      }
-    ]
-  },  
-  {
-    "slug": "forget-me-not",
-    "title": "Forget Me Not — Social Garden",
-    "date": "2022",
-    "cover": "/projects/forget-me-not/forget me not logo.png",
-    "tags": ["projects"],
-    "content": [
-      {
-        "type": "text",
-        "content": "During Penn’s Management & Technology Summer Institute, our team explored how technology can make emotional connection tangible. We built Forget Me Not, a “social garden” where you can nurture relationships by tending to a loved one’s plant remotely. Each interaction—watering, light, care—translates into movement or growth in a shared flower pot, turning affection into something you can literally see bloom. Inspired by IDEO’s design culture, we filled the Lauder lounge with Post-its and laughter before wiring up sensors, a Feather Huzzah, and a companion app. Watching our first flower respond felt like proof that empathy can be engineered."
-      },
-      {
-        type: "image",
-        src: "/projects/forget-me-not/forget me not logo 2.png",
-        alt: "Forget Me Not logo",
-        size: "sm",
-        aspectRatio: "auto"
-      },
-      {
-        "type": "video",
-        "src": "/projects/forget-me-not/Forget Me Not Final Vid.mp4",
-        "caption": "Final product & demo"
-      },
-      
     ]
   },
   {
@@ -663,30 +641,24 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "chinese-dance",
-    title: "Chinese Dance",
-    date: "Ongoing",
-    cover: "/projects/placeholder-dance.jpg",
-    tags: ["misc"],
-    content: [
-      {
-        type: "text",
-        content:
-          "I chased every genre—ballet, tap, jazz, hip-hop—before realizing the style I grew up with was already mine. At Penn, I bring that pride to the Asian Dance Team, blending tradition with experimentation."
-      }
-    ]
-  },
-  {
     slug: "haircutting",
     title: "Dorm Barber",
     date: "2020–present",
-    cover: "/projects/placeholder-hair.jpg",
+    cover: "/projects/hair/scissors.png",
     tags: ["misc"],
     content: [
       {
         type: "text",
         content:
-          "My first self-cut ended at the chin after chasing symmetry. From there: dad, brother, then a brave friend with craft scissors and a trash can. These days I set up a chair and cape, do the consultation, and get to work. It's design thinking with clippers."
+          "My brief stint as the school barber. It's design thinking with clippers."
+      }, 
+      {
+        type: "image",
+        src: "/projects/hair/grid.png",
+        alt: "Dorm Barber",
+        size: "md",
+        aspectRatio: "auto",
+        caption: "I'm not that good."
       }
     ]
   }
