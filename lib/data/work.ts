@@ -5,12 +5,12 @@ export const PROJECTS: Project[] = [
     slug: "rooster",  
     title: "Rooster",
     date: "2019",
-    cover: "/projects/art/rooster.png",
+    cover: "/projects/art/rooster-painting.png",
     tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/rooster.png",
+        src: "/projects/art/rooster-painting.png",
         alt: "Rooster",
         size: "lg",
         aspectRatio: "tall",
