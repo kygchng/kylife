@@ -274,7 +274,7 @@ export const PROJECTS: Project[] = [
     content: [
       {
         type: "video",
-        src: "/projects/art/15_Gumball Faces_stop motion, glass head, gumball machine, ping pong balls - HD 720p.mov4",
+        src: "/projects/art/15_Gumball Faces_stop motion, glass head, gumball machine, ping pong balls - HD 720p.mov",
         caption: "Gumball Faces",
         loop: true,
         autoplay: false

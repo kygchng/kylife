@@ -14,7 +14,7 @@ export default function OrangeAnimation() {
     // Preload all orange frames
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new window.Image();
-      img.src = `/orange/${i.toString().padStart(2, "0")}.png`;
+      img.src = `/public/orange/${i.toString().padStart(2, "0")}.png`;
     }
   }, []);
 
