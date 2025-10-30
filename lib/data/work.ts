@@ -5,12 +5,12 @@ export const PROJECTS: Project[] = [
     slug: "rooster",  
     title: "Rooster",
     date: "2019",
-    cover: "/projects/art/rooster.PNG",
+    cover: "/projects/art/rooster.png",
     tags: ["art"], 
     content: [
       {
         type: "image",
-        src: "/projects/art/rooster.PNG",
+        src: "/projects/art/rooster.png",
         alt: "Rooster",
         size: "lg",
         aspectRatio: "tall",
@@ -659,27 +659,27 @@ export const PROJECTS: Project[] = [
         type: "imageGrid",
         images: [
           {
-            src: "/projects/figma/cafe.JPG",
+            src: "/projects/figma/cafe.jpg",
             alt: "apartment cafe",
             caption: "Cafe hopping and hosting my first apartment cafe"
           },
           {
-            src: "/projects/figma/fam.JPG",
+            src: "/projects/figma/fam.jpg",
             alt: "Cooking class with interns",
             caption: "Cooking class with the figterns"
           },
           {
-            src: "/projects/figma/climbing.JPG",
+            src: "/projects/figma/climbing.jpg",
             alt: "Rock climbing",
             caption: "Fell for the SF climbing propaganda"
           },
           {
-            src: "/projects/figma/ipo.JPG",
+            src: "/projects/figma/ipo.jpg",
             alt: "IPO",
             caption: "IPO!!!"
           },
           {
-            src: "/projects/figma/interns.JPG",
+            src: "/projects/figma/interns.jpg",
             alt: "Interns",
             caption: "Interns <3"
           },
