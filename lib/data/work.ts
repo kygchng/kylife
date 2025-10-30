@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     title: "Rooster",
     date: "2019",
     cover: "/projects/art/rooster.png",
-    tags: ["art"], 
+    tags: ["art"],
     content: [
       {
         type: "image",
@@ -27,12 +27,12 @@ export const PROJECTS: Project[] = [
     slug: "game-on",  
     title: "Game On",
     date: "2023",
-    cover: "/projects/art/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/game-on.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "video",
-        src: "/projects/art/0_Game On_game controller, mixed pills.mp4",
+        src: "/projects/art/game-on.mp4",
         caption: "Game On",
         loop: true,
         autoplay: false
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "image",
-        src: "/projects/art/110_Rx-Game On_7x5x2.5_mixed media, mixed pills, remote game controller.jpeg",
+        src: "/projects/art/game-on.jpeg",
         alt: "Game On",
         size: "lg",
         aspectRatio: "wide",
@@ -56,12 +56,12 @@ export const PROJECTS: Project[] = [
     slug: "dream-fragments",  
     title: "Dream Fragments",
     date: "2023",
-    cover: "/projects/art/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
-   tags: ["art"], 
+    cover: "/projects/art/dream-fragments.jpeg",
+   tags: ["art"],
     content: [
       {
         type: "video",
-        src: "/projects/art/01_Dream Fragments_84x31x28_mixed media, wood skewers, vellum, LEDs.mp4",
+        src: "/projects/art/dream-fragments.mp4",
         caption: "Dream Fragments",
         loop: true,
         autoplay: false
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "image",
-        src: "/projects/art/04_Dream Fragments_82x28x23_mixed media, wood skewers, vellum, LEDs.jpeg",
+        src: "/projects/art/dream-fragments.jpeg",
         alt: "Dream Fragments",
         size: "lg",
         aspectRatio: "wide",
@@ -85,12 +85,12 @@ export const PROJECTS: Project[] = [
     slug: "dangerous-bloom",  
     title: "Dangerous Bloom",
     date: "2023",
-    cover: "/projects/art/01_Shattered Cup.png",
-    tags: ["art"], 
+    cover: "/projects/art/shattered-cup.png",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/01_Shattered Cup.png",
+        src: "/projects/art/shattered-cup.png",
         alt: "Dangerous Bloom",
         size: "lg",
         aspectRatio: "wide",
@@ -108,12 +108,12 @@ export const PROJECTS: Project[] = [
     slug: "ubiquity",  
     title: "Ubiquity",
     date: "2023",
-    cover: "/projects/art/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/ubiquity.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/02_Ubiquity_7x8x1.25_polymer clay on phone screen, two iPhones, photo of self.jpeg",
+        src: "/projects/art/ubiquity.jpeg",
         alt: "Ubiquity",
         size: "lg",
         aspectRatio: "wide",
@@ -131,12 +131,12 @@ export const PROJECTS: Project[] = [
     slug: "accesory-series",  
     title: "Accessory Series - iHuman & Beautiful Restraint",
     date: "2023",
-    cover: "/projects/art/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/accessory-series.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/03_Accessories Series-iHuman_14x1x5_mixed media, nylon dog collars, computer chips & Beautiful Restraint_9x8x1_mixed media, handcuff, feathers.jpeg",
+        src: "/projects/art/accessory-series.jpeg",
         alt: "Accessory Series - iHuman & Beautiful Restraint",
         size: "lg",
         aspectRatio: "wide",
@@ -154,12 +154,12 @@ export const PROJECTS: Project[] = [
     slug: "parched",  
     title: "Parched",
     date: "2023",
-    cover: "/projects/art/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/parched.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/05_Parched - Climate Change_23x12x4_cut styrofaom cups, LEDs.jpeg",
+        src: "/projects/art/parched.jpeg",
         alt: "Parched",
         size: "lg",
         aspectRatio: "wide",
@@ -177,12 +177,12 @@ export const PROJECTS: Project[] = [
     slug: "writers-block",  
     title: "Writer's Block",
     date: "2023",
-    cover: "/projects/art/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
-    tags: ["art"], 
+    cover: "/projects/art/writers-block.jpg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/10_Writer_s Block_18s21x10_mixed media, monitor, thumb tacks, acrylic spray, After Effects.jpg",
+        src: "/projects/art/writers-block.jpg",
         alt: "Writer's Block",
         size: "lg",
         aspectRatio: "wide",
@@ -200,12 +200,12 @@ export const PROJECTS: Project[] = [
     slug: "cola-wars",  
     title: "Cola Wars",
     date: "2023",
-    cover: "/projects/art/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/cola-wars.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/12_Cola Wars_17x6x7_mixed media, cola can labels, straws, keyboard, acrylic spray.jpeg",
+        src: "/projects/art/cola-wars.jpeg",
         alt: "Cola Wars",
         size: "lg",
         aspectRatio: "wide",
@@ -223,12 +223,12 @@ export const PROJECTS: Project[] = [
     slug: "litter-bug",  
     title: "Litter Bug",
     date: "2023",
-    cover: "/projects/art/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/litter-bug.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/13_Litter Bug - Bacterial Contamination_7x4x1.5_mixed media, bannaqn, kitty litter.jpeg",
+        src: "/projects/art/litter-bug.jpeg",
         alt: "Litter Bug",
         size: "lg",
         aspectRatio: "wide",
@@ -246,12 +246,12 @@ export const PROJECTS: Project[] = [
     slug: "in-memoriam",  
     title: "In Memoriam",
     date: "2023",
-    cover: "/projects/art/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/in-memoriam.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/14_Tech Series-In Memoriam - Language Death_7x16x8_mixed media, mixed media, acrylic spray, keyboard, plastic figures.jpeg",
+        src: "/projects/art/in-memoriam.jpeg",
         alt: "In Memoriam",
         size: "lg",
         aspectRatio: "wide",
@@ -269,19 +269,19 @@ export const PROJECTS: Project[] = [
     slug: "gumball-faces",  
     title: "Gumball Faces (Stop Motion)",
     date: "2023",
-    cover: "/projects/art/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/gumball-faces.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "video",
-        src: "/projects/art/15_Gumball Faces_stop motion, glass head, gumball machine, ping pong balls - HD 720p.mov",
+        src: "/projects/art/gumball-faces.mov",
         caption: "Gumball Faces",
         loop: true,
         autoplay: false
       },
       {
         type: "image",
-        src: "/projects/art/118b_Gumball Faces_16x6x8_mixed media, gumball machine, glass head, painted ping pong balls.jpeg",
+        src: "/projects/art/gumball-faces.jpeg",
         alt: "Gumball Faces (Stills)",
         size: "lg",
         aspectRatio: "wide",
@@ -299,12 +299,12 @@ export const PROJECTS: Project[] = [
     slug: "hema-fraud",  
     title: "Hema Fraud",
     date: "2023",
-    cover: "/projects/art/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/hema-fraud.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/16_Hema-Fraud - Elizabeth Holmes_3x12_glass vails, blood, drops of blood in water and food coloring, self.jpeg",
+        src: "/projects/art/hema-fraud.jpeg",
         alt: "Hema Fraud",
         size: "lg",
         aspectRatio: "wide",
@@ -322,12 +322,12 @@ export const PROJECTS: Project[] = [
     slug: "timestamp",  
     title: "Timestamp",
     date: "2023",
-    cover: "/projects/art/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/timestamp.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/17_Timestamp_10x5x4_analog clock cast in concrete.jpeg",
+        src: "/projects/art/timestamp.jpeg",
         alt: "Timestamp",
         size: "lg",
         aspectRatio: "wide",
@@ -344,12 +344,12 @@ export const PROJECTS: Project[] = [
     slug: "unequal-access",  
     title: "Unequal Access",
     date: "2023",
-    cover: "/projects/art/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/unequal-access.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/04_Unequal Access_18x15x3_mixed media, combination lock, hasp, toilet seat, LEDs.jeg.jpeg",
+        src: "/projects/art/unequal-access.jpeg",
         alt: "Unequal Access",
         size: "lg",
         aspectRatio: "wide",
@@ -361,12 +361,12 @@ export const PROJECTS: Project[] = [
     slug: "end-of-innocence",  
     title: "End of Innocence",
     date: "2023",
-    cover: "/projects/art/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/end-of-innocence.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/06_End of Innocence_22x14x6_mixed media, Hello Kitty purse, prescription bottles, LEDs.jpeg",
+        src: "/projects/art/end-of-innocence.jpeg",
         alt: "End of Innocence",
         size: "lg",
         aspectRatio: "wide",
@@ -378,12 +378,12 @@ export const PROJECTS: Project[] = [
     slug: "masquerade-filtration",  
     title: "Masquerade Filtration",
     date: "2023",
-    cover: "/projects/art/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/masquerade-filtration.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/09_Masquerade Filtration_10x6x9_knitted face sculpture.jpeg",
+        src: "/projects/art/masquerade-filtration.jpeg",
         alt: "Masquerade Filtration",
         size: "lg",
         aspectRatio: "wide",
@@ -395,12 +395,12 @@ export const PROJECTS: Project[] = [
     slug: "disconnect",  
     title: "Disconnect",
     date: "2023",
-    cover: "/projects/art/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/disconnect.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/07_Disconnect_34x30x13_mixed media, wire mesh, yarn, LEDs.jpeg",
+        src: "/projects/art/disconnect.jpeg",
         alt: "Disconnect",
         size: "lg",
         aspectRatio: "wide",
@@ -412,12 +412,12 @@ export const PROJECTS: Project[] = [
     slug: "appealing-to-the-core",  
     title: "Appealing to the Core",
     date: "2023",
-    cover: "/projects/art/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/appealing-to-the-core.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/08_.Appealing to the Core_7x6x5_mixed media, peeled spple, iPhone.jpeg",
+        src: "/projects/art/appealing-to-the-core.jpeg",
         alt: "Appealing to the Core",
         size: "lg",
         aspectRatio: "wide",
@@ -429,12 +429,12 @@ export const PROJECTS: Project[] = [
     slug: "dissenting-perspectives",  
     title: "Dissenting Perspectives",
     date: "2023",
-    cover: "/projects/art/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
-    tags: ["art"], 
+    cover: "/projects/art/dissenting-perspectives.jpeg",
+    tags: ["art"],
     content: [
       {
         type: "image",
-        src: "/projects/art/11_Dissenting Perspectives_20x18x4_mixed media, poured concrete, eyeglasses.jpeg",
+        src: "/projects/art/dissenting-perspectives.jpeg",
         alt: "Dissenting Perspectives",
         size: "lg",
         aspectRatio: "wide",
