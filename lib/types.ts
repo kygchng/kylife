@@ -104,6 +104,10 @@ export interface SideBySideBlock {
   title: string;
   description: string;
   imagePosition?: "left" | "right";
+  link?: {
+    text: string;
+    url: string;
+  };
 }
 
 export interface Project {

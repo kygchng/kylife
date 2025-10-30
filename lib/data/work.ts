@@ -566,6 +566,12 @@ export const PROJECTS: Project[] = [
         loop: true
       },
       {
+        type: "link",
+        text: "Check out the launch",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7374193551590699008/",
+        size: "sm"
+      },
+      {
         type: "spacer",
         size: "lg"
       },
@@ -614,7 +620,11 @@ export const PROJECTS: Project[] = [
         alt: "SF Standard article",
         title: "Featured in the SF Standard",
         description: "I was featured in the SF Standard in a piece about Figma's culture. It was wild to see my thoughts about the company in print.",
-        imagePosition: "right"
+        imagePosition: "right",
+        link: {
+          text: "Read the article",
+          url: "https://sfstandard.com/2025/08/18/inside-figma-ipo-public-san-francisco-tech-office-tour/"
+        }
       },
       {
         type: "sideBySide",
@@ -705,6 +715,12 @@ export const PROJECTS: Project[] = [
         "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
       },
       {
+        type: "link",
+        text: "Check out the DevPost",
+        url: "https://devpost.com/software/estimate-0nqzfx/",
+        size: "sm"
+      },
+      {
         "type": "image",
         "src": "/projects/estimate/estimate-flow.jpg",
         "alt": "EstiMate user flow",
@@ -734,6 +750,12 @@ export const PROJECTS: Project[] = [
         size: "lg",
         content:
           "What started as a late-night conversation about why we still estimate menstrual flow quickly spiraled into a deep dive across women's health - from quantifying blood loss to better diagnose heavy menstrual bleeding, to postpartum hemorrhage, perimenopause, and early indicators of PCOS. I met my two co-founders and closest friends at Penn, and together we went on to win the Y-Prize ($10k) and the Venture Lab Startup Challenge ($25k) to solve these problems."
+      },
+      {
+        type: "link",
+        text: "Read the article",
+        url: "https://mackinstitute.wharton.upenn.edu/2024/lilyloop-wins-2024-y-prize-competition/",
+        size: "sm"
       },
       {
         type: "image",
@@ -825,14 +847,14 @@ export const PROJECTS: Project[] = [
   {
     "slug": "fiona-chatbot",
     "title": "FIONA",
-    "date": "2020–2022",
+    "date": "2020–2021",
     "cover": "/projects/fiona/fiona-logo.png",
     "tags": ["projects"],
     "content": [
       {
         "type": "text",
         "content":
-          "FIONA, short for Foodbank Inquiry OperatioN Assistant, was born out of a simple question: how could we help food banks keep up when call lines were overflowing during COVID? Partnering with the Ecumenical Hunger Program (EHP), I led a four-person team to design a chatbot that could field common questions and donation requests, freeing up staff to focus on distributing food to families in need."
+          "FIONA, short for Foodbank Inquiry OperatioN Assistant, was my very first technical project, and the one that showed me how code could solve real problems. It started with a simple question: how could we help food banks keep up when phone lines were overflowing during COVID? Partnering with the Ecumenical Hunger Program (EHP), I joined three other students to build a chatbot that could answer common questions and route donation requests, giving staff more time to focus on delivering food to families."
       },
       {
         "type": "text",
@@ -905,7 +927,7 @@ export const PROJECTS: Project[] = [
         alt: "Dorm Barber",
         size: "md",
         aspectRatio: "auto",
-        caption: "I'm not that good."
+        caption: "I'm not that good"
       }
     ]
   }
