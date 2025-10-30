@@ -22,7 +22,7 @@ export default function ImageBlock({ block }: ImageBlockProps) {
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       <div className={`mx-auto ${sizeClasses[block.size || "md"]}`}>
         <div className={`relative bg-gray-100 ${aspectRatioClasses[block.aspectRatio || "auto"]}`}>
           <Image
@@ -36,7 +36,7 @@ export default function ImageBlock({ block }: ImageBlockProps) {
           />
         </div>
         {block.caption && (
-          <p className="text-sm text-gray-600 mt-2 text-center italic">
+          <p className="text-xs text-gray-500 mt-2 text-center">
             {block.caption}
           </p>
         )}

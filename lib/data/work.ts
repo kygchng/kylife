@@ -443,6 +443,253 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    slug: "figma-summer-2025",
+    title: "Building AI @ Figma",
+    date: "2025",
+    cover: "/projects/figma/figma-logo.png",
+    tags: ["projects"],
+    content: [
+      {
+        type: "sideBySide",
+        image: "/projects/figma/figma-logo.png",
+        alt: "Figma logo",
+        title: "Figma Summer 2025",
+        description: "I spent this summer as a software engineering intern on the AI Productivity team at Figma in San Francisco. This truly has been my best summer so far. I met the coolest people, learned a ton, and I kept leaving the office more energized than when I came in.",
+        imagePosition: "left"
+      },
+      {
+        type: "link",
+        text: "Learn about Figma AI",
+        url: "https://www.figma.com/ai/",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "sectionHeader",
+        content: "What I Shipped"
+      },
+      {
+        type: "text",
+        content: "Over the course of my internship, I worked on three major projects that shipped to production. Each one taught me something different about building AI-powered features, cross-team collaboration, and what it takes to ship delightful experiences to millions of users.",
+        size: "md"
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "subHeader",
+        content: "Project #1: AI Text Suggestions in Figma Sites"
+      },
+      {
+        type: "richText",
+        content: "**The Challenge:** AI text suggestions was already one of our highest-usage AI features, and we wanted to extend that value into Sites. But here's the thing — Sites has desktop, tablet, and mobile views, and each breakpoint has its own responsive design choices. The technical challenge was ensuring that suggestions would automatically propagate across all views while preserving what makes each breakpoint unique.",
+        size: "md"
+      },
+      {
+        type: "richText",
+        content: "**What I Built:** I worked closely with fellow engineers and the Sites team to build out the entire feature. Within one week, I had it working in staging and led my first bug bash. This was honestly such a confidence boost — coordinating engineers to break my feature and then systematically closing out every issue they found.",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "React • TypeScript • Responsive Design • AI Integration",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "quote",
+        content: "Successfully launched to staging within one week → Led first bug bash, tightened UX polish, closed follow-ups → Shipped 100% to production → ~10k requests with 52% session success rate",
+        align: "left"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "video",
+        src: "/projects/figma/autosuggest.mov",
+        caption: "AI text suggestions automatically adapting across desktop, tablet, and mobile breakpoints",
+        loop: true
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "subHeader",
+        content: "Project #2: Attach Reference Images for Image Generation"
+      },
+      {
+        type: "richText",
+        content: "**The Problem:** We noticed designers kept leaving Figma for image editing. The models we were using for make and edit image had the potential to support reference-guided generation, but we weren't utilizing it. This felt like a missed opportunity.",
+        size: "md"
+      },
+      {
+        type: "richText",
+        content: "**What I Built:** This project stretched me across the full stack. I got to touch Cortex for the first time, adding multi-reference support to our providers and writing integration tests. On the web side, I built out the entire flow — uploading images, supporting different models, building thumbnail viewers (building off Figma Make's codebase), handling error states, the whole deal.",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "Cortex • Multi-provider support • Integration Testing • Frontend orchestration • UX writing",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "quote",
+        content: "Added multi-reference support in Cortex with integration tests for stable, end-to-end wiring → Built complete upload flow supporting different models with error states → Collaborated across Data Science, FPL, Design/UX, and Product Marketing → Component reuse from Figma Make — orchestrating IDS logging, FPL styling, and DesignOps",
+        align: "left"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "richText",
+        content: "**Key Learning:** Leading bug bash on my first project taught me so much about tightening UX polish. By project two, I was confidently orchestrating work across six different teams and thinking about launch strategy, not just code.",
+        size: "md"
+      },
+      {
+        type: "video",
+        src: "/projects/figma/ref image.mp4",
+        caption: "Attach reference images to guide AI generation — describe styles without words, generate in your brand style, add specific objects, or combine images",
+        loop: true
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "subHeader",
+        content: "Project #3: Backend for Generative Image Features"
+      },
+      {
+        type: "richText",
+        content: "I also got to build out the backend for another generative image feature: wiring up the endpoint between web and model, and adding support for third-party providers. It's not launched yet, but stay tuned!",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "Backend Engineering • Cortex Endpoint • 3rd Party Vendor Wiring • Model Integration",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "xl"
+      },
+      {
+        type: "sectionHeader",
+        content: "Beyond the Code"
+      },
+      {
+        type: "text",
+        content: "This summer wasn't just about shipping features. It was about discovering what it feels like to be part of something special.",
+        size: "md"
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "sideBySide",
+        image: "/projects/figma/fignation.jpg",
+        alt: "Presenting at FigNation",
+        title: "Presenting at FigNation",
+        description: "I got to present at FigNation in the intern spotlight. Standing in front of the company and sharing my work was both terrifying and exhilarating.",
+        imagePosition: "left"
+      },
+      {
+        type: "sideBySide",
+        image: "/projects/figma/sf-standard.png",
+        alt: "SF Standard article",
+        title: "Featured in the SF Standard",
+        description: "I was featured in the SF Standard in a piece about Figma's culture. It was wild to see my thoughts about the company in print.",
+        imagePosition: "right"
+      },
+      {
+        type: "sideBySide",
+        image: "/projects/figma/dylan.jpeg",
+        alt: "Maker Week collaboration",
+        title: "Maker Week",
+        description: "Collaborated with the Make Video project team during maker week. I loved the energy of everyone building experimental features together!",
+        imagePosition: "left"
+      },
+      {
+        type: "sideBySide",
+        image: "/projects/figma/team.jpeg",
+        alt: "Team collaboration",
+        title: "The Best Team Ever",
+        description: "Meeting my team in person and working together all summer has been such a blast. Calisthenics corner, L-sit competitions, and Holy Nata runs became a ritual.",
+        imagePosition: "right"
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "sectionHeader",
+        content: "This Summer Featured...",
+        align: "center"
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "imageGrid",
+        images: [
+          {
+            src: "/projects/figma/cafe.JPG",
+            alt: "apartment cafe",
+            caption: "Cafe hopping and hosting my first apartment cafe"
+          },
+          {
+            src: "/projects/figma/fam.JPG",
+            alt: "Cooking class with interns",
+            caption: "Cooking class with the figterns"
+          },
+          {
+            src: "/projects/figma/climbing.JPG",
+            alt: "Rock climbing",
+            caption: "Fell for the SF climbing propaganda"
+          },
+          {
+            src: "/projects/figma/ipo.JPG",
+            alt: "IPO",
+            caption: "IPO!!!"
+          },
+          {
+            src: "/projects/figma/interns.JPG",
+            alt: "Interns",
+            caption: "Interns <3"
+          },
+          {
+            src: "/projects/figma/kp.jpeg",
+            alt: "Fellows",
+            caption: "KP <3"
+          },
+        ],
+        columns: 3,
+        gap: "lg"
+      },
+      {
+        type: "quote",
+        content: "Huge thank-yous to my mentor Hannah and my manager Dan, the AIP team, my SF desk pod, the SF Figterns, the early career team, my intern buddy, and everyone who took 1:1s with me. I felt supported every step of the way. I felt very lucky to be part of such a special place. Thanks so much for making this my best summer ever! 🔥",
+        align: "center"
+      }
+    ]
+  },
+  {
     "slug": "estimate",
     "title": "EstiMate",
     "date": "2024",

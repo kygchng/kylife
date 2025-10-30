@@ -6,9 +6,9 @@ interface TextBlockProps {
 
 export default function TextBlock({ block }: TextBlockProps) {
   const sizeClasses = {
-    sm: "text-sm",
-    md: "text-base",
-    lg: "text-lg"
+    sm: "text-sm leading-relaxed",
+    md: "text-base leading-relaxed",
+    lg: "text-lg leading-relaxed"
   };
 
   const alignClasses = {
@@ -18,9 +18,9 @@ export default function TextBlock({ block }: TextBlockProps) {
   };
 
   return (
-    <div className={`mb-6 ${alignClasses[block.align || "left"]}`}>
+    <div className={`mb-4 ${alignClasses[block.align || "left"]}`}>
       <div
-        className={`prose prose-neutral max-w-none ${sizeClasses[block.size || "md"]}`}
+        className={`${sizeClasses[block.size || "md"]} max-w-none`}
         dangerouslySetInnerHTML={{
           __html: block.content.replace(/\n/g, '<br/>')
         }}

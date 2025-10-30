@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${plexMono.className} bg-white text-black antialiased`}>
+      <body className={`${plexMono.className} bg-white text-black antialiased`} suppressHydrationWarning>
         <Header />
         {children}
       </body>

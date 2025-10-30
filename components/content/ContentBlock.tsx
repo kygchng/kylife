@@ -6,6 +6,11 @@ import VideoBlock from "./VideoBlock";
 import SpacerBlock from "./SpacerBlock";
 import QuoteBlock from "./QuoteBlock";
 import CodeBlock from "./CodeBlock";
+import SectionHeaderBlock from "./SectionHeaderBlock";
+import SubHeaderBlock from "./SubHeaderBlock";
+import RichTextBlock from "./RichTextBlock";
+import LinkBlock from "./LinkBlock";
+import SideBySideBlock from "./SideBySideBlock";
 
 interface ContentBlockProps {
   block: ContentBlockType;
@@ -27,6 +32,16 @@ export default function ContentBlock({ block }: ContentBlockProps) {
       return <QuoteBlock block={block} />;
     case "code":
       return <CodeBlock block={block} />;
+    case "sectionHeader":
+      return <SectionHeaderBlock block={block} />;
+    case "subHeader":
+      return <SubHeaderBlock block={block} />;
+    case "richText":
+      return <RichTextBlock block={block} />;
+    case "link":
+      return <LinkBlock block={block} />;
+    case "sideBySide":
+      return <SideBySideBlock block={block} />;
     default:
       return null;
   }

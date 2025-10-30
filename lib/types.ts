@@ -8,7 +8,12 @@ export type ContentBlock =
   | VideoBlock
   | SpacerBlock
   | QuoteBlock
-  | CodeBlock;
+  | CodeBlock
+  | SectionHeaderBlock
+  | SubHeaderBlock
+  | RichTextBlock
+  | LinkBlock
+  | SideBySideBlock;
 
 export interface TextBlock {
   type: "text";
@@ -63,6 +68,42 @@ export interface CodeBlock {
   content: string;
   language?: string;
   filename?: string;
+}
+
+export interface SectionHeaderBlock {
+  type: "sectionHeader";
+  content: string;
+  align?: "left" | "center" | "right";
+}
+
+export interface SubHeaderBlock {
+  type: "subHeader";
+  content: string;
+  align?: "left" | "center" | "right";
+}
+
+export interface RichTextBlock {
+  type: "richText";
+  content: string;
+  size?: "sm" | "md" | "lg";
+  align?: "left" | "center" | "right";
+}
+
+export interface LinkBlock {
+  type: "link";
+  text: string;
+  url: string;
+  size?: "sm" | "md" | "lg";
+  align?: "left" | "center" | "right";
+}
+
+export interface SideBySideBlock {
+  type: "sideBySide";
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  imagePosition?: "left" | "right";
 }
 
 export interface Project {

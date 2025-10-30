@@ -6,7 +6,7 @@ interface VideoBlockProps {
 
 export default function VideoBlock({ block }: VideoBlockProps) {
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       <div className="max-w-4xl mx-auto">
         <video
           className="w-full"
@@ -19,7 +19,7 @@ export default function VideoBlock({ block }: VideoBlockProps) {
           Your browser does not support the video tag.
         </video>
         {block.caption && (
-          <p className="text-sm text-gray-600 mt-2 text-center italic">
+          <p className="text-xs text-gray-500 mt-2 text-center">
             {block.caption}
           </p>
         )}

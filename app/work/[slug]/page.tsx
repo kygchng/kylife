@@ -3,7 +3,7 @@ import { PROJECTS } from "../../../lib/data/work";
 import ContentBlock from "../../../components/content/ContentBlock";
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -12,8 +12,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = PROJECTS.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = PROJECTS.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();

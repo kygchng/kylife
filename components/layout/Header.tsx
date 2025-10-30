@@ -83,66 +83,30 @@ export default function Header() {
             <p className="mt-1">
               <span className="font-medium">Talk to me about:</span> conceptual art, whimsical tech,{" "}
               <span
-                className="relative inline-block cursor-pointer"
+                className="cursor-pointer px-1 -mx-1"
+                style={{ backgroundColor: "#FFDBBB" }}
                 onMouseEnter={() => setHoveredWord("four-agreements")}
                 onMouseLeave={() => setHoveredWord(null)}
               >
                 the Four Agreements
-                <svg
-                  className="absolute left-0 -bottom-1 w-full"
-                  height="4"
-                  viewBox="0 0 100 4"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
-                    stroke="#ff8c42"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                </svg>
               </span>
               , women's health, Chinese dance,{" "}
               <span
-                className="relative inline-block cursor-pointer"
+                className="cursor-pointer px-1 -mx-1"
+                style={{ backgroundColor: "#FFDBBB" }}
                 onMouseEnter={() => setHoveredWord("frankenstein")}
                 onMouseLeave={() => setHoveredWord(null)}
               >
                 Frankenstein's monster
-                <svg
-                  className="absolute left-0 -bottom-1 w-full"
-                  height="4"
-                  viewBox="0 0 100 4"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
-                    stroke="#ff8c42"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                </svg>
               </span>
               , <br />little joys, and{" "}
               <span
-                className="relative inline-block cursor-pointer"
+                className="cursor-pointer px-1 -mx-1"
+                style={{ backgroundColor: "#FFDBBB" }}
                 onMouseEnter={() => setHoveredWord("oranges")}
                 onMouseLeave={() => setHoveredWord(null)}
               >
                 my love for oranges
-                <svg
-                  className="absolute left-0 -bottom-1 w-full"
-                  height="4"
-                  viewBox="0 0 100 4"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M 0 2 Q 5 0, 10 2 T 20 2 T 30 2 T 40 2 T 50 2 T 60 2 T 70 2 T 80 2 T 90 2 T 100 2"
-                    stroke="#ff8c42"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                </svg>
               </span>
               .
             </p>

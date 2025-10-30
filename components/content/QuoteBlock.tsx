@@ -12,12 +12,12 @@ export default function QuoteBlock({ block }: QuoteBlockProps) {
   };
 
   return (
-    <div className={`mb-8 ${alignClasses[block.align || "left"]}`}>
-      <blockquote className="text-lg italic text-gray-700 border-l-4 border-gray-300 pl-6">
-        "{block.content}"
+    <div className={`mb-6 ${alignClasses[block.align || "left"]}`}>
+      <blockquote className="text-sm italic text-gray-600 border-l-2 border-gray-300 pl-4 py-2">
+        {block.content}
         {block.author && (
-          <cite className="block mt-2 text-sm text-gray-500 not-italic">
-             {block.author}
+          <cite className="block mt-2 text-xs text-gray-500 not-italic">
+            {block.author}
           </cite>
         )}
       </blockquote>

@@ -19,7 +19,7 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-6">
       <div className={`grid ${columnClasses[block.columns || 3]} ${gapClasses[block.gap || "md"]}`}>
         {block.images.map((image, index) => (
           <div key={index}>
@@ -33,7 +33,7 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
               />
             </div>
             {image.caption && (
-              <p className="text-xs text-gray-600 mt-1 text-center italic">
+              <p className="text-xs text-gray-500 mt-1 text-center">
                 {image.caption}
               </p>
             )}
