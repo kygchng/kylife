@@ -2,447 +2,6 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
-    slug: "rooster",  
-    title: "Rooster",
-    date: "2019",
-    cover: "/projects/art/rooster-painting.png",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/rooster-painting.png",
-        alt: "Rooster",
-        size: "lg",
-        aspectRatio: "tall",
-        caption: "Rooster"
-      },
-      {
-        type: "text",
-        content: "Featured in SF MOMA.",
-        size: "lg"
-      }
-    ]
-  },
-  {
-    slug: "game-on",  
-    title: "Game On",
-    date: "2023",
-    cover: "/projects/art/game-on.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "video",
-        src: "/projects/art/game-on.mp4",
-        caption: "Game On",
-        loop: true,
-        autoplay: false
-      },
-      {
-        type: "text",
-        content: `My interest in medical applications of game design reaches back to middle school. While exploring computer science, I eventually came across Akili, a startup utilizing video games to combat mental impairment by challenging players to constantly multitask, resulting in improved cognitive functions such as sustained attention and memory, especially in ADHD patients. I began to imagine a world where video games are more widely known as a tool for healing all ages rather than just a fun pastime for children. \n\n Starting with an ordinary video game controller, I hot glued a variety of different vitamins to create a final product that reflects light to look bejeweled from afar. The action shot of a pair of hands interacting with the game controller reflects how widespread I imagine digital medicine becoming in the future, from healing ADHD to restoring geriatric memory loss.`,
-        size: "lg"
-      },
-      {
-        type: "image",
-        src: "/projects/art/game-on.jpeg",
-        alt: "Game On",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Game On"
-      }
-    ]
-  },
-  {
-    slug: "dream-fragments",  
-    title: "Dream Fragments",
-    date: "2023",
-    cover: "/projects/art/dream-fragments.jpeg",
-   tags: ["art"],
-    content: [
-      {
-        type: "video",
-        src: "/projects/art/dream-fragments.mp4",
-        caption: "Dream Fragments",
-        loop: true,
-        autoplay: false
-      },
-      {
-        type: "text",
-        content: `To hope is to be human. Whether it be waking up earlier or working out harder, we set ambitious goals every New Year’s Eve  with the purpose to improve our lives. No matter the failures or dire news from the year before, we promise ourselves things will be different if we just try a little harder. I created this precarious tower that, despite its many twists and turns, makes it to the top in order to pay homage to the human spirit that is never extinguishing. In contrast to the rigid nature of wooden skewers, they have been connected together to form a serpent-like vertical architecture with a lyrical flow, enticing the viewer with unexpected materials. Lastly, inspired by the phrase “reach for the stars,” I incorporated LED lights and vellum to illuminate both the tower and its surroundings. In spite of our social pendulum swinging towards destruction and divisive chaos in society today, I hope this work will provide a similar sense of hope and empowerment for the viewer as it has for me.`,
-        size: "lg"
-      },
-      {
-        type: "image",
-        src: "/projects/art/dream-fragments.jpeg",
-        alt: "Dream Fragments",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Dream Fragments"
-      }
-    ]
-  },
-  {
-    slug: "dangerous-bloom",  
-    title: "Dangerous Bloom",
-    date: "2023",
-    cover: "/projects/art/shattered-cup.png",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/shattered-cup.png",
-        alt: "Dangerous Bloom",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Dangerous Bloom"
-      },
-
-      {
-        type: "text",
-        content: `During my busiest times, I find myself craving the simplicity of a tea ritual - the quiet act of pouring water, watching leaves steep, sitting still. But that kind of stillness feels increasingly out of reach.\n\nI shattered this teacup and reassembled it so it can no longer hold water. It's now ornamental, dysfunctional - a relic of slowness in a world that demands constant motion. We've traded rituals for efficiency, moments for transactions. Everything is designed to be consumed and discarded.\n\n This broken cup gestures toward what we've lost: time to linger, space to savor. Its sharp edges make it dangerous to handle, a reminder that our pace comes at a cost. It's both warning and longing -an object caught between what was and what I wish could be again.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "ubiquity",  
-    title: "Ubiquity",
-    date: "2023",
-    cover: "/projects/art/ubiquity.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/ubiquity.jpeg",
-        alt: "Ubiquity",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Ubiquity"
-      },
-
-      {
-        type: "text",
-        content: `When eating with friends, I often hear the phrase, “phone eats first!” as they take pictures of their aesthetic meal to post on Instagram. While social media was initially created for users to share photos and videos to communicate with their connections, it has evolved into a competition for the most likes, views, and followers. The eye-phone reflects our increasing dependence on the beautifying lens of social media, which often gives way to toxic comparison. \n\nAfter digging out my dad’s broken phone, I used a toothpick and dry paintbrush to sculpt a polymer clay eyeball emerging from the screen and becoming one with the device. To convey how social media has become a vehicle to perpetuate a perfect life, I replicated the classic heart pupil in the eye of Michelangelo’s David. By photographing the product side by side with a photo of my own eye, I created a stark contrast between reality and the illusion of perfection perpetuated by social media. `,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "accesory-series",  
-    title: "Accessory Series - iHuman & Beautiful Restraint",
-    date: "2023",
-    cover: "/projects/art/accessory-series.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/accessory-series.jpeg",
-        alt: "Accessory Series - iHuman & Beautiful Restraint",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Accessory Series - iHuman & Beautiful Restraint"
-      },
-
-      {
-        type: "text",
-        content: `Through accessories, this series conveys my thoughts on difficult societal topics. The first piece was influenced by the tendency for children to be ‘sacrificed’ by pressures of society. First, I altered the dog collars to feature a large computer chip. Then, I scouted students passing by in the school quad and photographed them with their heads together and eyes closed, representing the loss of innocence. Finally, the pop of color in the black and white photo draws the viewer’s attention to the dog collars hanging around their necks.\n\nMy inspiration for the second piece came from the sacred symbolism of birds in ancient civilizations. Considered spiritual creatures representing the will of God, birds represented freedom and divinity. By juxtaposing the contrast between the rigid restraints of handcuffs and beautiful feathers in this surreal earring sculpture, I want to illustrate how a lack of freedom (physical, emotional, psychological) can ‘imprison’ each of us in today’s society.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "parched",  
-    title: "Parched",
-    date: "2023",
-    cover: "/projects/art/parched.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/parched.jpeg",
-        alt: "Parched",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Parched"
-      },
-
-      {
-        type: "text",
-        content: `Growing up in the Bay Area, the drought became a permanent part of my childhood. I remember my home always had a yellow patchy front lawn, thanks to my parents’ efforts to conserve water. Now, this drought has become the worst in the past 1,200 years. My intention in this piece is to ultimately initiate a dialogue within and between my viewers about the urgency of this situation.\n\nFirst, I wanted to entice the viewer with a beautiful, lyrical-looking structure – ironically made out of a mundane material. I purposely chose styrofoam cups to cut in a way that renders them unable to perform its only function of holding liquid. Planting the seed that I ultimately hope to grow into an alarm, this piece serves as a warning not only to Californians, but viewers from around the globe, about the unassailable fact that the environment is changing. By drawing their attention to this curious sculpture, my narrative will begin an active and urgent dialogue about human caused changes on Earth.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "writers-block",  
-    title: "Writer's Block",
-    date: "2023",
-    cover: "/projects/art/writers-block.jpg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/writers-block.jpg",
-        alt: "Writer's Block",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Writer's Block"
-      },
-
-      {
-        type: "text",
-        content: `Whether it’s with professional writing or a simple greeting card, most people have experienced writer’s block. My most recent example happens to be while I was writing a college application. In an attempt to find the perfect wording to portray my thoughts, I found myself frequently hitting backspace. Ironically, my temporary block became the inspiration for another expression, as I created this piece shortly after. Contrasting the intense visuals with a lighthearted message, this work is a witty way of poking fun at myself and this universal frustration.\n\nThrough the use of red, a color associated with danger and blood, this piece draws the viewer’s attention while calling for a double-take. By connecting the keyboard in a familiar monitor setup, I invite the viewer to subconsciously imagine themselves typing on the keys that have been replaced with face-up thumbtacks – a sensation that would be extremely painful. Drawing on a corporeal effect, my message goes from visual to visceral. `,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "cola-wars",  
-    title: "Cola Wars",
-    date: "2023",
-    cover: "/projects/art/cola-wars.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/cola-wars.jpeg",
-        alt: "Cola Wars",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Cola Wars"
-      },
-
-      {
-        type: "text",
-        content: `One of the most common icebreakers I hear on the first day of school is, “Do you prefer Coca-Cola or Pepsi?” As I began to study business, this long-time rivalry fascinated me. Just how far was each company willing to go to increase their market share?\n\nUsing a keyboard to represent how each brand continuously seeks to expand through technology, I replaced various keys with a jumble of plastic straws melded together – forming a tangle of connections. Where the number pad is supposed to be, I replaced the key pads with cut up Coke and Pepsi cans. The viewer naturally expects the wording to be right side up, but I purposely placed the logos upside down and rotated to create something askew that would throw off the viewer — conveying the complexities and dynamics that continue to shift in the ongoing globalization of advertisement. Through this piece, I hope to invite the viewer to ponder how the proliferation of technology has contributed to the rise of market saturation and consumerism.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "litter-bug",  
-    title: "Litter Bug",
-    date: "2023",
-    cover: "/projects/art/litter-bug.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/litter-bug.jpeg",
-        alt: "Litter Bug",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Litter Bug"
-      },
-
-      {
-        type: "text",
-        content: `I recently read a research article about Toxoplasma gondii, a parasite excreted by cats. Not only does this behavior-altering parasite affect the brains of rats to make them more risk-averse and drawn to cats, it has been discovered that humans can also be affected. By altering the connections between our neurons, this parasite can contribute to schizophrenia, car crashes, and suicides, maybe killing a million people each year.\n\nTo illustrate the unknown danger of a seemingly harmless material like kitty litter, I wanted to create an unexpected composition prompting viewers to do a double take. By gluing kitty litter on something people would innocently consume, i.e., a banana, my intention was to raise awareness that people can inadvertently be affected by this parasite. By combining art with science, I hope to engage each viewer using a unique vehicle to inform and educate.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "in-memoriam",  
-    title: "In Memoriam",
-    date: "2023",
-    cover: "/projects/art/in-memoriam.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/in-memoriam.jpeg",
-        alt: "In Memoriam",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "In Memoriam"
-      },
-
-      {
-        type: "text",
-        content: `Language death is a phenomenon occurring when a language loses all of its native speakers. Due to cultural assimilation, 90% of current languages are predicted to be extinct within the next fifty years. If we continue to ignore this trend, our world will continue to lose the inherent richness of  diverse communities and cultures.\n\nI was inspired and moved by the creation of the Vietnam Memorial as an homage to lives lost in the war. By replacing the iconic gray memorial with a spray-painted keyboard with missing keys, I want to call attention to words lost as society continues to progress. Using reference photos of viewers at the Vietnam Memorial, I placed mini figurines around the keyboard in a variety of poses, whether it be admiring from afar or reaching up to touch the sculpture. Through this piece, my goal is to prompt the viewer to ponder how we can save the culture and memories lost with the extinction of a language.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "gumball-faces",  
-    title: "Gumball Faces (Stop Motion)",
-    date: "2023",
-    cover: "/projects/art/gumball-faces.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "video",
-        src: "/projects/art/gumball-faces.mov",
-        caption: "Gumball Faces",
-        loop: true,
-        autoplay: false
-      },
-      {
-        type: "image",
-        src: "/projects/art/gumball-faces.jpeg",
-        alt: "Gumball Faces (Stills)",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Gumball Faces (Stills)"
-      },
-
-      {
-        type: "text",
-        content: `As a girl constantly bombarded with images of unrealistic beauty standards, it’s easy to find the flaws in my appearance. This piece reflects my struggle with fighting the urge to change my appearance, ultimately finding confidence in my own skin.\n\nTo convey how teenagers are sacrificing their childhood innocence for superficial desires like plastic surgery in order to conform to society’s standards, I replaced the candies inside a traditional gumball machine with painted ping pong balls representing diverse facial features. With just a turn of the coin slot, one can purchase brand new features, almost as easy as buying a piece of candy. The stop motion animation shows how as the ping pong balls are dispensed, they form a face that quickly changes to different colored eyes, nose shapes, and lip sizes, highlighting the ease at which we can now change our appearances. I created this piece as a warning that if we continue down this path, we may lose our true selves in the process.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "hema-fraud",  
-    title: "Hema Fraud",
-    date: "2023",
-    cover: "/projects/art/hema-fraud.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/hema-fraud.jpeg",
-        alt: "Hema Fraud",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Hema Fraud"
-      },
-
-      {
-        type: "text",
-        content: `Growing up in the heart of innovation, I am surrounded by stories of college dropouts who started multimillion-dollar companies using cutting-edge technology. Those success stories have shaped the mindsets of young students by attributing money and fame to success. Students live in a state of perpetual anxiety while always striving to be better than the competition to achieve tangible results for self-validation. Despite the ambition-fostering environment in Silicon Valley, we should temper our high expectations with the potential pitfalls of great success. The story of Elizabeth Holmes, a fairytale turned nightmare, illustrates the inevitable downfall when the desire for success becomes entangled with greed. I wanted to replicate the iconic photo of Holmes including the black turtleneck. To add more creative depth to the pose, each one of the blood vials (filled with water and food coloring) includes a drop of my own blood.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "timestamp",  
-    title: "Timestamp",
-    date: "2023",
-    cover: "/projects/art/timestamp.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/timestamp.jpeg",
-        alt: "Timestamp",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Timestamp"
-      },
-      {
-        type: "text",
-        content: `It comes as no surprise that as a typical teenager, I enjoy a shopping spree at my favorite go-to store. But for me, it’s not Hollister, Urban Outfitters, or Forever 21 – It’s Home Depot. Through my art, I explored how I could manipulate concrete, a material meant for heavy construction, for delicate creative expression.\n\nWith this project, my initial inspiration was to convey my struggle with constantly striving to be productive and fully scheduled. We have often been taught to equate being busy with success, leading us to overwork until we ultimately crack from the pressure – just like the shattered screen of the clock. \n\nBut, just as I was about to place the analog clock inside the prepared concrete mixture, I realized I could use my sculpture to resonate with more people. I quickly set the time to 9:59, the moment the South Tower collapsed in the 9/11 attack. Now, this tower of concrete stands tall with the clock signifying how the moment is stuck in time forever, turning my message from personal to universal.`,
-        size: "lg"
-      },
-    ]
-  },
-  {
-    slug: "unequal-access",  
-    title: "Unequal Access",
-    date: "2023",
-    cover: "/projects/art/unequal-access.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/unequal-access.jpeg",
-        alt: "Unequal Access",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Unequal Access"
-      },
-    ]
-  },
-  {
-    slug: "end-of-innocence",  
-    title: "End of Innocence",
-    date: "2023",
-    cover: "/projects/art/end-of-innocence.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/end-of-innocence.jpeg",
-        alt: "End of Innocence",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "End of Innocence"
-      },
-    ]
-  },
-  {
-    slug: "masquerade-filtration",  
-    title: "Masquerade Filtration",
-    date: "2023",
-    cover: "/projects/art/masquerade-filtration.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/masquerade-filtration.jpeg",
-        alt: "Masquerade Filtration",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Masquerade Filtration"
-      },
-    ]
-  },
-  {
-    slug: "disconnect",  
-    title: "Disconnect",
-    date: "2023",
-    cover: "/projects/art/disconnect.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/disconnect.jpeg",
-        alt: "Disconnect",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Disconnect"
-      },
-    ]
-  },
-  {
-    slug: "appealing-to-the-core",  
-    title: "Appealing to the Core",
-    date: "2023",
-    cover: "/projects/art/appealing-to-the-core.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/appealing-to-the-core.jpeg",
-        alt: "Appealing to the Core",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Appealing to the Core"
-      },
-    ]
-  },
-  {
-    slug: "dissenting-perspectives",  
-    title: "Dissenting Perspectives",
-    date: "2023",
-    cover: "/projects/art/dissenting-perspectives.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/dissenting-perspectives.jpeg",
-        alt: "Dissenting Perspectives",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Dissenting Perspectives"
-      },
-    ]
-  },
-  {
     slug: "figma-summer-2025",
     title: "Building AI @ Figma",
     date: "2025",
@@ -700,6 +259,503 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    slug: "rooster",  
+    title: "Rooster",
+    date: "2019",
+    cover: "/projects/art/rooster-painting.png",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/rooster-painting.png",
+        alt: "Rooster",
+        size: "lg",
+        aspectRatio: "tall",
+        caption: "Rooster"
+      },
+      {
+        type: "text",
+        content: "Acrylic on cardboard, magazines, feathers, leaves, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: "Featured in SF MOMA.",
+        size: "lg"
+      }
+    ]
+  },
+  {
+    slug: "game-on",  
+    title: "Game On",
+    date: "2023",
+    cover: "/projects/art/game-on.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "video",
+        src: "/projects/art/game-on.mp4",
+        caption: "Game On",
+        loop: true,
+        autoplay: false
+      },
+      {
+        type: "text",
+        content: "Game controller, spray paint, mixed vitamins, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `In middle school, I got interested in how games could be used for more than entertainment. I came across Akili, a company making video games that improve cognitive function in ADHD patients through multitasking challenges. The idea stuck with me—that something we think of as purely recreational could actually be therapeutic. \n\n I took a game controller and hot glued vitamins all over it until it looked almost jewel-encrusted under the light. The vitamins felt like the right symbol—something associated with health, transformed into something playful. I photographed hands holding it mid-game to suggest this future where digital medicine is just part of everyday life, treating everything from attention issues to memory loss.`,
+        size: "lg"
+      },
+      {
+        type: "image",
+        src: "/projects/art/game-on.jpeg",
+        alt: "Game On",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Game On"
+      }
+    ]
+  },
+  {
+    slug: "dream-fragments",  
+    title: "Dream Fragments",
+    date: "2023",
+    cover: "/projects/art/dream-fragments.jpeg",
+   tags: ["art"],
+    content: [
+      {
+        type: "video",
+        src: "/projects/art/dream-fragments.mp4",
+        caption: "Dream Fragments",
+        loop: true,
+        autoplay: false
+      },
+      {
+        type: "text",
+        content: "Wood skewers, vellum paper, LED lights, glue, wire",
+        size: "sm"
+      },
+      {
+        type: "image",
+        src: "/projects/art/dream-fragments.jpeg",
+        alt: "Dream Fragments",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Dream Fragments"
+      }
+    ]
+  },
+  {
+    slug: "dangerous-bloom",  
+    title: "Dangerous Bloom",
+    date: "2023",
+    cover: "/projects/art/shattered-cup.png",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/shattered-cup.png",
+        alt: "Dangerous Bloom",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Dangerous Bloom"
+      },
+      {
+        type: "text",
+        content: "Shattered porcelain teacup, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `During my busiest times, I find myself craving the simplicity of a tea ritual - the quiet act of pouring water, watching leaves steep, sitting still. But that kind of stillness feels increasingly out of reach.\n\nI shattered this teacup and reassembled it so it can no longer hold water. It's now ornamental, dysfunctional - a relic of slowness in a world that demands constant motion. We've traded rituals for efficiency, moments for transactions. Everything is designed to be consumed and discarded.\n\n This broken cup gestures toward what we've lost: time to linger, space to savor. Its sharp edges make it dangerous to handle, a reminder that our pace comes at a cost. It's both warning and longing -an object caught between what was and what I wish could be again.`,
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "ubiquity",  
+    title: "Ubiquity",
+    date: "2023",
+    cover: "/projects/art/ubiquity.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/ubiquity.jpeg",
+        alt: "Ubiquity",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Ubiquity"
+      },
+      {
+        type: "text",
+        content: "Polymer clay, two phones, photo of self",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `I started thinking about how much of our lives we experience through screens now—documenting, filtering, performing. There's something strange about that constant loop of looking at ourselves looking at things.\n\nThe eye-phone came from my dad's broken phone. I used a toothpick and dry paintbrush to sculpt a polymer clay eyeball emerging from the screen and becoming one with the device. The eye has heart-shaped pupils—borrowed from Michelangelo's David—because I liked the idea of being in love with your own reflection, or maybe just being in love with the act of looking.\n\nI photographed it next to my actual eye. One's polished and idealized, the other is just what it is. It's more an observation than a statement—just noticing how we've become a little obsessed with curating how we're seen.`,
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "accesory-series",  
+    title: "Accessory Series - iHuman & Beautiful Restraint",
+    date: "2023",
+    cover: "/projects/art/accessory-series.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/accessory-series.jpeg",
+        alt: "Accessory Series - iHuman & Beautiful Restraint",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Accessory Series - iHuman & Beautiful Restraint"
+      },
+      {
+        type: "text",
+        content: "Nylon dog collars, computer chips, handcuffs, feathers, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: "This accessory series explores societal pressures and constraints through wearable art.",
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "parched",  
+    title: "Parched",
+    date: "2023",
+    cover: "/projects/art/parched.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/parched.jpeg",
+        alt: "Parched",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Parched"
+      },
+      {
+        type: "text",
+        content: "Cut styrofoam cups, LED lights, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: "Cut styrofoam cups form a delicate structure that can no longer hold water—a quiet meditation on California's historic drought.",
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "writers-block",  
+    title: "Writer's Block",
+    date: "2023",
+    cover: "/projects/art/writers-block.jpg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/writers-block.jpg",
+        alt: "Writer's Block",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Writer's Block"
+      },
+      {
+        type: "text",
+        content: "Keyboard, desktop, thumbtacks, spray paint, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: "Writer's block feels like typing on thumbtacks. This bright red keyboard transforms familiar frustration into physical dread, making the invisible pain of creative paralysis suddenly uncomfortably tangible.",
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "cola-wars",  
+    title: "Cola Wars",
+    date: "2023",
+    cover: "/projects/art/cola-wars.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/cola-wars.jpeg",
+        alt: "Cola Wars",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Cola Wars"
+      },
+      {
+        type: "text",
+        content: "Pepsi and Coke cans, bendy straws, keyboard, glue",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "litter-bug",  
+    title: "Litter Bug",
+    date: "2023",
+    cover: "/projects/art/litter-bug.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/litter-bug.jpeg",
+        alt: "Litter Bug",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Litter Bug"
+      },
+      {
+        type: "text",
+        content: "Banana, kitty litter, mod podge",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `I recently read a research article about Toxoplasma gondii, a parasite excreted by cats. Not only does this behavior-altering parasite affect the brains of rats to make them more risk-averse and drawn to cats, it has been discovered that humans can also be affected. By altering the connections between our neurons, this parasite can contribute to schizophrenia, car crashes, and suicides, maybe killing a million people each year.\n\nI wanted something innocent turned unsettling, a double take that lingers. Kitty litter belongs in a box, not on food, yet here it clings to fruit we'd mindlessly peel and eat. The juxtaposition isn't just visual—it's a quiet alarm about invisible threats we've normalized. What looks harmless in one context becomes sinister in another, much like the parasite itself.`,
+        size: "lg"
+      },
+    ]
+  },
+  {
+    slug: "in-memoriam",  
+    title: "In Memoriam",
+    date: "2023",
+    cover: "/projects/art/in-memoriam.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/in-memoriam.jpeg",
+        alt: "In Memoriam",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "In Memoriam"
+      },
+      {
+        type: "text",
+        content: "Broken keyboard, spray paint, mini plastic figurines",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `Ninety percent of the world's languages will vanish by the end of the 21st century, each one carrying entire universes of thought, memory, and identity. I reimagined the Vietnam Memorial as a spray-painted keyboard with missing keys, replacing names of the dead with the gaps where words used to be. Miniature figures gather around it in mourning poses, reaching toward what can no longer be touched.\n\nBoth monuments honor irretrievable loss. Both ask what remains when voices disappear. The keyboard becomes a cenotaph for linguistic extinction, each absent key a culture we failed to preserve.`,
+        size: "lg"
+      },
+      {
+        type: "image",
+        src: "/projects/art/vietnam.webp",
+        alt: "Vietnam Memorial",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Vietnam Memorial - VA.gov"
+      },
+    ]
+  },
+  {
+    slug: "gumball-faces",  
+    title: "Gumball Faces (Stop Motion)",
+    date: "2023",
+    cover: "/projects/art/gumball-faces.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "video",
+        src: "/projects/art/gumball-faces.mov",
+        caption: "Gumball Faces",
+        loop: true,
+        autoplay: false
+      },
+      {
+        type: "text",
+        content: "Glass head, gumball machine, ping pong balls, acrylic paint, stop motion",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: `I filled a gumball machine with painted ping pong balls, each one a different feature: noses, lips, eyes in shifting colors. Turn the dial and a new face tumbles out. In the stop motion, features assemble and dissolve, cycling through combinations as casually as choosing candy.\n\nGrowing up meant learning my face was negotiable. Beauty became a vending machine transaction, features as interchangeable as currency. I wanted to see what happens when self-modification becomes that frictionless, that mundane. The machine dispenses identities with the same mechanical indifference it once dispensed gum.`,
+        size: "lg"
+      },
+      {
+        type: "image",
+        src: "/projects/art/gumball-faces.jpeg",
+        alt: "Gumball Faces (Stills)",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Gumball Faces (Stills)"
+      },
+    ]
+  },
+  {
+    slug: "timestamp",  
+    title: "Timestamp",
+    date: "2023",
+    cover: "/projects/art/timestamp.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/timestamp.jpeg",
+        alt: "Timestamp",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Timestamp"
+      },
+      {
+        type: "text",
+        content: "Mixed concrete, alarm clock, hammer",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "unequal-access",  
+    title: "Unequal Access",
+    date: "2023",
+    cover: "/projects/art/unequal-access.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/unequal-access.jpeg",
+        alt: "Unequal Access",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Unequal Access"
+      },
+      {
+        type: "text",
+        content: "Combination lock, hasp, toilet seat, LED lights",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "end-of-innocence",  
+    title: "End of Innocence",
+    date: "2023",
+    cover: "/projects/art/end-of-innocence.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/end-of-innocence.jpeg",
+        alt: "End of Innocence",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "End of Innocence"
+      },
+      {
+        type: "text",
+        content: "Hello Kitty purse, prescription bottles, LED lights",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "masquerade-filtration",  
+    title: "Masquerade Filtration",
+    date: "2023",
+    cover: "/projects/art/masquerade-filtration.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/masquerade-filtration.jpeg",
+        alt: "Masquerade Filtration",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Masquerade Filtration"
+      },
+      {
+        type: "text",
+        content: "Knitted face sculpture, wire",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "disconnect",  
+    title: "Disconnect",
+    date: "2023",
+    cover: "/projects/art/disconnect.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/disconnect.jpeg",
+        alt: "Disconnect",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Disconnect"
+      },
+      {
+        type: "text",
+        content: "Wire mesh, mixed yarn, LED lights",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "appealing-to-the-core",  
+    title: "Appealing to the Core",
+    date: "2023",
+    cover: "/projects/art/appealing-to-the-core.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/appealing-to-the-core.jpeg",
+        alt: "Appealing to the Core",
+        size: "lg",
+        aspectRatio: "tall",
+        caption: "Appealing to the Core"
+      },
+      {
+        type: "text",
+        content: "Peeled apple, iPhone",
+        size: "sm"
+      },
+    ]
+  },
+  {
+    slug: "dissenting-perspectives",  
+    title: "Dissenting Perspectives",
+    date: "2023",
+    cover: "/projects/art/dissenting-perspectives.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/dissenting-perspectives.jpeg",
+        alt: "Dissenting Perspectives",
+        size: "lg",
+        aspectRatio: "wide",
+        caption: "Dissenting Perspectives"
+      },
+      {
+        type: "text",
+        content: "Mixed concrete, eyeglasses",
+        size: "sm"
+      },
+    ]
+  },
+  {
     "slug": "estimate",
     "title": "EstiMate",
     "date": "2024",
@@ -820,7 +876,7 @@ export const PROJECTS: Project[] = [
   },  
   {
     "slug": "forget-me-not",
-    "title": "Forget Me Not — Social Garden",
+    "title": "Forget Me Not",
     "date": "2022",
     "cover": "/projects/forget-me-not/forget me not logo.png",
     "tags": ["projects"],
