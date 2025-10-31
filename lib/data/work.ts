@@ -659,17 +659,17 @@ export const PROJECTS: Project[] = [
         type: "imageGrid",
         images: [
           {
-            src: "/projects/figma/cafe.jpg",
+            src: "/projects/figma/cafe.jpeg",
             alt: "apartment cafe",
             caption: "Cafe hopping and hosting my first apartment cafe"
           },
           {
-            src: "/projects/figma/fam.jpg",
+            src: "/projects/figma/fam.jpeg",
             alt: "Cooking class with interns",
             caption: "Cooking class with the figterns"
           },
           {
-            src: "/projects/figma/climbing.jpg",
+            src: "/projects/figma/climbing.jpeg",
             alt: "Rock climbing",
             caption: "Fell for the SF climbing propaganda"
           },
@@ -679,7 +679,7 @@ export const PROJECTS: Project[] = [
             caption: "IPO!!!"
           },
           {
-            src: "/projects/figma/interns.jpg",
+            src: "/projects/figma/interns.jpeg",
             alt: "Interns",
             caption: "Interns <3"
           },
