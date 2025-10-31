@@ -403,33 +403,6 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "accesory-series",  
-    title: "Accessory Series - iHuman & Beautiful Restraint",
-    date: "2023",
-    cover: "/projects/art/accessory-series.jpeg",
-    tags: ["art"],
-    content: [
-      {
-        type: "image",
-        src: "/projects/art/accessory-series.jpeg",
-        alt: "Accessory Series - iHuman & Beautiful Restraint",
-        size: "lg",
-        aspectRatio: "wide",
-        caption: "Accessory Series - iHuman & Beautiful Restraint"
-      },
-      {
-        type: "text",
-        content: "Nylon dog collars, computer chips, handcuffs, feathers, glue",
-        size: "sm"
-      },
-      {
-        type: "text",
-        content: "This accessory series explores societal pressures and constraints through wearable art.",
-        size: "lg"
-      },
-    ]
-  },
-  {
     slug: "parched",  
     title: "Parched",
     date: "2023",
