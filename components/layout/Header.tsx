@@ -99,7 +99,7 @@ export default function Header() {
               >
                 Frankenstein's monster
               </span>
-              , <br />little joys, and{" "}
+              , <br />little joys, beli, and{" "}
               <span
                 className="cursor-pointer px-1 -mx-1"
                 style={{ backgroundColor: "#FFDBBB" }}

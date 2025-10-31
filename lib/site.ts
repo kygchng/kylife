@@ -27,5 +27,10 @@ export const site = {
       label: "Twitter",
       url: "https://x.com/kygchang"
     },
+    {
+      name: "Beli",
+      label: "Beli",
+      url: "https://beliapp.co/app/changomango"
+    },
   ]
 };

@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "text",
-        content: `My interest in medical applications of game design reaches back to middle school. While exploring computer science, I eventually came across Akili, a startup utilizing video games to combat mental impairment by challenging players to constantly multitask, resulting in improved cognitive functions such as sustained attention and memory, especially in ADHD patients. I began to imagine a world where video games are more widely known as a tool for healing all ages rather than just a fun pastime for children. \n\n Starting with an ordinary video game controller, I hot glued a variety of different vitamins to create a final product that reflects light to look bejeweled from afar. The action shot of a pair of hands interacting with the game controller reflects how widespread I imagine digital medicine becoming in the future, from healing ADHD to restoring geriatric memory loss. By combining my interest in both design and technology, I hope to help make this dream a reality.`,
+        content: `My interest in medical applications of game design reaches back to middle school. While exploring computer science, I eventually came across Akili, a startup utilizing video games to combat mental impairment by challenging players to constantly multitask, resulting in improved cognitive functions such as sustained attention and memory, especially in ADHD patients. I began to imagine a world where video games are more widely known as a tool for healing all ages rather than just a fun pastime for children. \n\n Starting with an ordinary video game controller, I hot glued a variety of different vitamins to create a final product that reflects light to look bejeweled from afar. The action shot of a pair of hands interacting with the game controller reflects how widespread I imagine digital medicine becoming in the future, from healing ADHD to restoring geriatric memory loss.`,
         size: "lg"
       },
       {
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
 
       {
         type: "text",
-        content: `When did we become reliant on our calendars? Assignments to turn in, events to attend, errands to run – it seems like we are sprinting a marathon that never ends. During my busiest times, I’m drawn to the idea of a tea party. The idle ritual of pouring steaming water into a cup, letting the leaves steep, and savoring  the ceremony gives me comfort. But today, with each new smartphone, each social media post, we are being constantly distracted. I imagine our attention span is shorter than any previous generation.\n\n By shattering the porcelain teacup, I reconstructed it so that it is unable to hold water. In this new reality, everything must be introduced and immediately completed. Everything is disposable; nothing is permanent. This cup represents another time where we had the luxury to enjoy the moment rather than lining up at the drive-thru window to eat in our cars. The dual nature of this beautiful yet dangerous teacup represents both a cautionary tale, as well as my idealistic wish. `,
+        content: `During my busiest times, I find myself craving the simplicity of a tea ritual - the quiet act of pouring water, watching leaves steep, sitting still. But that kind of stillness feels increasingly out of reach.\n\nI shattered this teacup and reassembled it so it can no longer hold water. It's now ornamental, dysfunctional - a relic of slowness in a world that demands constant motion. We've traded rituals for efficiency, moments for transactions. Everything is designed to be consumed and discarded.\n\n This broken cup gestures toward what we've lost: time to linger, space to savor. Its sharp edges make it dangerous to handle, a reminder that our pace comes at a cost. It's both warning and longing -an object caught between what was and what I wish could be again.`,
         size: "lg"
       },
     ]
@@ -674,7 +674,7 @@ export const PROJECTS: Project[] = [
             caption: "Fell for the SF climbing propaganda"
           },
           {
-            src: "/projects/figma/ipo.jpg",
+            src: "/projects/figma/ipo.jpeg",
             alt: "IPO",
             caption: "IPO!!!"
           },
