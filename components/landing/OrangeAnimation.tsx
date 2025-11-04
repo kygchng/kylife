@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LettersPullUp, WordsPullUp } from "../ui/WordsPullUp";
+import { LettersPullUp } from "../ui/LettersPullUp";
 
 const TOTAL_FRAMES = 5;
 
