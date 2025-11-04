@@ -64,7 +64,9 @@ export default function OrangeAnimation() {
             />
             {currentFrame === 0 && (
               <div
-                className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-300 ${showText ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-250 ${
+                  showText ? "opacity-100" : "opacity-0"
+                }`}
               >
                 <LettersPullUp
                   text="click to peel"
