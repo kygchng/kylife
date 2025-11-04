@@ -28,23 +28,32 @@ export default function OrangeAnimation() {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center cursor-pointer bg-white"
-      onClick={handleClick}
+      className="fixed inset-0 flex items-center justify-center bg-white"
       role="button"
       aria-label="click me"
     >
       {!isComplete ? (
         <div className="relative place-content-center transition-opacity duration-500 ease-out">
-          <Image
-            src={`/orange/${(currentFrame + 1)
-              .toString()
-              .padStart(2, "0")}.png`}
-            alt={`Orange animation frame ${currentFrame + 1}`}
-            width={800}
-            height={800}
-            priority={currentFrame === 0}
-            className="object-contain transition-transform duration-500 ease-out hover:scale-105"
-          />
+          <div className="relative inline-block transition-transform duration-300 hover:scale-105">
+            <Image
+              src={`/orange/${(currentFrame + 1)
+                .toString()
+                .padStart(2, "0")}.png`}
+              alt={`Orange animation frame ${currentFrame + 1}`}
+              width={800}
+              height={800}
+              priority={currentFrame === 0}
+              className="object-contain pointer-events-none"
+            />
+            <div
+              onClick={handleClick}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full cursor-pointer"
+              style={{
+                background: 'transparent',
+                zIndex: 10
+              }}
+            />
+          </div>
         </div>
       ) : (
         <div className="text-center text-black relative">

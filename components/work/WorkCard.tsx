@@ -9,7 +9,10 @@ interface WorkCardProps {
 export default function WorkCard({ project }: WorkCardProps) {
   return (
     <Link href={`/work/${project.slug}`} className="block group">
-      <div className="aspect-square bg-gray-100 mb-3 relative overflow-hidden">
+      <div
+        className="aspect-square bg-gray-100 mb-3 relative overflow-hidden"
+        style={{cursor: 'url(/orange-circle.png) 16 16, pointer'}}
+      >
         <Image
           src={project.cover}
           alt={project.title}
