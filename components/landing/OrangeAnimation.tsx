@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { LettersPullUp, WordsPullUp } from "../ui/WordsPullUp";
 
 const TOTAL_FRAMES = 5;
 
 export default function OrangeAnimation() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   useEffect(() => {
     // Preload all orange frames
@@ -20,7 +22,14 @@ export default function OrangeAnimation() {
 
   const handleClick = () => {
     if (currentFrame < TOTAL_FRAMES - 1) {
-      setCurrentFrame((prev) => prev + 1);
+      if (currentFrame === 0) {
+        setShowText(false); // Start fade-out
+        setTimeout(() => {
+          setCurrentFrame((prev) => prev + 1);
+        }, 300); // Wait for fade-out to complete
+      } else {
+        setCurrentFrame((prev) => prev + 1);
+      }
     } else if (currentFrame === TOTAL_FRAMES - 1) {
       setIsComplete(true);
     }
@@ -49,10 +58,20 @@ export default function OrangeAnimation() {
               onClick={handleClick}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full cursor-pointer"
               style={{
-                background: 'transparent',
-                zIndex: 10
+                background: "transparent",
+                zIndex: 10,
               }}
             />
+            {currentFrame === 0 && (
+              <div
+                className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-300 ${showText ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <LettersPullUp
+                  text="click to peel"
+                  className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700"
+                />
+              </div>
+            )}
           </div>
         </div>
       ) : (
