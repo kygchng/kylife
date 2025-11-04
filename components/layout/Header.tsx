@@ -100,14 +100,17 @@ export default function Header() {
                 Frankenstein's monster
               </span>
               , <br />little joys, beli, and{" "}
-              <span
-                className="cursor-pointer px-1 -mx-1"
+              <a
+                href="https://gladdestthing.com/poems/the-orange"
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer px-1 -mx-1 hover:underline"
                 style={{ backgroundColor: "#FFDBBB" }}
                 onMouseEnter={() => setHoveredWord("oranges")}
                 onMouseLeave={() => setHoveredWord(null)}
               >
                 my love for oranges
-              </span>
+              </a>
               .
             </p>
           </div>
