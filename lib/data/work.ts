@@ -3,7 +3,7 @@ import { Project } from "../types";
 export const PROJECTS: Project[] = [
   {
     slug: "figma-summer-2025",
-    title: "Building AI @ Figma",
+    title: "AI @ Figma",
     date: "2025",
     cover: "/projects/figma/figma-logo.png",
     tags: ["projects"],
@@ -45,12 +45,12 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "richText",
-        content: "**The Challenge:** AI text suggestions was already one of our highest-usage AI features, and we wanted to extend that value into Sites. But here's the thing — Sites has desktop, tablet, and mobile views, and each breakpoint has its own responsive design choices. The technical challenge was ensuring that suggestions would automatically propagate across all views while preserving what makes each breakpoint unique.",
+        content: "**The Challenge:** AI text suggestions was already one of our highest-usage AI features, and we wanted to extend that value into Sites. But, Sites has desktop, tablet, and mobile views, and each breakpoint has its own responsive design choices. The technical challenge was ensuring that suggestions would automatically propagate across all views while preserving what makes each breakpoint unique.",
         size: "md"
       },
       {
         type: "richText",
-        content: "**What I Built:** I worked closely with fellow engineers and the Sites team to build out the entire feature. Within one week, I had it working in staging and led my first bug bash. This was honestly such a confidence boost — coordinating engineers to break my feature and then systematically closing out every issue they found.",
+        content: "**What I Built:** I worked closely with fellow engineers and the Sites team to build out the entire feature. Within one week, I had it working in staging and led my first bug bash. This was my first big win: coordinating engineers to break my feature and then systematically closing out every issue they found.",
         size: "md"
       },
       {
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "richText",
-        content: "**What I Built:** This project stretched me across the full stack. I got to touch Cortex for the first time, adding multi-reference support to our providers and writing integration tests. On the web side, I built out the entire flow — uploading images, supporting different models, building thumbnail viewers (building off Figma Make's codebase), handling error states, the whole deal.",
+        content: "**What I Built:** This project stretched me across the full stack. I got to touch Cortex, the AI bakckend, for the first time, adding multi-reference support to our providers and writing integration tests. On the web side, I built out the entire flow — uploading images, supporting different models, building thumbnail viewers (building off Figma Make's codebase), and handling error states.",
         size: "md"
       },
       {
