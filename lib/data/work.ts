@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "richText",
-        content: "**What I Built:** This project stretched me across the full stack. I got to touch Cortex, the AI bakckend, for the first time, adding multi-reference support to our providers and writing integration tests. On the web side, I built out the entire flow — uploading images, supporting different models, building thumbnail viewers (building off Figma Make's codebase), and handling error states.",
+        content: "**What I Built:** This project stretched me across the full stack. I got to touch Cortex, the AI backend, for the first time, adding multi-reference support to our providers and writing integration tests. On the web side, I built out the entire flow — uploading images, supporting different models, building thumbnail viewers (building off Figma Make's codebase), and handling error states.",
         size: "md"
       },
       {
