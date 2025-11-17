@@ -77,33 +77,33 @@ export default function OrangeAnimation() {
           </div>
         </div>
       ) : (
-        <div className="text-center text-black relative">
-          <div className="absolute -top-10 -left-54 opacity-90">
+        <div className="text-center text-black relative select-none">
+          <div className="absolute -top-10 -left-54 opacity-90 select-none">
             <Image
               src="/orange/08.png"
               alt="Orange slice"
               width={180}
               height={180}
-              className="object-contain"
+              className="object-contain select-none"
             />
           </div>
-          <div className="absolute -top-20 -right-34 opacity-90">
+          <div className="absolute -top-20 -right-34 opacity-90 select-none">
             <Image
               src="/orange/09.png"
               alt="me"
               width={120}
               height={120}
-              className="object-contain"
+              className="object-contain select-none"
             />
           </div>
-          <p className="text-lg mb-8 text-gray-700 max-w-md mx-auto leading-relaxed">
+          <p className="text-lg mb-8 text-gray-700 max-w-md mx-auto leading-relaxed select-none">
             peel back the layers—
             <br />
             there's more than meets the rind
           </p>
           <Link
             href="/work"
-            className="inline-block rounded-full border border-black px-5 py-2.5 text-sm hover:bg-black hover:text-white transition-all duration-300"
+            className="inline-block rounded-full border border-black px-5 py-2.5 text-sm hover:bg-black hover:text-white transition-all duration-300 select-none"
           >
             enter
           </Link>
