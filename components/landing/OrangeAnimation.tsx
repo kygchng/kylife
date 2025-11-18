@@ -77,26 +77,18 @@ export default function OrangeAnimation() {
           </div>
         </div>
       ) : (
-        <div className="text-center text-black relative select-none">
-          <div className="absolute -top-10 -left-54 opacity-90 select-none">
+        <div className="text-center text-black relative select-none flex flex-col items-center">
+          {/* Mobile: above text, Desktop: absolute positioned left */}
+          <div className="mb-6 md:mb-0 md:absolute md:-top-10 md:-left-54 opacity-90 select-none">
             <Image
               src="/orange/08.png"
               alt="Orange slice"
               width={180}
               height={180}
-              className="object-contain select-none"
+              className="object-contain select-none w-[120px] h-[120px] md:w-[180px] md:h-[180px]"
             />
           </div>
-          <div className="absolute -top-20 -right-34 opacity-90 select-none">
-            <Image
-              src="/orange/09.png"
-              alt="me"
-              width={120}
-              height={120}
-              className="object-contain select-none"
-            />
-          </div>
-          <p className="text-lg mb-8 text-gray-700 max-w-md mx-auto leading-relaxed select-none">
+          <p className="text-lg mb-8 text-gray-700 max-w-md mx-auto leading-relaxed select-none px-4">
             peel back the layers—
             <br />
             there's more than meets the rind
@@ -107,6 +99,16 @@ export default function OrangeAnimation() {
           >
             enter
           </Link>
+          {/* Mobile: below button, Desktop: absolute positioned right */}
+          <div className="mt-6 md:mt-0 md:absolute md:-top-10 md:-right-45 opacity-90 select-none">
+            <Image
+              src="/orange/09.png"
+              alt="me"
+              width={180}
+              height={180}
+              className="object-contain select-none w-[120px] h-[120px] md:w-[180px] md:h-[180px]"
+            />
+          </div>
         </div>
       )}
     </div>

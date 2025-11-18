@@ -11,6 +11,16 @@ export default function Header() {
   const [now, setNow] = useState(new Date());
   const [mounted, setMounted] = useState(false);
   const [hoveredWord, setHoveredWord] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -34,7 +44,7 @@ export default function Header() {
     });
   };
 
-  const lastSqueezed = "10/25/2025";
+  const lastSqueezed = "11/18/2025";
 
   const getImageForWord = (word: string) => {
     switch (word) {
@@ -66,10 +76,10 @@ export default function Header() {
         </div>
       )}
 
-      <header className="px-4 md:px-6 py-4 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-black before:absolute before:bottom-[-4px] before:left-0 before:right-0 before:h-[1px] before:bg-black">
-        <div className="flex justify-between items-start gap-8">
+      <header className="px-4 md:px-6 py-4 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-black before:absolute before:bottom-[-4px] before:left-0 before:right-0 before:h-[1px] before:bg-black overflow-x-hidden">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-8">
           {/* Left Column - Bio */}
-          <div className="flex-shrink-0" style={{ width: "600px" }}>
+          <div className="flex-shrink-0 w-full md:w-[600px]">
             <h1 className="text-[13px] md:text-sm mb-1">✿ Kylie Chang ✿</h1>
 
             <div className="text-[13px] md:text-sm leading-5 tracking-tight">
@@ -83,31 +93,31 @@ export default function Header() {
             <p className="mt-1">
               <span className="font-medium">Talk to me about:</span> conceptual art, whimsical tech,{" "}
               <span
-                className="cursor-pointer px-1 -mx-1"
+                className="px-1 -mx-1"
                 style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => setHoveredWord("four-agreements")}
-                onMouseLeave={() => setHoveredWord(null)}
+                onMouseEnter={() => !isMobile && setHoveredWord("four-agreements")}
+                onMouseLeave={() => !isMobile && setHoveredWord(null)}
               >
                 the Four Agreements
               </span>
               , women's health, Chinese dance,{" "}
               <span
-                className="cursor-pointer px-1 -mx-1"
+                className="px-1 -mx-1"
                 style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => setHoveredWord("frankenstein")}
-                onMouseLeave={() => setHoveredWord(null)}
+                onMouseEnter={() => !isMobile && setHoveredWord("frankenstein")}
+                onMouseLeave={() => !isMobile && setHoveredWord(null)}
               >
                 Frankenstein's monster
               </span>
-              , <br />little joys, beli, and{" "}
+              , little joys, beli, and{" "}
               <a
                 href="https://gladdestthing.com/poems/the-orange"
                 target="_blank"
                 rel="noreferrer"
                 className="cursor-pointer px-1 -mx-1 hover:underline"
                 style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => setHoveredWord("oranges")}
-                onMouseLeave={() => setHoveredWord(null)}
+                onMouseEnter={() => !isMobile && setHoveredWord("oranges")}
+                onMouseLeave={() => !isMobile && setHoveredWord(null)}
               >
                 my love for oranges
               </a>
@@ -117,7 +127,7 @@ export default function Header() {
         </div>
 
         {/* Right Column - Vibe & Links */}
-        <div className="text-[13px] md:text-sm leading-5 tracking-tight text-right flex-shrink-0">
+        <div className="text-[13px] md:text-sm leading-5 tracking-tight text-left md:text-right flex-shrink-0">
           <div>
             <p className="text-gray-600">
                {mounted ? formatTime(now) : "loading..."}

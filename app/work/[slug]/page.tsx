@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { PROJECTS } from "../../../lib/data/work";
 import ContentBlock from "../../../components/content/ContentBlock";
 
@@ -35,6 +36,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {tag}
             </span>
           ))}
+        </div>
+
+        {/* Breadcrumb Navigation */}
+        <div className="mt-3 text-xs text-gray-400">
+          <Link href="/work" className="hover:text-gray-600 hover:underline transition-colors">
+            work
+          </Link>
+          <span className="mx-1">/</span>
+          <Link
+            href={`/work?filter=${project.tags[0]}`}
+            className="hover:text-gray-600 hover:underline transition-colors"
+          >
+            {project.tags[0]}
+          </Link>
+          <span className="mx-1">/</span>
+          <span className="text-gray-500">{project.slug}</span>
         </div>
       </div>
 
