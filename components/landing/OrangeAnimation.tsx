@@ -1,16 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LettersPullUp } from "../ui/LettersPullUp";
 
 const TOTAL_FRAMES = 5;
+const FRAME_DURATION = 400; // milliseconds per frame
 
 export default function OrangeAnimation() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [showText, setShowText] = useState(true);
+  const [fadeOutImage, setFadeOutImage] = useState(false);
+  const animationRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // Preload all orange frames
@@ -20,19 +23,41 @@ export default function OrangeAnimation() {
     }
   }, []);
 
-  const handleClick = () => {
-    if (currentFrame < TOTAL_FRAMES - 1) {
-      if (currentFrame === 0) {
-        setShowText(false); // Start fade-out
-        setTimeout(() => {
-          setCurrentFrame((prev) => prev + 1);
-        }, 300); // Wait for fade-out to complete
-      } else {
-        setCurrentFrame((prev) => prev + 1);
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (animationRef.current) {
+        clearTimeout(animationRef.current);
       }
-    } else if (currentFrame === TOTAL_FRAMES - 1) {
-      setIsComplete(true);
-    }
+    };
+  }, []);
+
+  const handleClick = () => {
+    if (isAnimating || isComplete) return;
+
+    // Start the animation sequence
+    setIsAnimating(true);
+    setShowText(false); // Start text fade-out
+
+    // Auto-play through all frames
+    let frame = 1;
+    const playNextFrame = () => {
+      if (frame < TOTAL_FRAMES) {
+        setCurrentFrame(frame);
+        frame++;
+        animationRef.current = setTimeout(playNextFrame, FRAME_DURATION);
+      } else {
+        // Animation complete, fade out the last frame then show enter page
+        setFadeOutImage(true);
+        setTimeout(() => {
+          setIsComplete(true);
+          setIsAnimating(false);
+        }, 500); // Wait for fade out
+      }
+    };
+
+    // Start after a brief delay for text fade-out
+    animationRef.current = setTimeout(playNextFrame, 300);
   };
 
   return (
@@ -42,7 +67,7 @@ export default function OrangeAnimation() {
       aria-label="click me"
     >
       {!isComplete ? (
-        <div className="relative place-content-center transition-opacity duration-500 ease-out">
+        <div className={`relative place-content-center transition-opacity duration-500 ease-out ${fadeOutImage ? "opacity-0" : "opacity-100"}`}>
           <div className="relative inline-block transition-transform duration-300 hover:scale-105">
             <Image
               src={`/orange/${(currentFrame + 1)
@@ -62,18 +87,15 @@ export default function OrangeAnimation() {
                 zIndex: 10,
               }}
             />
-            {currentFrame === 0 && (
-              <div
-                className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-250 ${
-                  showText ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <LettersPullUp
-                  text="click to peel"
-                  className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700"
-                />
-              </div>
-            )}
+            <div
+              className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-500 ease-out ${
+                showText ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <p className="text-2xl sm:text-3xl md:text-3xl font-serif text-center">
+                click to peel.
+              </p>
+            </div>
           </div>
         </div>
       ) : (
