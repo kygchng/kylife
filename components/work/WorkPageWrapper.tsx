@@ -10,6 +10,9 @@ export default function WorkPageWrapper({ children }: WorkPageWrapperProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+
     // Small delay to ensure the animation is visible
     const timer = setTimeout(() => {
       setMounted(true);
