@@ -11,7 +11,7 @@ export default function WorkCard({ project }: WorkCardProps) {
     <Link href={`/work/${project.slug}`} className="block group">
       <div
         className="aspect-square bg-gray-100 mb-3 relative overflow-hidden"
-        style={{cursor: 'url(/orange-circle.png) 16 16, pointer'}}
+        style={{cursor: 'url(/mandarin-pixel.png) 16 16, pointer'}}
       >
         <Image
           src={project.cover}
