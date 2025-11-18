@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TOTAL_FRAMES = 5;
-const FRAME_DURATION = 400; // milliseconds per frame
+const FRAME_DURATION = 500; // milliseconds per frame (slower for clarity)
 
 export default function OrangeAnimation() {
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -13,13 +13,24 @@ export default function OrangeAnimation() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [showText, setShowText] = useState(true);
   const [fadeOutImage, setFadeOutImage] = useState(false);
+  const [showEnterPage, setShowEnterPage] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const animationRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Preload all orange frames
+    // Preload all orange frames and wait for them to fully load
+    let loadedCount = 0;
+    const totalImages = TOTAL_FRAMES;
+
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new window.Image();
       img.src = `/orange/${i.toString().padStart(2, "0")}.png`;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setImagesLoaded(true);
+        }
+      };
     }
   }, []);
 
@@ -33,7 +44,7 @@ export default function OrangeAnimation() {
   }, []);
 
   const handleClick = () => {
-    if (isAnimating || isComplete) return;
+    if (isAnimating || isComplete || !imagesLoaded) return;
 
     // Start the animation sequence
     setIsAnimating(true);
@@ -52,7 +63,9 @@ export default function OrangeAnimation() {
         setTimeout(() => {
           setIsComplete(true);
           setIsAnimating(false);
-        }, 500); // Wait for fade out
+          // Trigger enter page fade in
+          setTimeout(() => setShowEnterPage(true), 50);
+        }, 600); // Wait for fade out
       }
     };
 
@@ -67,7 +80,7 @@ export default function OrangeAnimation() {
       aria-label="click me"
     >
       {!isComplete ? (
-        <div className={`relative place-content-center transition-opacity duration-500 ease-out ${fadeOutImage ? "opacity-0" : "opacity-100"}`}>
+        <div className={`relative place-content-center transition-opacity duration-700 ease-in-out ${fadeOutImage ? "opacity-0" : "opacity-100"}`}>
           <div className="relative inline-block transition-transform duration-300 hover:scale-105">
             <Image
               src={`/orange/${(currentFrame + 1)
@@ -88,7 +101,7 @@ export default function OrangeAnimation() {
               }}
             />
             <div
-              className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-500 ease-out ${
+              className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-500 ease-in-out ${
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -99,7 +112,9 @@ export default function OrangeAnimation() {
           </div>
         </div>
       ) : (
-        <div className="text-center text-black relative select-none flex flex-col items-center">
+        <div className={`text-center text-black relative select-none flex flex-col items-center transition-all duration-700 ease-out ${
+          showEnterPage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}>
           {/* Mobile: above text, Desktop: absolute positioned left */}
           <div className="mb-6 md:mb-0 md:absolute md:-top-10 md:-left-54 opacity-90 select-none">
             <Image
