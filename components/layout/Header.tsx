@@ -50,8 +50,6 @@ export default function Header() {
     switch (word) {
       case "oranges":
         return "/wendy-cope.webp";
-      case "frankenstein":
-        return "/frankenstein.jpg";
       case "four-agreements":
         return "/four-agreements.jpg";
       default:
@@ -100,16 +98,7 @@ export default function Header() {
               >
                 the Four Agreements
               </span>
-              , women's health, Chinese dance,{" "}
-              <span
-                className="px-1 -mx-1"
-                style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => !isMobile && setHoveredWord("frankenstein")}
-                onMouseLeave={() => !isMobile && setHoveredWord(null)}
-              >
-                Frankenstein's monster
-              </span>
-              , little joys, beli, and{" "}
+              , women's health, Chinese dance, Frankenstein's monster, little joys, beli, and{" "}
               <a
                 href="https://gladdestthing.com/poems/the-orange"
                 target="_blank"
