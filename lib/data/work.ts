@@ -136,11 +136,11 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "subHeader",
-        content: "Project #3: Backend for Generative Image Features"
+        content: "Project #3: Backend for Expand Image Feature"
       },
       {
         type: "richText",
-        content: "I also got to build out the backend for another generative image feature: wiring up the endpoint between web and model, and adding support for third-party providers. It's not launched yet, but stay tuned!",
+        content: "I also built the backend for generative expand, a feature that lets you drag the corner of an image and have AI fill in the expanded area such that your content fits any size. I connected the web client to the AI model and integrated third-party model providers. This feature is now launched as part of Figma's AI image editing tools in Design and Draw.",
         size: "md"
       },
       {
@@ -148,6 +148,19 @@ export const PROJECTS: Project[] = [
         content: "Backend Engineering • Cortex Endpoint • 3rd Party Vendor Wiring • Model Integration",
         size: "sm"
       },
+      {
+        type: "video",
+        src: "/projects/figma/figma expand demo.mov",
+        caption: "Expand any image by dragging its edges — AI generates the missing areas to fit new aspect ratios, extend backgrounds, or repurpose content across platforms",
+        loop: true
+      },
+      {
+        type: "link",
+        text: "Check out the launch",
+        url: "https://x.com/figma/status/1998756770421027243?s=20",
+        size: "sm"
+      },
+      
       {
         type: "spacer",
         size: "xl"
