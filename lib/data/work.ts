@@ -2,6 +2,74 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
+    slug: "hullabaloo",
+    title: "Hullabaloo",
+    date: "2025",
+    cover: "/projects/hullabaloo/hullabaloo.png",
+    tags: ["projects"],
+    content: [
+      {
+        type: "sideBySide",
+        image: "/projects/hullabaloo/hullabaloo.png",
+        alt: "Hullabaloo logo",
+        title: "Hullabaloo",
+        description: "Hullabaloo is a real-time multiplayer scavenger hunt where players race to find physical objects in their space and hold them up to their camera. No judges, no manual review. AI validates submissions on the spot and the first person to show the object wins the round.",
+        imagePosition: "left"
+      },
+      {
+        type: "video",
+        src: "/projects/hullabaloo/hullabaloo.mov",
+        loop: false
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "sideBySide",
+        image: "/projects/hullabaloo/compass.jpeg",
+        alt: "KP Hackathon",
+        title: "KP Hackathon",
+        description: "I got to build this with my good friend Anish, who I met through the KP Fellows program. We won the KP Fellows hackathon last summer with Compass, an interactive internet scavenger hunt on Browserbase where you could build hunts that guide players through real websites on any topic. We loved the mechanic enough to come back to it and rebuild from scratch, this time production-ready and physical.",
+        imagePosition: "right"
+      },
+      {
+        type: "sectionHeader",
+        content: "The Model"
+      },
+      {
+        type: "richText",
+        content: "The part I was most excited to build around was **OpenAI's CLIP** (Contrastive Language-Image Pretraining). It's trained on 400 million image-text pairs from the internet, learning to understand images and language together in a shared space. Most vision models need labeled examples for every object class they detect. CLIP doesn't. You describe what you're looking for in plain English and it figures out if what it sees matches. Zero-shot recognition!",
+        size: "md"
+      },
+      {
+        type: "richText",
+        content: "We used the **ViT-B/16 variant**, which cuts each image into 16x16 pixel patches and processes them like tokens in a language model. Fast enough for real-time inference on every incoming camera frame, accurate on everyday objects, and zero retraining needed when the target changes. Before each round starts, we pre-compute text embeddings for a set of positive and negative descriptions and cache them. Then every 200ms, each player's frame gets encoded and checked against those vectors. A frame only registers as a win if the positive score clears a threshold and the gap between positive and negative scores is wide enough, which keeps false positives low.",
+        size: "md"
+      },
+      {
+        type: "richText",
+        content: "**Backend** is FastAPI with Socket.io. Frames come in as base64 JPEG over WebSocket, get resized to 224x224, and land in a per-player queue that holds one frame at a time so stale frames get dropped automatically. The model runs on an NVIDIA T4 GPU on EC2, with Redis managing room state and atomic win claiming so only one player gets credited per round even across multiple workers. NGINX and DuckDNS handle traffic routing to the instance. **Frontend** is React 18 with Vite, Zustand for state, and Tailwind. The game screen streams live camera feeds between players, shows a confidence bar that updates in real time as you get closer to a match, and adapts the video grid layout based on how many people are in the room.",
+        size: "md"
+      },
+      {
+        type: "link",
+        text: "Play a game!",
+        url: "https://www.hullabaloo.online",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "React 18 · TypeScript · Vite · Zustand · Socket.io · Tailwind CSS · FastAPI · PyTorch · OpenAI CLIP (ViT-B/16) · Redis · NGINX · EC2 (NVIDIA T4) · DuckDNS",
+        size: "sm"
+      }
+    ]
+  },
+  {
     slug: "figma-summer-2025",
     title: "AI @ Figma",
     date: "2025",

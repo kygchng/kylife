@@ -20,7 +20,7 @@ export default function RichTextBlock({ block }: RichTextBlockProps) {
   // Process content to support **bold labels:**
   // Convert **Label:** to <strong>Label:</strong>
   const processedContent = block.content
-    .replace(/\*\*(.*?):\*\*/g, '<strong class="font-medium">$1:</strong>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-medium">$1</strong>')
     .replace(/\n/g, '<br/>');
 
   return (
