@@ -13,7 +13,8 @@ export type ContentBlock =
   | SubHeaderBlock
   | RichTextBlock
   | LinkBlock
-  | SideBySideBlock;
+  | SideBySideBlock
+  | TextColumnsBlock;
 
 export interface TextBlock {
   type: "text";
@@ -108,6 +109,14 @@ export interface SideBySideBlock {
     text: string;
     url: string;
   };
+}
+
+export interface TextColumnsBlock {
+  type: "textColumns";
+  columns: Array<{
+    title: string;
+    content: string;
+  }>;
 }
 
 export interface Project {

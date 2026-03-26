@@ -2,10 +2,94 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
+    slug: "sequoia-podcasts",
+    title: "Sequoia Stitch",
+    date: "2025",
+    cover: "/projects/sequoia/sequoia-logo.png",
+    tags: ["projects"],
+    content: [
+      {
+        type: "sideBySide",
+        image: "/projects/sequoia/sequoia-logo.png",
+        alt: "Sequoia Stitch logo",
+        title: "Sequoia Stitch",
+        description: "I got to work on this project as a design engineering contract for Sequoia Capital. Sequoia has a large and growing library of long-form podcast content packed with founder and investor insight, but it was locked inside multi-hour videos. Users had no way to find the most relevant moments without manually skimming. I built a semantic search tool for their Training Data podcast that lets you ask any question and get back a curated playlist of timestamped clips that actually answer it.",
+        imagePosition: "left"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "video",
+        src: "/projects/sequoia/sequoia-demo.mov",
+        caption: "Ask a question, get a stitch of clips that answer it",
+        loop: false
+      },
+      {
+        type: "link",
+        text: "Try it!",
+        url: "https://stitch.sequoiacap.com",
+        size: "sm"
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "sectionHeader",
+        content: "How I Built It"
+      },
+      {
+        type: "richText",
+        content: "The key design decisions lived in two places: the **video processing pipeline** and the **search pipeline**.",
+        size: "md"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "textColumns",
+        columns: [
+          {
+            title: "Fetch & Segment",
+            content: "The pipeline starts by pulling each podcast episode's YouTube transcript and normalizing the raw caption lines into timed entries with start and end seconds.\n\nFrom there, the full timestamped transcript is processed through an LLM-based segmentation layer that identifies 5 to 15 natural chapter boundaries — the moments where the conversation topic clearly shifts. Each chapter gets a title and a start timestamp, and the corresponding transcript text is extracted for that window. This gives us semantically coherent chunks that map to real discussion threads rather than arbitrary time slices."
+          },
+          {
+            title: "Embed & Store",
+            content: "Each chapter's text gets run through OpenAI's **text-embedding-3-small**, producing a 1536-dimension vector that captures the semantic meaning of that section of conversation.\n\nThe vector is stored in Postgres alongside the chapter title, start and end timestamps, and source video metadata, with the pgvector extension enabling cosine similarity search directly in the database.\n\nA daily cron job on Railway watches the YouTube playlist for new uploads and runs the full pipeline automatically, so the library stays current without any manual work."
+          },
+          {
+            title: "Search Pipeline",
+            content: "When a user submits a query, the same embedding model converts it into a vector and pgvector pulls the 40 most semantically similar segments from across the library.\n\nBefore hitting GPT, the backend checks for a cached result: if a previous query has a cosine similarity above 0.95 with the current one, the saved playlist is returned instantly.\n\nOtherwise, GPT takes the 40 candidates and selects and orders the best clips into a final playlist, reasoning about relevance and minimizing redundancy. That result gets saved so future similar searches are instant."
+          }
+        ]
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "This was such a fun project and I loved the end-to-end design challenge. Figuring out how to make hours of dense content feel instantly navigable was a really satisfying problem to solve.",
+        size: "md"
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "text",
+        content: "React 19 · Vite · Tailwind CSS · FastAPI · OpenAI text-embedding-3-small · GPT · pgvector · Supabase · Railway · Vercel",
+        size: "sm"
+      }
+    ]
+  },{
     slug: "hullabaloo",
     title: "Hullabaloo",
     date: "2025",
-    cover: "/projects/hullabaloo/hullabaloo.png",
+    cover: "/projects/hullabaloo/hullabaloo-2.png",
     tags: ["projects"],
     content: [
       {
@@ -22,6 +106,12 @@ export const PROJECTS: Project[] = [
         loop: false
       },
       {
+        type: "link",
+        text: "Play a game!",
+        url: "https://www.hullabaloo.online",
+        size: "sm"
+      },
+      {
         type: "spacer",
         size: "md"
       },
@@ -30,7 +120,7 @@ export const PROJECTS: Project[] = [
         image: "/projects/hullabaloo/compass.jpeg",
         alt: "KP Hackathon",
         title: "KP Hackathon",
-        description: "I got to build this with my good friend Anish, who I met through the KP Fellows program. We won the KP Fellows hackathon last summer with Compass, an interactive internet scavenger hunt on Browserbase where you could build hunts that guide players through real websites on any topic. We loved the mechanic enough to come back to it and rebuild from scratch, this time production-ready and physical.",
+        description: "I got to build this with my good friend Anish, who I met through the KP Fellows program. We won the KP Fellows hackathon last summer with Compass, an interactive internet scavenger hunt using Browserbase where you could build hunts that guide players through real websites on any topic. We loved the mechanic enough to come back to it and rebuild from scratch, this time production-ready and physical.",
         imagePosition: "right"
       },
       {
@@ -44,19 +134,13 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "richText",
-        content: "We used the **ViT-B/16 variant**, which cuts each image into 16x16 pixel patches and processes them like tokens in a language model. Fast enough for real-time inference on every incoming camera frame, accurate on everyday objects, and zero retraining needed when the target changes. Before each round starts, we pre-compute text embeddings for a set of positive and negative descriptions and cache them. Then every 200ms, each player's frame gets encoded and checked against those vectors. A frame only registers as a win if the positive score clears a threshold and the gap between positive and negative scores is wide enough, which keeps false positives low.",
+        content: "We used the **ViT-B/16 variant**, which cuts each image into 16x16 pixel patches and processes them like tokens in a language model. Before each round starts, we pre-compute text embeddings for a set of positive and negative descriptions and cache them. Then every 200ms, each player's frame gets encoded and checked against those vectors. A frame only registers as a win if the positive score clears a threshold and the gap between positive and negative scores is wide enough, which keeps false positives low.",
         size: "md"
       },
       {
         type: "richText",
-        content: "**Backend** is FastAPI with Socket.io. Frames come in as base64 JPEG over WebSocket, get resized to 224x224, and land in a per-player queue that holds one frame at a time so stale frames get dropped automatically. The model runs on an NVIDIA T4 GPU on EC2, with Redis managing room state and atomic win claiming so only one player gets credited per round even across multiple workers. NGINX and DuckDNS handle traffic routing to the instance. **Frontend** is React 18 with Vite, Zustand for state, and Tailwind. The game screen streams live camera feeds between players, shows a confidence bar that updates in real time as you get closer to a match, and adapts the video grid layout based on how many people are in the room.",
+        content: "**Backend** is FastAPI with Socket.io. The model runs on an NVIDIA T4 GPU on EC2, with Redis managing room state and atomic win claiming. We used NGINX and DuckDNS to handle traffic routing to the instance. \n\n **Frontend** is React 18 with Vite, Zustand for state, and Tailwind. The game screen streams live camera feeds between players, shows a confidence bar that updates in real time as you get closer to a match, and adapts the video grid layout based on how many people are in the room.",
         size: "md"
-      },
-      {
-        type: "link",
-        text: "Play a game!",
-        url: "https://www.hullabaloo.online",
-        size: "sm"
       },
       {
         type: "spacer",
@@ -338,34 +422,82 @@ export const PROJECTS: Project[] = [
         align: "center"
       }
     ]
-  },
-  {
-    slug: "rooster",  
-    title: "Rooster",
-    date: "2019",
-    cover: "/projects/art/rooster-painting.png",
-    tags: ["art"],
-    content: [
+  },{
+    "slug": "estimate",
+    "title": "EstiMate",
+    "date": "2024",
+    "cover": "/projects/estimate/estimate-logo2.png",
+    "tags": ["projects"],
+    "content": [
       {
-        type: "image",
-        src: "/projects/art/rooster-painting.png",
-        alt: "Rooster",
-        size: "lg",
-        aspectRatio: "tall",
-        caption: "Rooster"
+        "type": "text",
+        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
       },
       {
-        type: "text",
-        content: "Acrylic on cardboard, magazines, feathers, leaves, glue",
+        "type": "text",
+        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
+      },
+      {
+        type: "link",
+        text: "Check out the DevPost",
+        url: "https://devpost.com/software/estimate-0nqzfx/",
         size: "sm"
       },
       {
-        type: "text",
-        content: "Featured in SF MOMA.",
-        size: "lg"
+        "type": "image",
+        "src": "/projects/estimate/estimate-flow.jpg",
+        "alt": "EstiMate user flow",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "From friendly challenge setup to transparent on-chain settlement."
+      },
+      {
+        "type": "image",
+        "src": "/projects/estimate/estimate-stack.jpg",
+        "alt": "EstiMate tech stack",
+        "size": "lg",
+        "aspectRatio": "auto",
+        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
       }
     ]
-  },
+  },  
+  // {
+  //   "slug": "box-of-balloons-platform",
+  //   "title": "Box of Balloons",
+  //   "date": "2024–2025",
+  //   "cover": "/projects/bob/bob-logo 2.png",
+  //   "tags": ["projects"],
+  //   "content": [
+  //     {
+  //       "type": "text",
+  //       "content": "As Product Manager and Technical Lead at Hack4Impact, I partnered with Box of Balloons -- a nonprofit that brings birthdays to children in homelessness and foster care --to reimagine how their 24+ chapters coordinate nationwide. I scoped pain points with chapter leaders drowning in Google Forms, then led a 15-person team to design and ship a centralized, permissioned MERN platform. Partner agencies now submit secure requests, chapters can toggle intake on or off, and national staff can view a live dashboard of impact metrics embedded directly on their Wix site."
+  //     },
+  //     {
+  //       "type": "image",
+  //       "src": "/projects/bob/bob-map.png",
+  //       "alt": "Map of Box of Balloons chapters across the U.S.",
+  //       "size": "lg",
+  //       "aspectRatio": "auto",
+  //       "caption": "Interactive chapter map showing 24+ locations nationwide."
+  //     },
+  //     {
+  //       "type": "image",
+  //       "src": "/projects/bob/bob-dashboard.png",
+  //       "alt": "Chapter leader dashboard interface",
+  //       "size": "lg",
+  //       "aspectRatio": "auto",
+  //       "caption": "Dashboard for chapter leaders to manage requests, toggle capacity, and track deliveries."
+  //     },
+  //     {
+  //       "type": "image",
+  //       "src": "/projects/bob/bob-admin.png",
+  //       "alt": "National admin analytics dashboard",
+  //       "size": "lg",
+  //       "aspectRatio": "auto",
+  //       "caption": "Admin view consolidating chapter-level data and real-time impact statistics for public display."
+  //     }
+  //   ]
+  // },  
   {
     slug: "game-on",  
     title: "Game On",
@@ -810,49 +942,10 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    "slug": "estimate",
-    "title": "EstiMate",
-    "date": "2024",
-    "cover": "/projects/estimate/estimate-logo2.png",
-    "tags": ["projects"],
-    "content": [
-      {
-        "type": "text",
-        "content": "We built EstiMate at TreeHacks 2024 after realizing how many friendly bets vanish into thin air—no receipts, no bragging rights. So we made an app that locks in those moments for good: tap to create a wager, AirDrop it to your friends, and let the blockchain play referee. Whether it's 'who'll ace the midterm' or 'who shows up late again,' EstiMate keeps the fun (and accountability) alive."
-      },
-      {
-        "type": "text",
-        "content": "Under the hood, we paired SwiftUI with a Bun/Express.js backend, Convex for data and key management, and Solidity smart contracts deployed on Caldera for secure, on-chain holds. I led backend and database integration, wiring frontend flows to contract logic through Ethers.js. Our working prototype earned three honors: Taisu Ventures' Amazing Web3 Gaming Award ($500), Caldera's Best Use of Caldera ($1K in ETH), and Ava Labs' Best Consumer Use Case for Blockchain ($1.5K)."
-      },
-      {
-        type: "link",
-        text: "Check out the DevPost",
-        url: "https://devpost.com/software/estimate-0nqzfx/",
-        size: "sm"
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-flow.jpg",
-        "alt": "EstiMate user flow",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "From friendly challenge setup to transparent on-chain settlement."
-      },
-      {
-        "type": "image",
-        "src": "/projects/estimate/estimate-stack.jpg",
-        "alt": "EstiMate tech stack",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Built with SwiftUI, Bun/Express, Convex, Caldera, and Solidity."
-      }
-    ]
-  },  
-  {
     slug: "lilyloop",
     title: "LilyLoop",
-    date: "2023–present",
-    cover: "/projects/lilyloop/lilyloop-logo.png",
+    date: "2023-2024",
+    cover: "/projects/lilyloop/lilyloop-logo-2.png",
     tags: ["projects"],
     content: [
       {
@@ -892,47 +985,10 @@ export const PROJECTS: Project[] = [
     ]
   },  
   {
-    "slug": "box-of-balloons-platform",
-    "title": "Box of Balloons",
-    "date": "2024–2025",
-    "cover": "/projects/bob/bob-logo.png",
-    "tags": ["projects"],
-    "content": [
-      {
-        "type": "text",
-        "content": "As Product Manager and Technical Lead at Hack4Impact, I partnered with Box of Balloons -- a nonprofit that brings birthdays to children in homelessness and foster care --to reimagine how their 24+ chapters coordinate nationwide. I scoped pain points with chapter leaders drowning in Google Forms, then led a 15-person team to design and ship a centralized, permissioned MERN platform. Partner agencies now submit secure requests, chapters can toggle intake on or off, and national staff can view a live dashboard of impact metrics embedded directly on their Wix site."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-map.png",
-        "alt": "Map of Box of Balloons chapters across the U.S.",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Interactive chapter map showing 24+ locations nationwide."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-dashboard.png",
-        "alt": "Chapter leader dashboard interface",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Dashboard for chapter leaders to manage requests, toggle capacity, and track deliveries."
-      },
-      {
-        "type": "image",
-        "src": "/projects/bob/bob-admin.png",
-        "alt": "National admin analytics dashboard",
-        "size": "lg",
-        "aspectRatio": "auto",
-        "caption": "Admin view consolidating chapter-level data and real-time impact statistics for public display."
-      }
-    ]
-  },  
-  {
     "slug": "forget-me-not",
     "title": "Forget Me Not",
     "date": "2022",
-    "cover": "/projects/forget-me-not/forget me not logo.png",
+    "cover": "/projects/forget-me-not/forget me not logo 3.png",
     "tags": ["projects"],
     "content": [
       {
@@ -958,7 +1014,7 @@ export const PROJECTS: Project[] = [
     "slug": "fiona-chatbot",
     "title": "FIONA",
     "date": "2020–2021",
-    "cover": "/projects/fiona/fiona-logo.png",
+    "cover": "/projects/fiona/fiona-logo-2.png",
     "tags": ["projects"],
     "content": [
       {
@@ -990,7 +1046,7 @@ export const PROJECTS: Project[] = [
     "slug": "cookies4agoodcause",
     "title": "Cookies4aGoodCause",
     "date": "2020–2021",
-    "cover": "/projects/cookies/cookies-logo.png",
+    "cover": "/projects/cookies/cookies-logo-2.png",
     "tags": ["misc"],
     "content": [
       {
@@ -1038,6 +1094,33 @@ export const PROJECTS: Project[] = [
         size: "md",
         aspectRatio: "auto",
         caption: "I'm not that good"
+      }
+    ]
+  },
+  {
+    slug: "rooster",  
+    title: "Rooster",
+    date: "2019",
+    cover: "/projects/art/rooster-painting.png",
+    tags: ["art"],
+    content: [
+      {
+        type: "image",
+        src: "/projects/art/rooster-painting.png",
+        alt: "Rooster",
+        size: "lg",
+        aspectRatio: "tall",
+        caption: "Rooster"
+      },
+      {
+        type: "text",
+        content: "Acrylic on cardboard, magazines, feathers, leaves, glue",
+        size: "sm"
+      },
+      {
+        type: "text",
+        content: "Featured in SF MOMA.",
+        size: "lg"
       }
     ]
   }

@@ -11,6 +11,7 @@ import SubHeaderBlock from "./SubHeaderBlock";
 import RichTextBlock from "./RichTextBlock";
 import LinkBlock from "./LinkBlock";
 import SideBySideBlock from "./SideBySideBlock";
+import TextColumnsBlock from "./TextColumnsBlock";
 
 interface ContentBlockProps {
   block: ContentBlockType;
@@ -42,6 +43,8 @@ export default function ContentBlock({ block }: ContentBlockProps) {
       return <LinkBlock block={block} />;
     case "sideBySide":
       return <SideBySideBlock block={block} />;
+    case "textColumns":
+      return <TextColumnsBlock block={block} />;
     default:
       return null;
   }
