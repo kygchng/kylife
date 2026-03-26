@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
         image: "/projects/sequoia/sequoia-logo.png",
         alt: "Sequoia Stitch logo",
         title: "Sequoia Stitch",
-        description: "I got to work on this project as a design engineering contract for Sequoia Capital. Sequoia has a large and growing library of long-form podcast content packed with founder and investor insight, but it was locked inside multi-hour videos. Users had no way to find the most relevant moments without manually skimming. I built a semantic search tool for their Training Data podcast that lets you ask any question and get back a curated playlist of timestamped clips that actually answer it.",
+        description: "I built this project as a design engineering contractor for Sequoia Capital. Sequoia has a large and growing library of long-form podcast content packed with founder and investor insight, but it was locked inside multi-hour videos. Users had no way to find the most relevant moments without manually skimming. I built a semantic search tool for their 'Training Data' podcast that lets you ask any question and get back a curated playlist of timestamped clips that actually answer it.",
         imagePosition: "left"
       },
       {
