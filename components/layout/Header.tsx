@@ -18,8 +18,8 @@ export default function Header() {
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Header() {
     });
   };
 
-  const lastSqueezed = "11/18/2025";
+  const lastSqueezed = "03/26/2026";
 
   const getImageForWord = (word: string) => {
     switch (word) {
@@ -81,68 +81,76 @@ export default function Header() {
             <h1 className="text-[13px] md:text-sm mb-1">✿ Kylie Chang ✿</h1>
 
             <div className="text-[13px] md:text-sm leading-5 tracking-tight">
-            <p>
-              <span className="font-medium">Currently:</span> CS + Finance @ UPenn M&T
-            </p>
-            <p>
-              <span className="font-medium">Previously:</span> AI @ Figma, KP Fellows '25
-            </p>
+              <p>
+                <span className="font-medium">Currently:</span> CS + Finance @
+                UPenn M&T
+              </p>
+              <p>
+                <span className="font-medium">Previously:</span> AI @ Figma, KP
+                Fellows '25
+              </p>
 
-            <p className="mt-1">
-              <span className="font-medium">Talk to me about:</span> conceptual art, whimsical tech,{" "}
-              <span
-                className="px-1 -mx-1"
-                style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => !isMobile && setHoveredWord("four-agreements")}
-                onMouseLeave={() => !isMobile && setHoveredWord(null)}
-              >
-                the Four Agreements
-              </span>
-              , women's health, Chinese dance, Frankenstein's monster, little joys, beli, and{" "}
-              <a
-                href="https://gladdestthing.com/poems/the-orange"
-                target="_blank"
-                rel="noreferrer"
-                className="cursor-pointer px-1 -mx-1 hover:underline"
-                style={{ backgroundColor: "#FFDBBB" }}
-                onMouseEnter={() => !isMobile && setHoveredWord("oranges")}
-                onMouseLeave={() => !isMobile && setHoveredWord(null)}
-              >
-                my love for oranges
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-
-        {/* Right Column - Vibe & Links */}
-        <div className="text-[13px] md:text-sm leading-5 tracking-tight text-left md:text-right flex-shrink-0">
-          <div>
-            <p className="text-gray-600">
-               {mounted ? formatTime(now) : "loading..."}
-            </p>
-            <p className="text-gray-500 mt-0.5">
-              ( last squeezed: {lastSqueezed} 🍊 )
-            </p>
-          </div>
-
-          <div className="space-y-0.5 mt-2">
-            {site.social.map((link) => (
-              <div key={link.name}>
-                <a
-                  href={link.name === "E-mail" ? `mailto:${link.url}` : link.url}
-                  target={link.name !== "E-mail" ? "_blank" : undefined}
-                  rel={link.name !== "E-mail" ? "noreferrer" : undefined}
-                  className="underline hover:opacity-60 transition-opacity"
+              <p className="mt-1">
+                <span className="font-medium">Talk to me about:</span>{" "}
+                conceptual art, whimsical tech,{" "}
+                <span
+                  className="px-1 -mx-1"
+                  style={{ backgroundColor: "#FFDBBB" }}
+                  onMouseEnter={() =>
+                    !isMobile && setHoveredWord("four-agreements")
+                  }
+                  onMouseLeave={() => !isMobile && setHoveredWord(null)}
                 >
-                  {link.name}
+                  the Four Agreements
+                </span>
+                , women's health, Chinese dance, Frankenstein's monster, little
+                joys, beli, and{" "}
+                <a
+                  href="https://gladdestthing.com/poems/the-orange"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer px-1 -mx-1 hover:underline"
+                  style={{ backgroundColor: "#FFDBBB" }}
+                  onMouseEnter={() => !isMobile && setHoveredWord("oranges")}
+                  onMouseLeave={() => !isMobile && setHoveredWord(null)}
+                >
+                  my love for oranges
                 </a>
-              </div>
-            ))}
+                .
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Vibe & Links */}
+          <div className="text-[13px] md:text-sm leading-5 tracking-tight text-left md:text-right flex-shrink-0">
+            <div>
+              <p className="text-gray-600">
+                {mounted ? formatTime(now) : "loading..."}
+              </p>
+              <p className="text-gray-500 mt-0.5">
+                ( last squeezed: {lastSqueezed} 🍊 )
+              </p>
+            </div>
+
+            <div className="space-y-0.5 mt-2">
+              {site.social.map((link) => (
+                <div key={link.name}>
+                  <a
+                    href={
+                      link.name === "E-mail" ? `mailto:${link.url}` : link.url
+                    }
+                    target={link.name !== "E-mail" ? "_blank" : undefined}
+                    rel={link.name !== "E-mail" ? "noreferrer" : undefined}
+                    className="underline hover:opacity-60 transition-opacity"
+                  >
+                    {link.name}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
     </>
   );
 }
