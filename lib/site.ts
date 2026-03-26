@@ -23,14 +23,14 @@ export const site = {
       url: "kylie.chang@gmail.com"
     },
     {
-      name: "Twitter",
-      label: "Twitter",
-      url: "https://x.com/kygchang"
-    },
-    {
       name: "Beli",
       label: "Beli",
       url: "https://beliapp.co/app/changomango"
+    },
+    {
+      name: "X",
+      label: "X",
+      url: "https://x.com/kygchang"
     },
   ]
 };
