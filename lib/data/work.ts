@@ -2,7 +2,7 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
-    slug: "sequoia-podcasts",
+    slug: "sequoia-stitch",
     title: "Sequoia Stitch",
     date: "2025",
     cover: "/projects/sequoia/sequoia-logo.png",
