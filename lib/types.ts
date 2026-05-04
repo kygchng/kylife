@@ -28,6 +28,8 @@ export interface ImageBlock {
   src: string;
   alt: string;
   caption?: string;
+  title?: string;
+  description?: string;
   size?: "sm" | "md" | "lg" | "full"; // width/layout
   aspectRatio?: "square" | "video" | "wide" | "tall" | "auto";
 }
@@ -41,6 +43,11 @@ export interface ImageGridBlock {
   }>;
   columns?: 2 | 3 | 4;
   gap?: "sm" | "md" | "lg";
+  caption?: string;
+  title?: string;
+  description?: string;
+  uniform?: boolean;      // true → square crop all images (for grids)
+  flexRatios?: number[];  // per-image flex values for height-matching layouts
 }
 
 export interface VideoBlock {

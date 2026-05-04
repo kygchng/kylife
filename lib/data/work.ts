@@ -2,6 +2,134 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
+    slug: "pottery",
+    title: "pottery",
+    date: "2026",
+    cover: "/pottery/cover.jpeg",
+    tags: ["art"],
+    content: [
+      {
+        type: "text",
+        content: "I came to Hong Kong to study abroad for five months, and one of the first things I did was sign up for a pottery class at a local studio in Kowloon. I've always wanted to learn wheel throwing properly — not just a one-off workshop, but actually understanding the whole process.",
+        size: "lg"
+      },
+      {
+        type: "text",
+        content: "Each piece moves through the process slowly. Thrown on the wheel, left to dry, trimmed, bisque fired, glazed, and fired again. There's a lot of waiting, a lot of variables you can't control. I liked that — wabi sabi!!",
+        size: "lg"
+      },
+      {
+        type: "text",
+        content: "I made six pieces over the semester and gave some of them away before leaving. It felt like a bittersweet ending, giving my art to the people who made my abroad experience so memorable!",
+        size: "lg"
+      },
+      {
+        type: "spacer",
+        size: "md"
+      },
+      {
+        type: "sectionHeader",
+        content: "the pieces"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "imageGrid",
+        columns: 2,
+        gap: "sm",
+        title: "piece 01",
+        description: "my favorite. stick your fingers in its nose to pick it up.",
+        flexRatios: [4, 9],
+        images: [
+          { src: "/pottery/piece-1a.jpeg", alt: "piece 01" },
+          { src: "/pottery/piece-1b.jpeg", alt: "piece 01 detail" }
+        ]
+      },
+      {
+        type: "image",
+        src: "/pottery/piece-2.jpeg",
+        alt: "piece 02",
+        size: "lg",
+        aspectRatio: "auto",
+        title: "piece 02",
+        description: "ramel bowl. the yellow pooled in like sunlight."
+      },
+      {
+        type: "imageGrid",
+        columns: 2,
+        gap: "sm",
+        title: "piece 03",
+        description: "a cup shaped like a hand, made to be held by hands.",
+        flexRatios: [4, 9],
+        images: [
+          { src: "/pottery/piece-3a.jpeg", alt: "piece 03" },
+          { src: "/pottery/piece-3b.jpeg", alt: "piece 03 detail" }
+        ]
+      },
+      {
+        type: "image",
+        src: "/pottery/piece-4.jpeg",
+        alt: "piece 04",
+        size: "lg",
+        aspectRatio: "auto",
+        title: "piece 04",
+        description: "the simplest one. came out exactly as imagined."
+      },
+      {
+        type: "image",
+        src: "/pottery/piece-5.jpeg",
+        alt: "piece 05",
+        size: "lg",
+        aspectRatio: "auto",
+        title: "piece 05",
+        description: "oxblood glaze. came out darker than expected."
+      },
+      {
+        type: "imageGrid",
+        columns: 2,
+        gap: "sm",
+        title: "piece 06",
+        description: "a bubble plate for my friend's matcha brand, Mida 弥达.",
+        flexRatios: [4, 9],
+        images: [
+          { src: "/pottery/piece-6a.jpeg", alt: "piece 06" },
+          { src: "/pottery/piece-6b.jpeg", alt: "piece 06 detail" }
+        ]
+      },
+      {
+        type: "spacer",
+        size: "lg"
+      },
+      {
+        type: "sectionHeader",
+        content: "the progress"
+      },
+      {
+        type: "spacer",
+        size: "sm"
+      },
+      {
+        type: "imageGrid",
+        columns: 3,
+        gap: "md",
+        uniform: true,
+        images: [
+          { src: "/pottery/progress-1.jpeg", alt: "progress" },
+          { src: "/pottery/progress-2.jpeg", alt: "progress" },
+          { src: "/pottery/progress-3.jpeg", alt: "progress" },
+          { src: "/pottery/progress-4.jpeg", alt: "progress" },
+          { src: "/pottery/progress-5.jpeg", alt: "progress" },
+          { src: "/pottery/progress-6.jpeg", alt: "progress" },
+          { src: "/pottery/progress-7.jpeg", alt: "progress" },
+          { src: "/pottery/progress-8.jpeg", alt: "progress" },
+          { src: "/pottery/progress-9.jpeg", alt: "progress" }
+        ]
+      }
+    ]
+  },
+  {
     slug: "sequoia-stitch",
     title: "Sequoia Stitch",
     date: "2025",
