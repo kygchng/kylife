@@ -9,13 +9,13 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
   const columnClasses = {
     2: "grid-cols-1 sm:grid-cols-2",
     3: "grid-cols-3",
-    4: "grid-cols-2 sm:grid-cols-4"
+    4: "grid-cols-2 sm:grid-cols-4",
   };
 
   const gapClasses = {
     sm: "gap-2",
     md: "gap-3",
-    lg: "gap-6"
+    lg: "gap-6",
   };
 
   const header = (
@@ -29,26 +29,36 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
     </>
   );
 
-  // Uniform square grid (e.g. progress photos)
   if (block.uniform) {
     return (
       <div className="mb-8">
         {header}
-        <div className={`grid ${columnClasses[block.columns || 3]} ${gapClasses[block.gap || "md"]}`}>
+        <div
+          className={`grid ${columnClasses[block.columns || 3]} ${gapClasses[block.gap || "md"]}`}
+        >
           {block.images.map((image, index) => (
-            <div key={index} className="aspect-square relative overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 50vw, 33vw"
-              />
+            <div key={index}>
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              </div>
+              {image.caption && (
+                <p className="text-xs text-gray-500 mt-1 text-center">
+                  {image.caption}
+                </p>
+              )}
             </div>
           ))}
         </div>
         {block.caption && (
-          <p className="text-xs text-gray-500 mt-2 text-center">{block.caption}</p>
+          <p className="text-xs text-gray-500 mt-2 text-center">
+            {block.caption}
+          </p>
         )}
       </div>
     );
@@ -62,12 +72,25 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
     return (
       <div className="mb-8">
         <div className="max-w-4xl mx-auto">
-        {header}
-          <div style={{ display: "flex", gap: `${gapPx}px`, alignItems: "stretch" }}>
+          {header}
+          <div
+            style={{
+              display: "flex",
+              gap: `${gapPx}px`,
+              alignItems: "stretch",
+            }}
+          >
             {block.images.map((image, index) => {
               const definesHeight = index === 0;
               return (
-                <div key={index} style={{ flex: block.flexRatios![index], minWidth: 0, overflow: "hidden" }}>
+                <div
+                  key={index}
+                  style={{
+                    flex: block.flexRatios![index],
+                    minWidth: 0,
+                    overflow: "hidden",
+                  }}
+                >
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -78,7 +101,7 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
                       width: "100%",
                       height: definesHeight ? "auto" : "100%",
                       objectFit: definesHeight ? undefined : "cover",
-                      display: "block"
+                      display: "block",
                     }}
                   />
                 </div>
@@ -87,7 +110,9 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
           </div>
         </div>
         {block.caption && (
-          <p className="text-xs text-gray-500 mt-2 text-center">{block.caption}</p>
+          <p className="text-xs text-gray-500 mt-2 text-center">
+            {block.caption}
+          </p>
         )}
       </div>
     );
@@ -97,7 +122,9 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
   return (
     <div className="mb-8">
       {header}
-      <div className={`grid ${columnClasses[block.columns || 3]} ${gapClasses[block.gap || "md"]} items-start`}>
+      <div
+        className={`grid ${columnClasses[block.columns || 3]} ${gapClasses[block.gap || "md"]} items-start`}
+      >
         {block.images.map((image, index) => (
           <div key={index}>
             <Image
@@ -109,13 +136,17 @@ export default function ImageGridBlock({ block }: ImageGridBlockProps) {
               style={{ width: "100%", height: "auto", display: "block" }}
             />
             {image.caption && (
-              <p className="text-xs text-gray-500 mt-1 text-center">{image.caption}</p>
+              <p className="text-xs text-gray-500 mt-1 text-center">
+                {image.caption}
+              </p>
             )}
           </div>
         ))}
       </div>
       {block.caption && (
-        <p className="text-xs text-gray-500 mt-2 text-center">{block.caption}</p>
+        <p className="text-xs text-gray-500 mt-2 text-center">
+          {block.caption}
+        </p>
       )}
     </div>
   );

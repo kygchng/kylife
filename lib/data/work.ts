@@ -516,6 +516,7 @@ export const PROJECTS: Project[] = [
       },
       {
         type: "imageGrid",
+        uniform: true,
         images: [
           {
             src: "/projects/figma/cafe.jpeg",
