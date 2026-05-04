@@ -2,7 +2,7 @@ import { Project } from "../types";
 
 export const PROJECTS: Project[] = [
   {
-    slug: "Pottery",
+    slug: "pottery",
     title: "Pottery",
     date: "2026",
     cover: "/pottery/cover.jpeg",
