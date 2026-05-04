@@ -9,6 +9,13 @@ export const PROJECTS: Project[] = [
     tags: ["art"],
     content: [
       {
+        type: "image",
+        src: "/pottery/cover.jpeg",
+        alt: "cover",
+        size: "lg",
+        aspectRatio: "auto"
+      },
+      {
         type: "text",
         content: "I came to Hong Kong to study abroad for five months, and one of the first things I did was sign up for a pottery class at a local studio in Kowloon. I've always wanted to learn wheel throwing properly — not just a one-off workshop, but actually understanding the whole process.",
         size: "lg"
