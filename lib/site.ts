@@ -30,7 +30,7 @@ export const site = {
     {
       name: "X",
       label: "X",
-      url: "https://x.com/kygchang"
+      url: "https://x.com/kylifec"
     },
   ]
 };

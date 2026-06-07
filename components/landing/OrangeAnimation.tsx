@@ -5,7 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TOTAL_FRAMES = 5;
-const FRAME_DURATION = 500; // milliseconds per frame (slower for clarity)
+const FRAME_DURATION = 500;
+
+const frameSrcs = Array.from(
+  { length: TOTAL_FRAMES },
+  (_, i) => `/orange/${(i + 1).toString().padStart(2, "0")}.png`
+);
 
 export default function OrangeAnimation() {
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -14,43 +19,23 @@ export default function OrangeAnimation() {
   const [showText, setShowText] = useState(true);
   const [fadeOutImage, setFadeOutImage] = useState(false);
   const [showEnterPage, setShowEnterPage] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const animationRef = useRef<NodeJS.Timeout | null>(null);
+  const [loadedCount, setLoadedCount] = useState(0);
+  const animationRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    // Preload all orange frames and wait for them to fully load
-    let loadedCount = 0;
-    const totalImages = TOTAL_FRAMES;
+  const allLoaded = loadedCount >= TOTAL_FRAMES;
 
-    for (let i = 1; i <= TOTAL_FRAMES; i++) {
-      const img = new window.Image();
-      img.src = `/orange/${i.toString().padStart(2, "0")}.png`;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === totalImages) {
-          setImagesLoaded(true);
-        }
-      };
-    }
-  }, []);
-
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      if (animationRef.current) {
-        clearTimeout(animationRef.current);
-      }
+      if (animationRef.current) clearTimeout(animationRef.current);
     };
   }, []);
 
   const handleClick = () => {
-    if (isAnimating || isComplete || !imagesLoaded) return;
+    if (isAnimating || isComplete || !allLoaded) return;
 
-    // Start the animation sequence
     setIsAnimating(true);
-    setShowText(false); // Start text fade-out
+    setShowText(false);
 
-    // Auto-play through all frames
     let frame = 1;
     const playNextFrame = () => {
       if (frame < TOTAL_FRAMES) {
@@ -58,63 +43,94 @@ export default function OrangeAnimation() {
         frame++;
         animationRef.current = setTimeout(playNextFrame, FRAME_DURATION);
       } else {
-        // Animation complete, fade out the last frame then show enter page
         setFadeOutImage(true);
         setTimeout(() => {
           setIsComplete(true);
           setIsAnimating(false);
-          // Trigger enter page fade in
           setTimeout(() => setShowEnterPage(true), 50);
-        }, 600); // Wait for fade out
+        }, 600);
       }
     };
 
-    // Start after a brief delay for text fade-out
     animationRef.current = setTimeout(playNextFrame, 300);
   };
 
   return (
-    <div
-      className="fixed inset-0 flex items-center justify-center bg-white"
-      role="button"
-      aria-label="click me"
-    >
+    <div className="fixed inset-0 flex items-center justify-center bg-white">
       {!isComplete ? (
-        <div className={`relative place-content-center transition-opacity duration-700 ease-in-out ${fadeOutImage ? "opacity-0" : "opacity-100"}`}>
-          <div className="relative inline-block transition-transform duration-300 hover:scale-105">
-            <Image
-              src={`/orange/${(currentFrame + 1)
-                .toString()
-                .padStart(2, "0")}.png`}
-              alt={`Orange animation frame ${currentFrame + 1}`}
-              width={800}
-              height={800}
-              priority={currentFrame === 0}
-              className="object-contain pointer-events-none"
-            />
+        <div
+          className={`transition-opacity duration-700 ease-in-out ${
+            fadeOutImage ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <div className="relative group">
+            {/* Image stack — all frames in DOM, switched via opacity (no src swaps = no flicker) */}
+            <div
+              className="relative transition-transform duration-300 group-hover:scale-105"
+              style={{
+                width: "min(800px, 90vw)",
+                aspectRatio: "1 / 1",
+                willChange: "transform",
+              }}
+            >
+              {frameSrcs.map((src, i) => (
+                <div
+                  key={src}
+                  className="absolute inset-0"
+                  style={{ opacity: i === currentFrame ? 1 : 0 }}
+                >
+                  <Image
+                    src={src}
+                    alt={i === 0 ? "Orange" : ""}
+                    fill
+                    sizes="min(800px, 90vw)"
+                    priority={i === 0}
+                    loading={i === 0 ? undefined : "eager"}
+                    onLoad={() => setLoadedCount((c) => c + 1)}
+                    onError={() => setLoadedCount((c) => c + 1)}
+                    className="object-contain pointer-events-none select-none"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Click target — outside scaled div so it doesn't move on hover */}
             <div
               onClick={handleClick}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full cursor-pointer"
+              onKeyDown={(e) => e.key === "Enter" && handleClick()}
+              role="button"
+              tabIndex={0}
+              aria-label="Click to peel the orange"
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full ${
+                allLoaded ? "cursor-pointer" : "cursor-wait"
+              }`}
               style={{
                 background: "transparent",
                 zIndex: 10,
+                touchAction: "manipulation",
               }}
             />
+
+            {/* Text — outside scaled div so it doesn't move on hover */}
             <div
               className={`absolute top-[85%] left-1/2 -translate-x-1/2 w-full pointer-events-none transition-opacity duration-500 ease-in-out ${
                 showText ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-2xl sm:text-3xl md:text-3xl font-serif text-center">
-                click to peel.
+              <p className="text-lg text-gray-700 text-center leading-relaxed">
+                {allLoaded ? "click to peel." : "loading..."}
               </p>
             </div>
           </div>
         </div>
       ) : (
-        <div className={`text-center text-black relative select-none flex flex-col items-center transition-all duration-700 ease-out ${
-          showEnterPage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}>
+        <div
+          className={`text-center text-black relative select-none flex flex-col items-center transition-all duration-700 ease-out ${
+            showEnterPage
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-4"
+          }`}
+        >
           {/* Mobile: above text, Desktop: absolute positioned left */}
           <div className="mb-6 md:mb-0 md:absolute md:-top-10 md:-left-54 opacity-90 select-none">
             <Image

@@ -44,7 +44,7 @@ export default function Header() {
     });
   };
 
-  const lastSqueezed = "03/26/2026";
+  const lastSqueezed = "06/06/2026";
 
   const getImageForWord = (word: string) => {
     switch (word) {
@@ -82,8 +82,8 @@ export default function Header() {
 
             <div className="text-[13px] md:text-sm leading-5 tracking-tight">
               <p>
-                <span className="font-medium">Currently:</span> CS + Finance @
-                UPenn M&T
+                <span className="font-medium">Currently:</span> Deployed
+                Engineer @ Cognition, CS + Finance @ UPenn M&T
               </p>
               <p>
                 <span className="font-medium">Previously:</span> AI @ Figma, KP
@@ -104,7 +104,7 @@ export default function Header() {
                   the Four Agreements
                 </span>
                 , women's health, Chinese dance, Frankenstein's monster, little
-                joys, beli, and{" "}
+                joys, beli, Hong Kong, and{" "}
                 <a
                   href="https://gladdestthing.com/poems/the-orange"
                   target="_blank"
